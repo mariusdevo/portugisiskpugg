@@ -166,27 +166,27 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 .cover.animated{transition:top 0.35s cubic-bezier(.2,.8,.2,1), height 0.35s cubic-bezier(.2,.8,.2,1);}
 
 .cover::before{
-  content:"";position:absolute;top:-11px;left:-4px;right:-4px;height:22px;
-  background-image:radial-gradient(circle at 11px 11px, transparent 10.4px, var(--ocean-light) 11px);
-  background-size:22px 22px;background-repeat:repeat-x;opacity:0.95;
+  content:"";pointer-events:none;
+  position:absolute;top:0;left:0;right:0;height:18px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18' viewBox='0 0 44 18'%3E%3Cpath d='M0 9 Q11 1 22 9 T44 9 V18 H0 Z' fill='%231C7A86'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-size:44px 18px;
+  opacity:0.95;
 }
 
 .cover-hint{
-  position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  position:absolute;top:24px;left:50%;transform:translateX(-50%);
   color:rgba(255,255,255,0.88);font-size:0.72rem;letter-spacing:0.03em;
   white-space:nowrap;pointer-events:none;font-weight:500;
   display:flex;align-items:center;gap:6px;
 }
 
 .handle{
-  position:absolute;top:-10px;left:50%;transform:translateX(-50%);
-  width:64px;height:22px;border-radius:999px;background:var(--sand);
-  box-shadow:0 3px 8px rgba(11,59,68,0.35);
-  display:flex;align-items:center;justify-content:center;gap:4px;cursor:grab;
+  position:absolute;top:2px;left:50%;transform:translateX(-50%);
+  width:40px;height:6px;border-radius:999px;
+  background:rgba(244,238,223,0.9);cursor:grab;
 }
 .handle:active{cursor:grabbing;}
-.handle .dot{width:4px;height:4px;border-radius:50%;background:var(--ocean-deep);}
-.handle:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
+.handle:focus-visible{outline:2px solid var(--coral);outline-offset:3px;}
 
 .counter{text-align:center;color:var(--ink-soft);font-size:0.85rem;margin-top:14px;}
 .footer-tip{text-align:center;color:var(--ink-soft);font-size:0.78rem;margin-top:6px;opacity:0.8;}
@@ -214,7 +214,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
     </div>
     <div>
       <h1>Onda</h1>
-      <p class="tagline">Dra bølgen ned, trykk på den, eller bruk mellomromstasten — for å avsløre svaret, rad for rad.</p>
+      <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
     </div>
   </div>
 
@@ -254,14 +254,12 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
       <div class="cover" id="cover">
         <div class="cover-hint" id="coverHint">dra ↓, trykk, eller mellomrom ⎵</div>
         <div class="handle" id="handle" role="slider" tabindex="0"
-             aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>
+             aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0"></div>
       </div>
     </div>
 
     <p class="counter" id="counter"></p>
-    <p class="footer-tip">Norsk til venstre er alltid synlig. Portugisisk og uttale ligger under bølgen.</p>
+    <p class="footer-tip">Norsk til venstre er alltid synlig. Dra, trykk, eller bruk mellomromstasten for å avsløre portugisisk og uttale under bølgen.</p>
   </div>
 
 </div>
