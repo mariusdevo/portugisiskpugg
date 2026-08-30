@@ -45,21 +45,14 @@ body{
 
 .app{max-width:760px;margin:0 auto;}
 
-.topbar{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;}
-
-.brand-mark{
-  flex:0 0 auto;width:46px;height:46px;border-radius:14px;
-  background:linear-gradient(160deg, var(--ocean-light), var(--ocean-deep));
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 14px -6px rgba(11,59,68,0.5);
-}
-.brand-mark svg{width:24px;height:24px;}
+.topbar{margin-bottom:22px;}
 
 h1{
   font-family:'Fraunces', Georgia, serif;font-weight:600;
   font-size:clamp(1.5rem, 4.2vw, 2.1rem);color:var(--ocean-deep);
-  margin:0 0 2px;letter-spacing:-0.01em;
+  margin:0 0 4px;letter-spacing:-0.01em;
 }
+.wave-underline{display:block;margin:0 0 8px;}
 .tagline{margin:0;color:var(--ink-soft);font-size:0.95rem;}
 
 .panel{
@@ -206,16 +199,11 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 <div class="app">
 
   <div class="topbar">
-    <div class="brand-mark">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M2 19c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
-      </svg>
-    </div>
-    <div>
-      <h1>Onda</h1>
-      <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
-    </div>
+    <h1>Onda</h1>
+    <svg class="wave-underline" width="90" height="14" viewBox="0 0 90 14" aria-hidden="true">
+      <path d="M1 7 Q12 1 23 7 T45 7 T67 7 T89 7" fill="none" stroke="#1C7A86" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
   </div>
 
   <div id="statusBox" class="status">Laster pensum …</div>
