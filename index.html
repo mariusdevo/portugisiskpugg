@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Skjul &amp; avslør — brasiliansk portugisisk</title>
+
+<meta name="theme-color" content="#0B3B44" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Pugg" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="description" content="Pugg brasiliansk portugisisk muntlig: norsk vises, portugisisk og uttale skjules under bølgen." />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --sand:#F4EEDF;
+  --paper:#FBF8F1;
+  --ink:#1B2430;
+  --ink-soft:#5B6472;
+  --ocean-deep:#0B3B44;
+  --ocean:#125863;
+  --ocean-light:#1C7A86;
+  --coral:#E2637B;
+  --coral-dark:#C74E67;
+  --line: rgba(27,36,48,0.12);
+  --radius:18px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+
+body{
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(63,167,150,0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(226,99,123,0.10), transparent 60%),
+    var(--sand);
+  color:var(--ink);
+  font-family:'Inter', system-ui, -apple-system, sans-serif;
+  min-height:100vh;
+  padding:28px 16px calc(60px + env(safe-area-inset-bottom));
+}
+
+.app{max-width:760px;margin:0 auto;}
+
+.topbar{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;}
+
+.brand-mark{
+  flex:0 0 auto;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(160deg, var(--ocean-light), var(--ocean-deep));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 14px -6px rgba(11,59,68,0.5);
+}
+.brand-mark svg{width:24px;height:24px;}
+
+h1{
+  font-family:'Fraunces', Georgia, serif;font-weight:600;
+  font-size:clamp(1.5rem, 4.2vw, 2.1rem);color:var(--ocean-deep);
+  margin:0 0 2px;letter-spacing:-0.01em;
+}
+.tagline{margin:0;color:var(--ink-soft);font-size:0.95rem;}
+
+.panel{
+  background:var(--paper);border-radius:16px;padding:16px;
+  box-shadow:0 1px 0 rgba(255,255,255,0.6) inset, 0 10px 24px -18px rgba(11,59,68,0.35);
+  margin-bottom:16px;
+}
+
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;}
+
+.field{display:flex;flex-direction:column;gap:6px;font-size:0.8rem;color:var(--ink-soft);flex:1 1 220px;}
+.field span{font-weight:600;text-transform:uppercase;letter-spacing:0.04em;font-size:0.72rem;}
+
+select{
+  font-family:'Inter',sans-serif;font-size:0.95rem;padding:10px 12px;border-radius:10px;
+  border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;
+}
+select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
+
+.tabs{display:flex;gap:6px;background:rgba(11,59,68,0.06);padding:4px;border-radius:11px;}
+.tab{
+  border:none;background:transparent;color:var(--ink-soft);
+  font-family:'Inter',sans-serif;font-weight:600;font-size:0.85rem;
+  padding:8px 14px;border-radius:8px;cursor:pointer;
+}
+.tab.active{background:var(--ocean-deep);color:#fff;}
+.tab:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
+
+.actions{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap;}
+.btn{
+  font-family:'Inter',sans-serif;font-weight:600;font-size:0.85rem;
+  padding:9px 14px;border-radius:10px;cursor:pointer;border:1px solid transparent;
+}
+.btn.ghost{background:#fff;border-color:var(--line);color:var(--ink);}
+.btn.ghost:hover{border-color:var(--ocean-light);}
+.btn.primary{background:var(--coral);color:#fff;}
+.btn.primary:hover{background:var(--coral-dark);}
+.btn:focus-visible{outline:2px solid var(--ocean-deep);outline-offset:2px;}
+
+.hint{font-size:0.85rem;color:var(--ink-soft);margin:0 2px 6px;}
+.hint2{font-size:0.8rem;color:var(--ink-soft);margin:0 2px 14px;opacity:0.85;}
+
+.extra-note{
+  display:none;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  background:rgba(226,99,123,0.08);border:1px solid rgba(226,99,123,0.25);
+  padding:10px 14px;border-radius:12px;margin-bottom:14px;font-size:0.85rem;color:var(--ink);
+}
+
+.status{
+  background:var(--paper);border-radius:var(--radius);padding:26px 22px;
+  box-shadow:0 16px 36px -22px rgba(11,59,68,0.45);
+  color:var(--ink-soft);font-size:0.95rem;line-height:1.55;
+}
+.status h2{
+  font-family:'Fraunces',Georgia,serif;font-size:1.1rem;color:var(--coral-dark);
+  margin:0 0 8px;font-weight:600;
+}
+.status code{
+  font-family:'IBM Plex Mono',monospace;font-size:0.85rem;
+  background:rgba(11,59,68,0.07);padding:2px 6px;border-radius:5px;
+}
+
+.board{
+  position:relative;background:var(--paper);border-radius:var(--radius);
+  overflow:hidden;box-shadow:0 16px 36px -22px rgba(11,59,68,0.45);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: minmax(96px,0.85fr) minmax(150px,1.15fr);
+  column-gap:16px;padding:14px 18px;
+}
+
+.cell{padding:11px 2px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;}
+.cell.row-alt{background:rgba(11,59,68,0.03);}
+
+.cell-no{
+  font-weight:600;font-size:0.98rem;color:var(--ink);cursor:pointer;
+  border-radius:6px;transition:background-color .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.cell-no:hover{background-color:rgba(226,99,123,0.08);}
+.cell-no.marked{border-left:4px solid var(--coral);padding-left:10px;background-color:rgba(226,99,123,0.08);}
+.cell-pt.marked{background-color:rgba(226,99,123,0.08);}
+
+.src-tag{
+  font-size:0.68rem;color:var(--ink-soft);font-weight:500;text-transform:uppercase;
+  letter-spacing:0.03em;margin-top:3px;opacity:0.75;
+}
+
+.cell-pt .pt{font-weight:600;font-size:0.98rem;color:var(--ink);}
+.cell-pt .ut{
+  font-family:'IBM Plex Mono','Courier New',monospace;
+  font-size:0.82rem;color:var(--ocean);margin-top:3px;letter-spacing:0.01em;
+}
+
+.cover{
+  position:absolute;left:0;top:0;width:0;height:0;
+  background:linear-gradient(165deg, var(--ocean-light) 0%, var(--ocean-deep) 88%);
+  box-shadow:inset 0 10px 20px -12px rgba(0,0,0,0.45);
+  touch-action:none;cursor:grab;
+}
+.cover:active{cursor:grabbing;}
+.cover.animated{transition:top 0.35s cubic-bezier(.2,.8,.2,1), height 0.35s cubic-bezier(.2,.8,.2,1);}
+
+.cover::before{
+  content:"";position:absolute;top:-11px;left:-4px;right:-4px;height:22px;
+  background-image:radial-gradient(circle at 11px 11px, transparent 10.4px, var(--ocean-light) 11px);
+  background-size:22px 22px;background-repeat:repeat-x;opacity:0.95;
+}
+
+.cover-hint{
+  position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,0.88);font-size:0.72rem;letter-spacing:0.03em;
+  white-space:nowrap;pointer-events:none;font-weight:500;
+  display:flex;align-items:center;gap:6px;
+}
+
+.handle{
+  position:absolute;top:-10px;left:50%;transform:translateX(-50%);
+  width:64px;height:22px;border-radius:999px;background:var(--sand);
+  box-shadow:0 3px 8px rgba(11,59,68,0.35);
+  display:flex;align-items:center;justify-content:center;gap:4px;cursor:grab;
+}
+.handle:active{cursor:grabbing;}
+.handle .dot{width:4px;height:4px;border-radius:50%;background:var(--ocean-deep);}
+.handle:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
+
+.counter{text-align:center;color:var(--ink-soft);font-size:0.85rem;margin-top:14px;}
+.footer-tip{text-align:center;color:var(--ink-soft);font-size:0.78rem;margin-top:6px;opacity:0.8;}
+
+@media (max-width:520px){
+  .grid{grid-template-columns: minmax(84px,0.85fr) minmax(120px,1.15fr); column-gap:10px; padding:12px;}
+  .actions{margin-left:0;width:100%;}
+  .actions .btn{flex:1;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="topbar">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M2 19c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Skjul &amp; avslør</h1>
+      <p class="tagline">Dra bølgen ned — eller trykk på den — for å avsløre svaret, rad for rad.</p>
+    </div>
+  </div>
+
+  <div id="statusBox" class="status">Laster pensum …</div>
+
+  <div id="ui" style="display:none;">
+    <div class="panel">
+      <div class="controls">
+        <label class="field">
+          <span>Kapittel</span>
+          <select id="chapterSelect"></select>
+        </label>
+
+        <div class="tabs" id="typeTabs">
+          <button class="tab active" data-type="gloser" type="button">Gloser</button>
+          <button class="tab" data-type="setninger" type="button">Setninger</button>
+        </div>
+
+        <div class="actions">
+          <button id="shuffleBtn" class="btn ghost" type="button">Stokk om</button>
+          <button id="hideBtn" class="btn ghost" type="button">Skjul alt</button>
+          <button id="revealBtn" class="btn primary" type="button">Vis alt</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-note" id="extraNote">
+      <span>Blandet liste — gloser og setninger sammen. Trykk på en rad for å fjerne den fra Ekstra pugg.</span>
+      <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
+    </div>
+
+    <p class="hint">Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne).</p>
+    <p class="hint2">Ekstra pugg lagres i denne nettleseren, og er din egen — den følger ikke med til andre enheter.</p>
+
+    <div class="board" id="board">
+      <div class="grid" id="grid"></div>
+      <div class="cover" id="cover">
+        <div class="cover-hint" id="coverHint">dra ↓ eller trykk</div>
+        <div class="handle" id="handle" role="slider" tabindex="0"
+             aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="counter" id="counter"></p>
+    <p class="footer-tip">Norsk til venstre er alltid synlig. Portugisisk og uttale ligger under bølgen.</p>
+  </div>
+
+</div>
+
+<script>
+"use strict";
+
+const STORAGE_KEY = 'ekstra-pugg-v1';
+const DATA_FILE = 'pensum.md';
+
+const statusBox = document.getElementById('statusBox');
+const ui = document.getElementById('ui');
+const chapterSelect = document.getElementById('chapterSelect');
+const typeTabs = document.getElementById('typeTabs');
+const extraNote = document.getElementById('extraNote');
+const clearExtraBtn = document.getElementById('clearExtraBtn');
+const grid = document.getElementById('grid');
+const board = document.getElementById('board');
+const cover = document.getElementById('cover');
+const coverHint = document.getElementById('coverHint');
+const handle = document.getElementById('handle');
+const counterEl = document.getElementById('counter');
+const shuffleBtn = document.getElementById('shuffleBtn');
+const hideBtn = document.getElementById('hideBtn');
+const revealBtn = document.getElementById('revealBtn');
+
+let SECTIONS = [];
+let sectionIndex = 0;
+let currentType = 'gloser';
+let viewingExtra = false;
+let currentList = [];
+let rowBottoms = [];
+let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
+let revealY = 0;
+let markedItems = {};
+let ekstraOption = null;
+const renderedItemsById = new Map();
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+/* ---------- Markdown-tolking ---------- */
+
+const TABLE_HEADER = /^\|\s*Norsk\s*\|\s*Portugisisk\s*\|\s*Uttale\s*\|/i;
+
+function parsePensum(text){
+  const lines = text.split(/\r?\n/);
+  const sections = [];
+  const warnings = [];
+  let section = null;
+  let bucket = null;
+
+  let i = 0;
+  while(i < lines.length){
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if(trimmed.startsWith('## ')){
+      section = { title: trimmed.slice(3).trim(), gloser: [], setninger: [] };
+      sections.push(section);
+      bucket = null;
+      i++; continue;
+    }
+
+    if(trimmed === '**Gloser**'){ bucket = 'gloser'; i++; continue; }
+    if(trimmed === '**Setninger**'){ bucket = 'setninger'; i++; continue; }
+    if(trimmed.startsWith('**Infinitiv')){ bucket = 'gloser'; i++; continue; }
+    if(trimmed === '**Eksempler**'){ bucket = 'setninger'; i++; continue; }
+
+    if(TABLE_HEADER.test(trimmed)){
+      const startLine = i + 1;
+      i += 2; // hopp over overskrift + skillelinje
+      let rowCount = 0;
+      while(i < lines.length && lines[i].trim().startsWith('|')){
+        const parts = lines[i].trim().split('|').slice(1, -1).map(p => p.trim());
+        if(parts.length === 3 && section && bucket){
+          let [norsk, port, uttale] = parts;
+          if(uttale.startsWith('[') && uttale.endsWith(']')){
+            uttale = uttale.slice(1, -1);
+          }
+          if(norsk && port){
+            section[bucket].push({ norsk, port, uttale });
+            rowCount++;
+          }
+        } else if(parts.length !== 3 && section){
+          warnings.push('«' + section.title + '» (linje ' + (i + 1) + '): raden har ikke tre kolonner.');
+        }
+        i++;
+      }
+      if(rowCount === 0 && section){
+        warnings.push('«' + section.title + '» (linje ' + startLine + '): tabellen ga ingen rader.');
+      }
+      continue;
+    }
+
+    i++;
+  }
+
+  return { sections: sections.filter(s => s.gloser.length || s.setninger.length), warnings };
+}
+
+/* ---------- Lagring (per nettleser) ---------- */
+
+function loadMarked(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    markedItems = raw ? JSON.parse(raw) : {};
+  }catch(e){
+    markedItems = {};
+  }
+}
+
+function persistMarked(){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems));
+  }catch(e){ /* privat modus e.l. — lista lever da bare i denne økta */ }
+}
+
+/* ---------- Bygging av lister ---------- */
+
+function buildItems(sIdx, type){
+  const section = SECTIONS[sIdx];
+  return (section[type] || []).map(row => ({
+    id: section.title + '::' + type + '::' + row.norsk + '::' + row.port,
+    norsk: row.norsk, port: row.port, uttale: row.uttale,
+    chapterTitle: section.title, type: type
+  }));
+}
+
+function updateEkstraLabel(){
+  if(ekstraOption){
+    ekstraOption.textContent = '★ Ekstra pugg (' + Object.keys(markedItems).length + ')';
+  }
+}
+
+function buildChapterOptions(){
+  chapterSelect.innerHTML = '';
+  ekstraOption = document.createElement('option');
+  ekstraOption.value = 'ekstra';
+  chapterSelect.appendChild(ekstraOption);
+  updateEkstraLabel();
+
+  const chapters = document.createElement('optgroup');
+  chapters.label = 'Kapitler';
+  const appendices = document.createElement('optgroup');
+  appendices.label = 'Appendiks';
+
+  SECTIONS.forEach((s, i) => {
+    const opt = document.createElement('option');
+    opt.value = String(i);
+    opt.textContent = s.title;
+    (s.title.toLowerCase().startsWith('appendiks') ? appendices : chapters).appendChild(opt);
+  });
+
+  if(chapters.children.length) chapterSelect.appendChild(chapters);
+  if(appendices.children.length) chapterSelect.appendChild(appendices);
+  chapterSelect.value = '0';
+}
+
+function toggleMark(item){
+  const wasMarked = !!markedItems[item.id];
+  if(wasMarked){ delete markedItems[item.id]; }
+  else { markedItems[item.id] = item; }
+  persistMarked();
+  updateEkstraLabel();
+
+  if(viewingExtra){ loadList(); return; }
+
+  const nowMarked = !wasMarked;
+  grid.querySelectorAll('.cell').forEach(el => {
+    if(el.dataset.id === item.id) el.classList.toggle('marked', nowMarked);
+  });
+}
+
+function loadList(){
+  if(viewingExtra){
+    currentList = Object.values(markedItems);
+    typeTabs.style.display = 'none';
+    extraNote.style.display = 'flex';
+  } else {
+    currentList = buildItems(sectionIndex, currentType);
+    typeTabs.style.display = 'flex';
+    extraNote.style.display = 'none';
+  }
+  renderGrid();
+  requestAnimationFrame(() => { measure(); setReveal(0, false); });
+}
+
+function renderGrid(){
+  renderedItemsById.clear();
+  if(currentList.length === 0){
+    const msg = viewingExtra
+      ? 'Ekstra pugg er tom. Trykk på et norsk ord i et kapittel for å legge det hit.'
+      : 'Ingen rader her.';
+    grid.innerHTML = '<p style="padding:20px;color:var(--ink-soft);">' + msg + '</p>';
+    return;
+  }
+  let html = '';
+  currentList.forEach((item, i) => {
+    renderedItemsById.set(item.id, item);
+    const alt = (i % 2 === 1) ? ' row-alt' : '';
+    const marked = markedItems[item.id] ? ' marked' : '';
+    const srcTag = viewingExtra
+      ? '<div class="src-tag">' + escapeHtml(item.chapterTitle) + ' · ' + (item.type === 'gloser' ? 'glose' : 'setning') + '</div>'
+      : '';
+    const idAttr = escapeHtml(item.id);
+    html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '">'
+          + escapeHtml(item.norsk) + srcTag + '</div>';
+    html += '<div class="cell cell-pt' + alt + marked + '" data-id="' + idAttr + '">'
+          + '<div class="pt">' + escapeHtml(item.port) + '</div>'
+          + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
+  });
+  grid.innerHTML = html;
+}
+
+/* ---------- Bølgen ---------- */
+
+function measure(){
+  const boardRect = board.getBoundingClientRect();
+  const ptCells = grid.querySelectorAll('.cell-pt');
+  const noCells = grid.querySelectorAll('.cell-no');
+  if(ptCells.length === 0){
+    overlayLeft = 0; overlayWidth = 0; totalHeight = 0; rowBottoms = [];
+    cover.style.width = '0px'; cover.style.height = '0px';
+    return;
+  }
+  const firstPtRect = ptCells[0].getBoundingClientRect();
+  overlayLeft = firstPtRect.left - boardRect.left;
+  overlayWidth = boardRect.right - firstPtRect.left;
+  totalHeight = board.offsetHeight;
+
+  rowBottoms = [];
+  for(let k = 0; k < ptCells.length; k++){
+    const r1 = noCells[k].getBoundingClientRect();
+    const r2 = ptCells[k].getBoundingClientRect();
+    rowBottoms.push(Math.max(r1.bottom, r2.bottom) - boardRect.top);
+  }
+  cover.style.left = overlayLeft + 'px';
+  cover.style.width = overlayWidth + 'px';
+  handle.setAttribute('aria-valuemax', String(Math.round(totalHeight)));
+}
+
+function clamp(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
+
+function setReveal(y, animated){
+  revealY = clamp(y, 0, totalHeight);
+  cover.classList.toggle('animated', !!animated);
+  cover.style.top = revealY + 'px';
+  cover.style.height = Math.max(0, totalHeight - revealY) + 'px';
+  coverHint.style.display = (totalHeight - revealY) > 46 ? 'flex' : 'none';
+  handle.setAttribute('aria-valuenow', String(Math.round(revealY)));
+
+  const revealed = rowBottoms.filter(b => b <= revealY + 0.5).length;
+  counterEl.textContent = rowBottoms.length ? (revealed + ' av ' + rowBottoms.length + ' avslørt') : '';
+}
+
+function stepReveal(){
+  const next = rowBottoms.find(b => b > revealY + 0.5);
+  setReveal(next !== undefined ? next : totalHeight, true);
+}
+
+let dragging = false, dragStartY = 0, dragStartReveal = 0, moved = 0;
+
+function onPointerDown(e){
+  dragging = true; moved = 0;
+  dragStartY = e.clientY; dragStartReveal = revealY;
+  cover.classList.remove('animated');
+  try{ e.currentTarget.setPointerCapture(e.pointerId); }catch(err){}
+}
+function onPointerMove(e){
+  if(!dragging) return;
+  const delta = e.clientY - dragStartY;
+  moved = Math.abs(delta);
+  setReveal(dragStartReveal + delta, false);
+}
+function onPointerUp(){
+  if(!dragging) return;
+  dragging = false;
+  if(moved < 6) stepReveal();
+}
+[cover, handle].forEach(el => {
+  el.addEventListener('pointerdown', onPointerDown);
+  el.addEventListener('pointermove', onPointerMove);
+  el.addEventListener('pointerup', onPointerUp);
+  el.addEventListener('pointercancel', onPointerUp);
+});
+
+handle.addEventListener('keydown', (e) => {
+  const step = 34;
+  if(e.key === 'ArrowDown' || e.key === 'PageDown'){ setReveal(revealY + step, true); e.preventDefault(); }
+  else if(e.key === 'ArrowUp' || e.key === 'PageUp'){ setReveal(revealY - step, true); e.preventDefault(); }
+  else if(e.key === 'Home'){ setReveal(0, true); e.preventDefault(); }
+  else if(e.key === 'End'){ setReveal(totalHeight, true); e.preventDefault(); }
+  else if(e.key === 'Enter' || e.key === ' '){ stepReveal(); e.preventDefault(); }
+});
+
+/* ---------- Kontroller ---------- */
+
+grid.addEventListener('click', (e) => {
+  const cellNo = e.target.closest('.cell-no');
+  if(!cellNo) return;
+  const item = renderedItemsById.get(cellNo.dataset.id);
+  if(item) toggleMark(item);
+});
+
+chapterSelect.addEventListener('change', () => {
+  const val = chapterSelect.value;
+  if(val === 'ekstra'){ viewingExtra = true; }
+  else { viewingExtra = false; sectionIndex = Number(val); }
+  loadList();
+});
+
+typeTabs.addEventListener('click', (e) => {
+  const btn = e.target.closest('.tab');
+  if(!btn) return;
+  currentType = btn.dataset.type;
+  typeTabs.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === btn));
+  loadList();
+});
+
+shuffleBtn.addEventListener('click', () => {
+  for(let i = currentList.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [currentList[i], currentList[j]] = [currentList[j], currentList[i]];
+  }
+  renderGrid();
+  requestAnimationFrame(() => { measure(); setReveal(0, true); });
+});
+
+hideBtn.addEventListener('click', () => setReveal(0, true));
+revealBtn.addEventListener('click', () => setReveal(totalHeight, true));
+
+clearExtraBtn.addEventListener('click', () => {
+  if(Object.keys(markedItems).length === 0) return;
+  if(confirm('Tøm hele Ekstra pugg-lista?')){
+    markedItems = {};
+    persistMarked();
+    updateEkstraLabel();
+    loadList();
+  }
+});
+
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { measure(); setReveal(revealY, false); }, 150);
+});
+
+if(document.fonts && document.fonts.ready){
+  document.fonts.ready.then(() => { measure(); setReveal(revealY, false); });
+}
+
+/* ---------- Oppstart ---------- */
+
+function showError(title, bodyHtml){
+  statusBox.innerHTML = '<h2>' + escapeHtml(title) + '</h2>' + bodyHtml;
+  statusBox.style.display = 'block';
+  ui.style.display = 'none';
+}
+
+async function init(){
+  loadMarked();
+
+  let text;
+  try{
+    const res = await fetch(DATA_FILE, { cache: 'no-cache' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    text = await res.text();
+  }catch(err){
+    if(location.protocol === 'file:'){
+      showError('Sida må ligge på nett',
+        '<p>Nettleseren nekter å hente <code>pensum.md</code> når fila åpnes direkte fra disken. ' +
+        'Legg begge filene i GitHub-repoet og åpne sida via GitHub Pages-adressen.</p>');
+    } else {
+      showError('Fant ikke pensum.md',
+        '<p>Sjekk at <code>pensum.md</code> ligger i samme mappe som <code>index.html</code> i repoet.</p>' +
+        '<p>Teknisk melding: ' + escapeHtml(String(err.message || err)) + '</p>');
+    }
+    return;
+  }
+
+  const { sections, warnings } = parsePensum(text);
+
+  if(sections.length === 0){
+    showError('Ingen kapitler funnet i pensum.md',
+      '<p>Fila ble lastet, men ingen tabeller ble gjenkjent. Hvert kapittel må starte med ' +
+      '<code>## Tittel</code>, og hver tabell må ha overskriftsrada ' +
+      '<code>| Norsk | Portugisisk | Uttale |</code>.</p>');
+    return;
+  }
+
+  SECTIONS = sections;
+  buildChapterOptions();
+
+  statusBox.style.display = 'none';
+  ui.style.display = 'block';
+
+  if(warnings.length){
+    statusBox.style.display = 'block';
+    statusBox.innerHTML = '<h2>Noen rader ble hoppet over</h2><p>' +
+      warnings.slice(0, 8).map(escapeHtml).join('<br>') + '</p>';
+  }
+
+  loadList();
+}
+
+init();
+</script>
+</body>
+</html>
