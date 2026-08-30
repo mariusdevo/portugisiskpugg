@@ -110,8 +110,8 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
   font-family:'Fraunces',Georgia,serif;font-size:1.1rem;color:var(--coral-dark);
   margin:0 0 8px;font-weight:600;
 }
-.status code{
-  font-family:'IBM Plex Mono',monospace;font-size:0.85rem;
+code{
+  font-family:'IBM Plex Mono',monospace;font-size:0.85em;
   background:rgba(11,59,68,0.07);padding:2px 6px;border-radius:5px;
 }
 
@@ -192,6 +192,40 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 @media (prefers-reduced-motion: reduce){
   *{transition:none !important;animation:none !important;}
 }
+
+#printView{display:none;}
+
+@media print{
+  .app{display:none;}
+  #printView{
+    display:block;color:#1B2430;font-family:'Inter',sans-serif;
+  }
+  #printView h1{
+    font-family:'Fraunces',Georgia,serif;font-size:20pt;color:#0B3B44;margin:0 0 14pt;
+  }
+  #printView h2{
+    font-family:'Fraunces',Georgia,serif;font-size:14pt;color:#C74E67;
+    margin:20pt 0 4pt;break-after:avoid;
+  }
+  #printView h2:first-of-type{margin-top:0;}
+  #printView h3{
+    font-family:'Inter',sans-serif;font-size:10pt;text-transform:uppercase;letter-spacing:0.04em;
+    color:#125863;margin:8pt 0 4pt;break-after:avoid;
+  }
+  #printView table{
+    width:100%;border-collapse:collapse;margin:0 0 8pt;font-size:9.5pt;
+  }
+  #printView th{
+    text-align:left;font-size:8pt;text-transform:uppercase;letter-spacing:0.03em;
+    color:#5B6472;border-bottom:1px solid rgba(27,36,48,0.3);padding:3pt 6pt;
+  }
+  #printView td{
+    padding:3pt 6pt;border-bottom:1px solid rgba(27,36,48,0.12);vertical-align:top;
+  }
+  #printView td:nth-child(3){font-family:'IBM Plex Mono',monospace;color:#125863;}
+  #printView tr{break-inside:avoid;}
+  @page{margin:16mm;}
+}
 </style>
 </head>
 <body>
@@ -225,6 +259,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om</button>
           <button id="hideBtn" class="btn ghost" type="button">Skjul alt</button>
           <button id="revealBtn" class="btn primary" type="button">Vis alt</button>
+          <button id="pdfBtn" class="btn ghost" type="button">Last ned PDF</button>
         </div>
       </div>
     </div>
@@ -234,6 +269,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
+    <p class="hint">Teksten i klammer, f.eks. <code>[o NO-mi]</code>, er en norsk-tilpasset uttale — ikke offisiell lydskrift. Stavelser er delt med bindestrek, og STORE BOKSTAVER viser hvilken stavelse som skal trykkes. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt, og skråstrek skiller hankjønns- og hunkjønnsform.</p>
     <p class="hint">Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne).</p>
 
     <div class="board" id="board">
@@ -249,6 +285,8 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
   </div>
 
 </div>
+
+<div id="printView"></div>
 
 <script>
 "use strict";
@@ -271,6 +309,8 @@ const counterEl = document.getElementById('counter');
 const shuffleBtn = document.getElementById('shuffleBtn');
 const hideBtn = document.getElementById('hideBtn');
 const revealBtn = document.getElementById('revealBtn');
+const pdfBtn = document.getElementById('pdfBtn');
+const printView = document.getElementById('printView');
 
 let SECTIONS = [];
 let sectionIndex = 0;
@@ -614,6 +654,29 @@ shuffleBtn.addEventListener('click', () => {
 
 hideBtn.addEventListener('click', () => setReveal(0, true));
 revealBtn.addEventListener('click', () => setReveal(totalHeight, true));
+
+function buildPrintView(){
+  let html = '<h1>Onda — brasiliansk portugisisk</h1>';
+  SECTIONS.forEach(section => {
+    html += '<h2>' + escapeHtml(section.title) + '</h2>';
+    [['gloser', 'Gloser'], ['setninger', 'Setninger']].forEach(([key, label]) => {
+      const rows = section[key];
+      if(!rows || !rows.length) return;
+      html += '<h3>' + label + '</h3><table><thead><tr><th>Norsk</th><th>Portugisisk</th><th>Uttale</th></tr></thead><tbody>';
+      rows.forEach(row => {
+        html += '<tr><td>' + escapeHtml(row.norsk) + '</td><td>' + escapeHtml(row.port) + '</td><td>['
+              + escapeHtml(row.uttale) + ']</td></tr>';
+      });
+      html += '</tbody></table>';
+    });
+  });
+  printView.innerHTML = html;
+}
+
+pdfBtn.addEventListener('click', () => {
+  buildPrintView();
+  window.print();
+});
 
 clearExtraBtn.addEventListener('click', () => {
   if(Object.keys(markedItems).length === 0) return;
