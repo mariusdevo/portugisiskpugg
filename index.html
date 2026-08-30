@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Skjul &amp; avslør — brasiliansk portugisisk</title>
+<title>Onda — brasiliansk portugisisk</title>
 
 <meta name="theme-color" content="#0B3B44" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-title" content="Pugg" />
+<meta name="apple-mobile-web-app-title" content="Onda" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<meta name="description" content="Pugg brasiliansk portugisisk muntlig: norsk vises, portugisisk og uttale skjules under bølgen." />
+<meta name="description" content="Onda — pugg brasiliansk portugisisk muntlig: norsk vises, portugisisk og uttale skjules under bølgen." />
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
@@ -45,21 +45,14 @@ body{
 
 .app{max-width:760px;margin:0 auto;}
 
-.topbar{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;}
-
-.brand-mark{
-  flex:0 0 auto;width:46px;height:46px;border-radius:14px;
-  background:linear-gradient(160deg, var(--ocean-light), var(--ocean-deep));
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 14px -6px rgba(11,59,68,0.5);
-}
-.brand-mark svg{width:24px;height:24px;}
+.topbar{margin-bottom:22px;}
 
 h1{
   font-family:'Fraunces', Georgia, serif;font-weight:600;
   font-size:clamp(1.5rem, 4.2vw, 2.1rem);color:var(--ocean-deep);
-  margin:0 0 2px;letter-spacing:-0.01em;
+  margin:0 0 4px;letter-spacing:-0.01em;
 }
+.wave-underline{display:block;margin:0 0 8px;}
 .tagline{margin:0;color:var(--ink-soft);font-size:0.95rem;}
 
 .panel{
@@ -166,27 +159,27 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 .cover.animated{transition:top 0.35s cubic-bezier(.2,.8,.2,1), height 0.35s cubic-bezier(.2,.8,.2,1);}
 
 .cover::before{
-  content:"";position:absolute;top:-11px;left:-4px;right:-4px;height:22px;
-  background-image:radial-gradient(circle at 11px 11px, transparent 10.4px, var(--ocean-light) 11px);
-  background-size:22px 22px;background-repeat:repeat-x;opacity:0.95;
+  content:"";pointer-events:none;
+  position:absolute;top:0;left:0;right:0;height:18px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18' viewBox='0 0 44 18'%3E%3Cpath d='M0 9 Q11 1 22 9 T44 9 V18 H0 Z' fill='%231C7A86'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-size:44px 18px;
+  opacity:0.95;
 }
 
 .cover-hint{
-  position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  position:absolute;top:24px;left:50%;transform:translateX(-50%);
   color:rgba(255,255,255,0.88);font-size:0.72rem;letter-spacing:0.03em;
   white-space:nowrap;pointer-events:none;font-weight:500;
   display:flex;align-items:center;gap:6px;
 }
 
 .handle{
-  position:absolute;top:-10px;left:50%;transform:translateX(-50%);
-  width:64px;height:22px;border-radius:999px;background:var(--sand);
-  box-shadow:0 3px 8px rgba(11,59,68,0.35);
-  display:flex;align-items:center;justify-content:center;gap:4px;cursor:grab;
+  position:absolute;top:2px;left:50%;transform:translateX(-50%);
+  width:40px;height:6px;border-radius:999px;
+  background:rgba(244,238,223,0.9);cursor:grab;
 }
 .handle:active{cursor:grabbing;}
-.handle .dot{width:4px;height:4px;border-radius:50%;background:var(--ocean-deep);}
-.handle:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
+.handle:focus-visible{outline:2px solid var(--coral);outline-offset:3px;}
 
 .counter{text-align:center;color:var(--ink-soft);font-size:0.85rem;margin-top:14px;}
 .footer-tip{text-align:center;color:var(--ink-soft);font-size:0.78rem;margin-top:6px;opacity:0.8;}
@@ -206,16 +199,11 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 <div class="app">
 
   <div class="topbar">
-    <div class="brand-mark">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M2 19c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" stroke="#F4EEDF" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
-      </svg>
-    </div>
-    <div>
-      <h1>Skjul &amp; avslør</h1>
-      <p class="tagline">Dra bølgen ned, trykk på den, eller bruk mellomromstasten — for å avsløre svaret, rad for rad.</p>
-    </div>
+    <h1>Onda</h1>
+    <svg class="wave-underline" width="90" height="14" viewBox="0 0 90 14" aria-hidden="true">
+      <path d="M1 7 Q12 1 23 7 T45 7 T67 7 T89 7" fill="none" stroke="#1C7A86" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
   </div>
 
   <div id="statusBox" class="status">Laster pensum …</div>
@@ -254,14 +242,12 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
       <div class="cover" id="cover">
         <div class="cover-hint" id="coverHint">dra ↓, trykk, eller mellomrom ⎵</div>
         <div class="handle" id="handle" role="slider" tabindex="0"
-             aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>
+             aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0"></div>
       </div>
     </div>
 
     <p class="counter" id="counter"></p>
-    <p class="footer-tip">Norsk til venstre er alltid synlig. Portugisisk og uttale ligger under bølgen.</p>
+    <p class="footer-tip">Norsk til venstre er alltid synlig. Dra, trykk, eller bruk mellomromstasten for å avsløre portugisisk og uttale under bølgen.</p>
   </div>
 
 </div>

@@ -1,6 +1,8 @@
-# Skjul & avslør — brasiliansk portugisisk
+# Onda — brasiliansk portugisisk
 
-Puggeverktøy for muntlig trening. Norsk står alltid synlig; portugisisk og uttale ligger skjult under en «bølge» du drar eller trykker nedover, rad for rad.
+Puggeverktøy for muntlig trening. Norsk står alltid synlig; portugisisk og uttale ligger skjult under en «bølge» (*onda*) du drar, trykker eller bruker tastaturet på for å avsløre, rad for rad.
+
+Nettsiden ligger på **https://mariusdevo.github.io/portugisiskpugg/**.
 
 ## Filer
 
@@ -12,23 +14,7 @@ Puggeverktøy for muntlig trening. Norsk står alltid synlig; portugisisk og utt
 
 Appen leser `pensum.md` hver gang sida lastes. Du trenger aldri å røre `index.html` for å legge til nytt stoff.
 
-## Sette opp nettsida (én gang)
-
-1. Lag et nytt **public** repo på GitHub (privat repo krever betalt plan for Pages).
-2. Last opp `index.html`, `pensum.md` og `README.md` til rota av repoet.
-3. Gå til **Settings → Pages**.
-4. Under *Source*, velg branch `main` og mappe `/ (root)`. Trykk **Save**.
-5. Vent et par minutter. Sida ligger da på:
-   `https://BRUKERNAVN.github.io/REPO-NAVN/`
-
 På mobilen: åpne adressen, og velg «Legg til på Hjem-skjerm» i nettlesermenyen. Da får du et ikon som åpner verktøyet i fullskjerm.
-
-### Eget domene (valgfritt)
-
-1. Kjøp domenet (f.eks. hos Domeneshop eller Porkbun).
-2. **Settings → Pages → Custom domain**: skriv inn domenet og trykk Save.
-3. Hos domeneleverandøren, sett DNS-pekerne GitHub oppgir på samme side.
-4. Kryss av for **Enforce HTTPS** når det blir tilgjengelig (kan ta en time).
 
 ## Legge til nye gloser
 
