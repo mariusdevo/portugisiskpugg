@@ -214,7 +214,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
     </div>
     <div>
       <h1>Skjul &amp; avslør</h1>
-      <p class="tagline">Dra bølgen ned — eller trykk på den — for å avsløre svaret, rad for rad.</p>
+      <p class="tagline">Dra bølgen ned, trykk på den, eller bruk mellomromstasten — for å avsløre svaret, rad for rad.</p>
     </div>
   </div>
 
@@ -252,7 +252,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
     <div class="board" id="board">
       <div class="grid" id="grid"></div>
       <div class="cover" id="cover">
-        <div class="cover-hint" id="coverHint">dra ↓ eller trykk</div>
+        <div class="cover-hint" id="coverHint">dra ↓, trykk, eller mellomrom ⎵</div>
         <div class="handle" id="handle" role="slider" tabindex="0"
              aria-label="Avslør oversettelser" aria-valuemin="0" aria-valuenow="0">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -519,9 +519,35 @@ function setReveal(y, animated){
   counterEl.textContent = rowBottoms.length ? (revealed + ' av ' + rowBottoms.length + ' avslørt') : '';
 }
 
+function getBoundaries(){
+  const arr = [0, ...rowBottoms];
+  if(totalHeight - (arr[arr.length - 1] || 0) > 1) arr.push(totalHeight);
+  return arr;
+}
+
 function stepReveal(){
-  const next = rowBottoms.find(b => b > revealY + 0.5);
+  const next = getBoundaries().find(b => b > revealY + 0.5);
   setReveal(next !== undefined ? next : totalHeight, true);
+}
+
+function stepRevealBack(){
+  const bs = getBoundaries();
+  let prev = 0;
+  for(const b of bs){
+    if(b < revealY - 0.5) prev = b; else break;
+  }
+  setReveal(prev, true);
+}
+
+function snapToNearest(y){
+  const bs = getBoundaries();
+  let closest = bs[0] || 0;
+  let bestDist = Math.abs(y - closest);
+  bs.forEach(b => {
+    const d = Math.abs(y - b);
+    if(d < bestDist){ bestDist = d; closest = b; }
+  });
+  return closest;
 }
 
 let dragging = false, dragStartY = 0, dragStartReveal = 0, moved = 0;
@@ -542,6 +568,7 @@ function onPointerUp(){
   if(!dragging) return;
   dragging = false;
   if(moved < 6) stepReveal();
+  else setReveal(snapToNearest(revealY), true);
 }
 [cover, handle].forEach(el => {
   el.addEventListener('pointerdown', onPointerDown);
@@ -551,12 +578,21 @@ function onPointerUp(){
 });
 
 handle.addEventListener('keydown', (e) => {
-  const step = 34;
-  if(e.key === 'ArrowDown' || e.key === 'PageDown'){ setReveal(revealY + step, true); e.preventDefault(); }
-  else if(e.key === 'ArrowUp' || e.key === 'PageUp'){ setReveal(revealY - step, true); e.preventDefault(); }
+  if(e.key === 'ArrowDown' || e.key === 'PageDown'){ stepReveal(); e.preventDefault(); }
+  else if(e.key === 'ArrowUp' || e.key === 'PageUp'){ stepRevealBack(); e.preventDefault(); }
   else if(e.key === 'Home'){ setReveal(0, true); e.preventDefault(); }
   else if(e.key === 'End'){ setReveal(totalHeight, true); e.preventDefault(); }
   else if(e.key === 'Enter' || e.key === ' '){ stepReveal(); e.preventDefault(); }
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.code !== 'Space' && e.key !== ' ') return;
+  if(e.target === handle) return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
+  if(totalHeight === 0) return;
+  stepReveal();
+  e.preventDefault();
 });
 
 /* ---------- Kontroller ---------- */
