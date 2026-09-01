@@ -962,6 +962,14 @@ document.addEventListener('keydown', (e) => {
   e.preventDefault();
 });
 
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 's' && e.key !== 'S') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
+  shuffleBtn.click();
+  e.preventDefault();
+});
+
 /* ---------- Kontroller ---------- */
 
 grid.addEventListener('click', (e) => {
