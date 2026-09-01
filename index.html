@@ -149,6 +149,23 @@ code{
   font-size:0.82rem;color:var(--ocean);margin-top:3px;letter-spacing:0.01em;
 }
 
+.cell-pt.has-examples{cursor:pointer;border-radius:6px;transition:background-color .12s ease;}
+.cell-pt.has-examples:hover{background-color:rgba(28,122,134,0.08);}
+.example-icon{font-size:0.72rem;margin-left:6px;opacity:0.7;vertical-align:middle;}
+
+.examples-panel{
+  grid-column:1 / -1;background:rgba(28,122,134,0.07);border-radius:10px;
+  padding:10px 14px;margin:2px 0 10px;display:flex;flex-direction:column;gap:8px;
+  position:relative;z-index:2;
+}
+.examples-panel.row-alt{background:rgba(28,122,134,0.1);}
+.example-row .example-norsk{font-size:0.82rem;color:var(--ink-soft);}
+.example-row .example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
+.example-row .example-ut{
+  font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
+  font-size:0.78rem;color:var(--ocean);
+}
+
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
 .cell-person{font-weight:600;font-size:0.98rem;color:var(--ink);}
 .verb-tag{
@@ -349,6 +366,7 @@ code{
 
 const STORAGE_KEY = 'ekstra-pugg-v1';
 const DATA_FILE = 'pensum.md';
+const EXAMPLES_FILE = 'eksempler.json';
 
 const statusBox = document.getElementById('statusBox');
 const ui = document.getElementById('ui');
@@ -379,6 +397,8 @@ let currentType = 'gloser';
 let viewingExtra = false;
 let currentList = [];
 let boyningGroups = [];
+let EXAMPLES = {};
+let expandedExampleIds = new Set();
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -585,11 +605,36 @@ function toggleMark(item){
   persistMarked();
   updateEkstraLabel();
 
-  if(viewingExtra){ loadList(); return; }
+  if(viewingExtra){ removeFromExtraKeepingReveal(item); return; }
 
   const nowMarked = !wasMarked;
   grid.querySelectorAll('.cell').forEach(el => {
     if(el.dataset.id === item.id) el.classList.toggle('marked', nowMarked);
+  });
+}
+
+function removeFromExtraKeepingReveal(item){
+  const oldIndex = currentList.findIndex(i => i.id === item.id);
+  const oldRevealY = revealY;
+  let anchorTop = null, anchorBottom = null;
+  if(oldIndex >= 0){
+    anchorBottom = rowBottoms[oldIndex];
+    anchorTop = oldIndex > 0 ? rowBottoms[oldIndex - 1] : 0;
+  }
+
+  currentList = currentList.filter(i => i.id !== item.id);
+  expandedExampleIds.delete(item.id);
+  renderGrid();
+
+  requestAnimationFrame(() => {
+    measure();
+    let newRevealY = oldRevealY;
+    if(anchorBottom !== null){
+      const rowHeight = anchorBottom - anchorTop;
+      if(oldRevealY >= anchorBottom - 0.5) newRevealY = oldRevealY - rowHeight;
+      else if(oldRevealY > anchorTop + 0.5) newRevealY = anchorTop;
+    }
+    setReveal(newRevealY, false);
   });
 }
 
@@ -702,13 +747,44 @@ function renderNormalGrid(){
       ? '<div class="src-tag">' + escapeHtml(item.chapterTitle) + ' · ' + (item.type === 'gloser' ? 'glose' : 'setning') + '</div>'
       : '';
     const idAttr = escapeHtml(item.id);
+    const examples = item.type === 'gloser' ? EXAMPLES[item.id] : null;
+    const exampleIcon = examples ? '<span class="example-icon" title="Se eksempelsetninger">💬</span>' : '';
     html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '">'
           + escapeHtml(item.norsk) + srcTag + '</div>';
-    html += '<div class="cell cell-pt' + alt + marked + '" data-id="' + idAttr + '">'
-          + '<div class="pt">' + escapeHtml(item.port) + '</div>'
+    html += '<div class="cell cell-pt' + alt + marked + (examples ? ' has-examples' : '') + '" data-id="' + idAttr + '">'
+          + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
+    if(examples && expandedExampleIds.has(item.id)){
+      html += '<div class="examples-panel' + alt + '">' + examples.map(ex =>
+        '<div class="example-row"><div class="example-norsk">' + escapeHtml(ex.norsk) + '</div>'
+        + '<div class="example-pt">' + escapeHtml(ex.port)
+        + ' <span class="example-ut">[' + escapeHtml(ex.uttale) + ']</span></div></div>'
+      ).join('') + '</div>';
+    }
   });
   grid.innerHTML = html;
+}
+
+function toggleExamples(id){
+  const idx = currentList.findIndex(item => item.id === id);
+  const isOpening = !expandedExampleIds.has(id);
+  const wasRevealed = idx >= 0 && revealY >= (rowBottoms[idx] || 0) - 0.5;
+  const keepReveal = revealY;
+  const oldTotalHeight = totalHeight;
+
+  if(isOpening) expandedExampleIds.add(id);
+  else expandedExampleIds.delete(id);
+
+  renderGrid();
+  requestAnimationFrame(() => {
+    measure();
+    if(wasRevealed && idx >= 0){
+      const delta = totalHeight - oldTotalHeight;
+      setReveal(Math.max(keepReveal + delta, rowBottoms[idx]), false);
+    } else {
+      setReveal(keepReveal, false);
+    }
+  });
 }
 
 function formCellHtml(form){
@@ -760,7 +836,12 @@ function measureNormal(){
   for(let k = 0; k < ptCells.length; k++){
     const r1 = noCells[k].getBoundingClientRect();
     const r2 = ptCells[k].getBoundingClientRect();
-    rowBottoms.push(Math.max(r1.bottom, r2.bottom) - boardRect.top);
+    let bottom = Math.max(r1.bottom, r2.bottom);
+    const next = ptCells[k].nextElementSibling;
+    if(next && next.classList.contains('examples-panel')){
+      bottom = Math.max(bottom, next.getBoundingClientRect().bottom);
+    }
+    rowBottoms.push(bottom - boardRect.top);
   }
   cover.style.left = overlayLeft + 'px';
   cover.style.width = overlayWidth + 'px';
@@ -881,13 +962,25 @@ document.addEventListener('keydown', (e) => {
   e.preventDefault();
 });
 
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 's' && e.key !== 'S') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
+  shuffleBtn.click();
+  e.preventDefault();
+});
+
 /* ---------- Kontroller ---------- */
 
 grid.addEventListener('click', (e) => {
   const cellNo = e.target.closest('.cell-no');
-  if(!cellNo) return;
-  const item = renderedItemsById.get(cellNo.dataset.id);
-  if(item) toggleMark(item);
+  if(cellNo){
+    const item = renderedItemsById.get(cellNo.dataset.id);
+    if(item) toggleMark(item);
+    return;
+  }
+  const cellPt = e.target.closest('.cell-pt.has-examples');
+  if(cellPt) toggleExamples(cellPt.dataset.id);
 });
 
 chapterSelect.addEventListener('change', () => {
@@ -917,12 +1010,21 @@ shuffleBtn.addEventListener('click', () => {
       [currentList[i], currentList[j]] = [currentList[j], currentList[i]];
     }
   }
+  expandedExampleIds.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 
-hideBtn.addEventListener('click', () => setReveal(0, true));
-revealBtn.addEventListener('click', () => setReveal(totalHeight, true));
+hideBtn.addEventListener('click', () => {
+  expandedExampleIds.clear();
+  renderGrid();
+  requestAnimationFrame(() => { measure(); setReveal(0, true); });
+});
+revealBtn.addEventListener('click', () => {
+  expandedExampleIds.clear();
+  renderGrid();
+  requestAnimationFrame(() => { measure(); setReveal(totalHeight, true); });
+});
 
 function buildPrintView(){
   let html = '<h1>Onda — brasiliansk portugisisk</h1>';
@@ -1008,6 +1110,11 @@ async function init(){
 
   SECTIONS = sections;
   buildChapterOptions();
+
+  try{
+    const exRes = await fetch(EXAMPLES_FILE, { cache: 'no-cache' });
+    if(exRes.ok) EXAMPLES = await exRes.json();
+  }catch(err){ /* valgfri fil — appen funker fint uten den */ }
 
   statusBox.style.display = 'none';
   ui.style.display = 'block';
