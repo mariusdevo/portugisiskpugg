@@ -605,11 +605,36 @@ function toggleMark(item){
   persistMarked();
   updateEkstraLabel();
 
-  if(viewingExtra){ loadList(); return; }
+  if(viewingExtra){ removeFromExtraKeepingReveal(item); return; }
 
   const nowMarked = !wasMarked;
   grid.querySelectorAll('.cell').forEach(el => {
     if(el.dataset.id === item.id) el.classList.toggle('marked', nowMarked);
+  });
+}
+
+function removeFromExtraKeepingReveal(item){
+  const oldIndex = currentList.findIndex(i => i.id === item.id);
+  const oldRevealY = revealY;
+  let anchorTop = null, anchorBottom = null;
+  if(oldIndex >= 0){
+    anchorBottom = rowBottoms[oldIndex];
+    anchorTop = oldIndex > 0 ? rowBottoms[oldIndex - 1] : 0;
+  }
+
+  currentList = currentList.filter(i => i.id !== item.id);
+  expandedExampleIds.delete(item.id);
+  renderGrid();
+
+  requestAnimationFrame(() => {
+    measure();
+    let newRevealY = oldRevealY;
+    if(anchorBottom !== null){
+      const rowHeight = anchorBottom - anchorTop;
+      if(oldRevealY >= anchorBottom - 0.5) newRevealY = oldRevealY - rowHeight;
+      else if(oldRevealY > anchorTop + 0.5) newRevealY = anchorTop;
+    }
+    setReveal(newRevealY, false);
   });
 }
 
