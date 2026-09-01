@@ -149,6 +149,22 @@ code{
   font-size:0.82rem;color:var(--ocean);margin-top:3px;letter-spacing:0.01em;
 }
 
+.cell-pt.has-examples{cursor:pointer;border-radius:6px;transition:background-color .12s ease;}
+.cell-pt.has-examples:hover{background-color:rgba(28,122,134,0.08);}
+.example-icon{font-size:0.72rem;margin-left:6px;opacity:0.7;vertical-align:middle;}
+
+.examples-panel{
+  grid-column:1 / -1;background:rgba(28,122,134,0.07);border-radius:10px;
+  padding:10px 14px;margin:2px 0 10px;display:flex;flex-direction:column;gap:8px;
+}
+.examples-panel.row-alt{background:rgba(28,122,134,0.1);}
+.example-row .example-norsk{font-size:0.82rem;color:var(--ink-soft);}
+.example-row .example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
+.example-row .example-ut{
+  font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
+  font-size:0.78rem;color:var(--ocean);
+}
+
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
 .cell-person{font-weight:600;font-size:0.98rem;color:var(--ink);}
 .verb-tag{
@@ -349,6 +365,7 @@ code{
 
 const STORAGE_KEY = 'ekstra-pugg-v1';
 const DATA_FILE = 'pensum.md';
+const EXAMPLES_FILE = 'eksempler.json';
 
 const statusBox = document.getElementById('statusBox');
 const ui = document.getElementById('ui');
@@ -379,6 +396,8 @@ let currentType = 'gloser';
 let viewingExtra = false;
 let currentList = [];
 let boyningGroups = [];
+let EXAMPLES = {};
+let expandedExampleIds = new Set();
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -702,13 +721,34 @@ function renderNormalGrid(){
       ? '<div class="src-tag">' + escapeHtml(item.chapterTitle) + ' · ' + (item.type === 'gloser' ? 'glose' : 'setning') + '</div>'
       : '';
     const idAttr = escapeHtml(item.id);
+    const examples = item.type === 'gloser' ? EXAMPLES[item.id] : null;
+    const exampleIcon = examples ? '<span class="example-icon" title="Se eksempelsetninger">💬</span>' : '';
     html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '">'
           + escapeHtml(item.norsk) + srcTag + '</div>';
-    html += '<div class="cell cell-pt' + alt + marked + '" data-id="' + idAttr + '">'
-          + '<div class="pt">' + escapeHtml(item.port) + '</div>'
+    html += '<div class="cell cell-pt' + alt + marked + (examples ? ' has-examples' : '') + '" data-id="' + idAttr + '">'
+          + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
+    if(examples && expandedExampleIds.has(item.id)){
+      html += '<div class="examples-panel' + alt + '">' + examples.map(ex =>
+        '<div class="example-row"><div class="example-norsk">' + escapeHtml(ex.norsk) + '</div>'
+        + '<div class="example-pt">' + escapeHtml(ex.port)
+        + ' <span class="example-ut">[' + escapeHtml(ex.uttale) + ']</span></div></div>'
+      ).join('') + '</div>';
+    }
   });
   grid.innerHTML = html;
+}
+
+function toggleExamples(id){
+  const wasFullyRevealed = revealY >= totalHeight - 0.5;
+  const keepReveal = revealY;
+  if(expandedExampleIds.has(id)) expandedExampleIds.delete(id);
+  else expandedExampleIds.add(id);
+  renderGrid();
+  requestAnimationFrame(() => {
+    measure();
+    setReveal(wasFullyRevealed ? totalHeight : keepReveal, false);
+  });
 }
 
 function formCellHtml(form){
@@ -885,9 +925,13 @@ document.addEventListener('keydown', (e) => {
 
 grid.addEventListener('click', (e) => {
   const cellNo = e.target.closest('.cell-no');
-  if(!cellNo) return;
-  const item = renderedItemsById.get(cellNo.dataset.id);
-  if(item) toggleMark(item);
+  if(cellNo){
+    const item = renderedItemsById.get(cellNo.dataset.id);
+    if(item) toggleMark(item);
+    return;
+  }
+  const cellPt = e.target.closest('.cell-pt.has-examples');
+  if(cellPt) toggleExamples(cellPt.dataset.id);
 });
 
 chapterSelect.addEventListener('change', () => {
@@ -1008,6 +1052,11 @@ async function init(){
 
   SECTIONS = sections;
   buildChapterOptions();
+
+  try{
+    const exRes = await fetch(EXAMPLES_FILE, { cache: 'no-cache' });
+    if(exRes.ok) EXAMPLES = await exRes.json();
+  }catch(err){ /* valgfri fil — appen funker fint uten den */ }
 
   statusBox.style.display = 'none';
   ui.style.display = 'block';

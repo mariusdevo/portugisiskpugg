@@ -1,0 +1,94 @@
+{
+  "1. Om meg::gloser::navnet::o nome": [
+    { "norsk": "Navnet mitt er Maripus.", "port": "Meu nome é Maripus.", "uttale": "meo NO-mi Æ ma-RI-pos" },
+    { "norsk": "Hva heter du?", "port": "Qual é o seu nome?", "uttale": "KWAO Æ o seo NO-mi" }
+  ],
+  "1. Om meg::gloser::landet::o país": [
+    { "norsk": "Norge er et lite land.", "port": "A Noruega é um país pequeno.", "uttale": "a no-RWÆ-ga Æ ũ pa-IS pe-KE-no" },
+    { "norsk": "Jeg elsker landet mitt.", "port": "Eu amo meu país.", "uttale": "eo A-mo meo pa-IS" }
+  ],
+  "1. Om meg::gloser::byen::a cidade": [
+    { "norsk": "Byen er stor.", "port": "A cidade é grande.", "uttale": "a si-DA-dji Æ GRÃ-dji" },
+    { "norsk": "Jeg bor i en fin by.", "port": "Moro numa cidade legal.", "uttale": "MÅ-ro NŨ-ma si-DA-dji le-GAO" }
+  ],
+  "1. Om meg::gloser::Norge::a Noruega": [
+    { "norsk": "Jeg er fra Norge.", "port": "Sou da Noruega.", "uttale": "SO da no-RWÆ-ga" },
+    { "norsk": "Norge er vakkert.", "port": "A Noruega é linda.", "uttale": "a no-RWÆ-ga Æ LĨ-da" }
+  ],
+  "1. Om meg::gloser::norsk (mann / kvinne)::norueguês / norueguesa": [
+    { "norsk": "Jeg snakker norsk og engelsk.", "port": "Falo norueguês e inglês.", "uttale": "FA-lo no-rwe-GES i ĩ-GLES" },
+    { "norsk": "Jeg er norsk.", "port": "Eu sou norueguês.", "uttale": "eo SO no-rwe-GES" }
+  ],
+  "1. Om meg::gloser::brasiliansk (m / k)::brasileiro / brasileira": [
+    { "norsk": "Han er brasiliansk.", "port": "Ele é brasileiro.", "uttale": "E-li Æ bra-zi-LEI-ro" },
+    { "norsk": "Hun er brasiliansk.", "port": "Ela é brasileira.", "uttale": "Æ-la Æ bra-zi-LEI-ra" }
+  ],
+  "1. Om meg::gloser::studenten::o estudante": [
+    { "norsk": "Jeg er student.", "port": "Sou estudante.", "uttale": "SO es-to-DÃ-tsji" },
+    { "norsk": "Hun er en flink student.", "port": "Ela é uma boa estudante.", "uttale": "Æ-la Æ Ũ-ma BO-a es-to-DÃ-tsji" }
+  ],
+  "1. Om meg::gloser::læreren (m / k)::o professor / a professora": [
+    { "norsk": "Hun er lærer.", "port": "Ela é professora.", "uttale": "Æ-la Æ pro-fe-SÅ-ra" },
+    { "norsk": "Han er lærer.", "port": "Ele é professor.", "uttale": "E-li Æ pro-fe-SOR" }
+  ],
+  "1. Om meg::gloser::medstudenten::o colega": [
+    { "norsk": "Han er kollegaen min.", "port": "Ele é meu colega.", "uttale": "E-li Æ meo ko-LÆ-ga" },
+    { "norsk": "Jeg studerer med en medstudent.", "port": "Estudo com um colega.", "uttale": "es-TO-do kõ ũ ko-LÆ-ga" }
+  ],
+  "1. Om meg::gloser::vennen (m / k)::o amigo / a amiga": [
+    { "norsk": "Vennen min.", "port": "Meu amigo.", "uttale": "meo a-MI-go" },
+    { "norsk": "Vennene deres.", "port": "Os amigos deles.", "uttale": "os a-MI-gos DE-lis" }
+  ],
+  "1. Om meg::gloser::mannen / kvinnen::o homem / a mulher": [
+    { "norsk": "Mannen er hyggelig.", "port": "O homem é simpático.", "uttale": "o Å-mẽi Æ sĩ-PA-tsji-ko" },
+    { "norsk": "Kvinnen heter Ana.", "port": "A mulher se chama Ana.", "uttale": "a mo-LJÆR si SJÃ-ma Ã-na" }
+  ],
+  "1. Om meg::gloser::språket::a língua": [
+    { "norsk": "Hvilke språk snakker du?", "port": "Que línguas você fala?", "uttale": "ki LĨ-gwas vo-SE FA-la" },
+    { "norsk": "Portugisisk er et vakkert språk.", "port": "Português é uma língua linda.", "uttale": "por-to-GES Æ Ũ-ma LĨ-gwa LĨ-da" }
+  ],
+  "1. Om meg::gloser::engelsk::o inglês": [
+    { "norsk": "Jeg snakker norsk og engelsk.", "port": "Falo norueguês e inglês.", "uttale": "FA-lo no-rwe-GES i ĩ-GLES" },
+    { "norsk": "Snakker du engelsk?", "port": "Você fala inglês?", "uttale": "vo-SE FA-la ĩ-GLES" }
+  ],
+  "1. Om meg::gloser::spansk::o espanhol": [
+    { "norsk": "Forstår du spansk?", "port": "Você entende espanhol?", "uttale": "vo-SE ẽ-TẼ-dji es-pa-NJÅO" },
+    { "norsk": "Jeg forstår ikke spansk.", "port": "Não entendo espanhol.", "uttale": "não ẽ-TẼ-do es-pa-NJÅO" }
+  ],
+  "1. Om meg::gloser::tysk::o alemão": [
+    { "norsk": "Han er tysk.", "port": "Ele é alemão.", "uttale": "E-li Æ a-le-MÃO" },
+    { "norsk": "Snakker du tysk?", "port": "Você fala alemão?", "uttale": "vo-SE FA-la a-le-MÃO" }
+  ],
+  "1. Om meg::gloser::utveksling::o intercâmbio": [
+    { "norsk": "Jeg er her på utveksling.", "port": "Tô aqui de intercâmbio.", "uttale": "to a-KI dji ĩ-ter-KÃ-bio" },
+    { "norsk": "Utvekslingen min er kjempegøy.", "port": "Meu intercâmbio tá muito divertido.", "uttale": "meo ĩ-ter-KÃ-bio ta MŨI-to dji-ver-TSJI-do" }
+  ],
+  "1. Om meg::gloser::år (alder)::anos": [
+    { "norsk": "Jeg er tretti år.", "port": "Tenho trinta anos.", "uttale": "TE-njo TRĨ-ta Ã-nos" },
+    { "norsk": "Hvor gammel er du?", "port": "Quantos anos você tem?", "uttale": "KWÃ-tos Ã-nos vo-SE tẽi" }
+  ],
+  "1. Om meg::gloser::ung / gammel (om folk)::jovem / velho": [
+    { "norsk": "Bilen er rask, men gammel.", "port": "O carro é rápido, mas velho.", "uttale": "o KA-ho Æ HA-pi-do, mas VÆ-ljo" },
+    { "norsk": "Hun er ung.", "port": "Ela é jovem.", "uttale": "Æ-la Æ ZJÅ-vẽi" }
+  ],
+  "1. Om meg::gloser::gift / singel::casado / solteiro": [
+    { "norsk": "Han er gift.", "port": "Ele é casado.", "uttale": "E-li Æ ka-ZA-do" },
+    { "norsk": "Jeg er singel.", "port": "Sou solteiro.", "uttale": "SO so-TEI-ro" }
+  ],
+  "1. Om meg::gloser::høy / lav::alto / baixo": [
+    { "norsk": "Han er høy.", "port": "Ele é alto.", "uttale": "E-li Æ AO-to" },
+    { "norsk": "Bordet er lavt.", "port": "A mesa é baixa.", "uttale": "a ME-za Æ BAI-sja" }
+  ],
+  "1. Om meg::gloser::hyggelig, sympatisk::simpático": [
+    { "norsk": "Hun er kjempehyggelig.", "port": "Ela é super simpática.", "uttale": "Æ-la Æ SO-per sĩ-PA-tsji-ka" },
+    { "norsk": "Han er kjempehyggelig.", "port": "Ele é super simpático.", "uttale": "E-li Æ SO-per sĩ-PA-tsji-ko" }
+  ],
+  "1. Om meg::gloser::sjenert::tímido": [
+    { "norsk": "Han er sjenert.", "port": "Ele é tímido.", "uttale": "E-li Æ TSJI-mi-do" },
+    { "norsk": "Jeg er litt sjenert.", "port": "Sou um pouco tímido.", "uttale": "SO ũ PO-ko TSJI-mi-do" }
+  ],
+  "1. Om meg::gloser::utenlandsk::estrangeiro": [
+    { "norsk": "Jeg er utlending.", "port": "Sou estrangeiro.", "uttale": "SO es-trã-ZJEI-ro" },
+    { "norsk": "Han er utlending.", "port": "Ele é estrangeiro.", "uttale": "E-li Æ es-trã-ZJEI-ro" }
+  ]
+}
