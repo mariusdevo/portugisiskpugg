@@ -399,6 +399,13 @@ Norsk · portugisisk · uttale
 | neste / siste | próximo / último | [PRÅ-si-mo / O-tsji-mo] |
 | travelt, mye folk | movimentado | [mo-vi-mẽ-TA-do] |
 | trygg / farlig | seguro / perigoso | [se-GO-ro / pe-ri-GÅ-zo] |
+| foran | na frente de | [na FRẼ-tsji dji] |
+| bak | atrás de | [a-TRAS dji] |
+| ved siden av | ao lado de | [ao LA-do dji] |
+| å svinge | virar | [vi-RAR] |
+| å krysse (gata) | atravessar | [a-tra-ve-SAR] |
+| forbi | passar por | [pa-SAR por] |
+| på den andre siden | do outro lado | [do O-tro LA-do] |
 
 **Setninger**
 
