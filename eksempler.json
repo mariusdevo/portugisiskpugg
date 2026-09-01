@@ -4594,5 +4594,89 @@
    "port": "Isso é um presente pra você.",
    "uttale": "I-so Æ ũ pre-ZẼ-tsji pra vo-SE"
   }
+ ],
+ "8. Transport og finne fram::gloser::foran::na frente de": [
+  {
+   "norsk": "Bussen stopper foran biblioteket.",
+   "port": "O ônibus para na frente da biblioteca.",
+   "uttale": "o O-ni-bos PA-ra na FRẼ-tsji da bi-bli-o-TÆ-ka"
+  },
+  {
+   "norsk": "Det er en butikk foran huset.",
+   "port": "Tem uma loja na frente da casa.",
+   "uttale": "tẽi Ũ-ma LÅ-zja na FRẼ-tsji da KA-za"
+  }
+ ],
+ "8. Transport og finne fram::gloser::bak::atrás de": [
+  {
+   "norsk": "Holdeplassen er bak kirken.",
+   "port": "O ponto fica atrás da igreja.",
+   "uttale": "o PÕ-to FI-ka a-TRAS da i-GRE-zja"
+  },
+  {
+   "norsk": "Bilen står bak bussen.",
+   "port": "O carro tá atrás do ônibus.",
+   "uttale": "o KA-ho ta a-TRAS do O-ni-bos"
+  }
+ ],
+ "8. Transport og finne fram::gloser::ved siden av::ao lado de": [
+  {
+   "norsk": "Holdeplassen er ved siden av butikken.",
+   "port": "O ponto fica ao lado da loja.",
+   "uttale": "o PÕ-to FI-ka ao LA-do da LÅ-zja"
+  },
+  {
+   "norsk": "Bussen står ved siden av terminalen.",
+   "port": "O ônibus tá ao lado do terminal.",
+   "uttale": "o O-ni-bos ta ao LA-do do ter-mi-NAO"
+  }
+ ],
+ "8. Transport og finne fram::gloser::å svinge::virar": [
+  {
+   "norsk": "Sving til høyre her.",
+   "port": "Vira à direita aqui.",
+   "uttale": "VI-ra a dji-REI-ta a-KI"
+  },
+  {
+   "norsk": "Sving til venstre på hjørnet.",
+   "port": "Vira à esquerda na esquina.",
+   "uttale": "VI-ra a es-KER-da na es-KI-na"
+  }
+ ],
+ "8. Transport og finne fram::gloser::å krysse (gata)::atravessar": [
+  {
+   "norsk": "Kryss gata her.",
+   "port": "Atravessa a rua aqui.",
+   "uttale": "a-tra-VE-sa a HO-a a-KI"
+  },
+  {
+   "norsk": "Jeg krysset gata.",
+   "port": "Atravessei a rua.",
+   "uttale": "a-tra-ve-SEI a HO-a"
+  }
+ ],
+ "8. Transport og finne fram::gloser::forbi::passar por": [
+  {
+   "norsk": "Gå forbi biblioteket.",
+   "port": "Passa pela biblioteca.",
+   "uttale": "PA-sa PE-la bi-bli-o-TÆ-ka"
+  },
+  {
+   "norsk": "Bussen kjører forbi her.",
+   "port": "O ônibus passa por aqui.",
+   "uttale": "o O-ni-bos PA-sa por a-KI"
+  }
+ ],
+ "8. Transport og finne fram::gloser::på den andre siden::do outro lado": [
+  {
+   "norsk": "Butikken er på den andre siden.",
+   "port": "A loja fica do outro lado.",
+   "uttale": "a LÅ-zja FI-ka do O-tro LA-do"
+  },
+  {
+   "norsk": "Stranda er på den andre siden av byen.",
+   "port": "A praia fica do outro lado da cidade.",
+   "uttale": "a PRAI-a FI-ka do O-tro LA-do da si-DA-dji"
+  }
  ]
 }
