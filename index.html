@@ -92,6 +92,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 .btn.primary{background:var(--coral);color:#fff;}
 .btn.primary:hover{background:var(--coral-dark);}
 .btn:focus-visible{outline:2px solid var(--ocean-deep);outline-offset:2px;}
+.btn.ghost.active{background:var(--coral);border-color:var(--coral);color:#fff;}
 
 .hint{font-size:0.85rem;color:var(--ink-soft);margin:0 2px 6px;}
 
@@ -153,18 +154,27 @@ code{
 .cell-pt.has-examples:hover{background-color:rgba(28,122,134,0.08);}
 .example-icon{font-size:0.72rem;margin-left:6px;opacity:0.7;vertical-align:middle;}
 
-.examples-panel{
-  grid-column:1 / -1;background:rgba(28,122,134,0.07);border-radius:10px;
-  padding:10px 14px;margin:2px 0 10px;display:flex;flex-direction:column;gap:8px;
-  position:relative;z-index:2;
+.example-wrap{
+  grid-column:1 / -1;display:grid;
+  grid-template-columns: minmax(96px,0.85fr) minmax(150px,1.15fr);column-gap:16px;
+  background:rgba(28,122,134,0.07);border-radius:10px;padding:6px 0;margin:2px 0 10px;
 }
-.examples-panel.row-alt{background:rgba(28,122,134,0.1);}
-.example-row .example-norsk{font-size:0.82rem;color:var(--ink-soft);}
-.example-row .example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
-.example-row .example-ut{
+.example-wrap.row-alt{background:rgba(28,122,134,0.1);}
+.example-wrap .ex-norsk-col{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:5px 2px;}
+.example-wrap .ex-norsk-col > div{font-size:0.82rem;color:var(--ink-soft);}
+.example-wrap .ex-pt-col{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:5px 2px;}
+.example-wrap .ex-pt-col > div{font-weight:600;font-size:0.92rem;color:var(--ink);}
+.example-wrap .ut{
   font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
-  font-size:0.78rem;color:var(--ocean);
+  font-size:0.78rem;color:var(--ocean);display:block;margin-top:3px;
 }
+.example-wrap .ex-veil{
+  display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;
+}
+.example-wrap .ex-veil .pt-veil{
+  color:var(--ocean-deep);font-style:italic;font-weight:500;font-size:0.82rem;opacity:0.8;
+}
+.example-wrap .ex-veil:hover .pt-veil{opacity:1;text-decoration:underline;}
 
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
 .cell-person{font-weight:600;font-size:0.98rem;color:var(--ink);}
@@ -324,6 +334,8 @@ code{
           <button class="tab" data-type="boyning" type="button" id="boyningTab" style="display:none;">Bøyning</button>
         </div>
 
+        <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg (k)</button>
+
         <div class="actions">
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om (s)</button>
           <button id="hideBtn" class="btn ghost" type="button">Skjul alt</button>
@@ -338,7 +350,7 @@ code{
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord. Piltast venstre/høyre bytter kapittel.</p>
+    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord — den portugisiske oversettelsen er skjult til du trykker <strong>E</strong> igjen (eller på setningen selv), så du kan øve på å huske den. Piltast venstre/høyre bytter kapittel.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -386,6 +398,7 @@ const coverHint = document.getElementById('coverHint');
 const handle = document.getElementById('handle');
 const counterEl = document.getElementById('counter');
 const shuffleBtn = document.getElementById('shuffleBtn');
+const extraFilterBtn = document.getElementById('extraFilterBtn');
 const hideBtn = document.getElementById('hideBtn');
 const revealBtn = document.getElementById('revealBtn');
 const pdfBtn = document.getElementById('pdfBtn');
@@ -395,10 +408,12 @@ let SECTIONS = [];
 let sectionIndex = 0;
 let currentType = 'gloser';
 let viewingExtra = false;
+let filterExtraOnly = false;
 let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
 let expandedExampleIds = new Set();
+let revealedExampleAnswerItems = new Set();
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -574,6 +589,16 @@ function updateEkstraLabel(){
   }
 }
 
+function updateExtraFilterUI(){
+  const relevant = !viewingExtra && currentType !== 'boyning';
+  extraFilterBtn.style.display = relevant ? '' : 'none';
+  if(!relevant) return;
+  const count = buildItems(sectionIndex, currentType).filter(item => markedItems[item.id]).length;
+  extraFilterBtn.classList.toggle('active', filterExtraOnly);
+  extraFilterBtn.setAttribute('aria-pressed', String(filterExtraOnly));
+  extraFilterBtn.textContent = (filterExtraOnly ? '★' : '☆') + ' Kun ekstra pugg (k) (' + count + ')';
+}
+
 function buildChapterOptions(){
   chapterSelect.innerHTML = '';
   ekstraOption = document.createElement('option');
@@ -604,8 +629,9 @@ function toggleMark(item){
   else { markedItems[item.id] = item; }
   persistMarked();
   updateEkstraLabel();
+  updateExtraFilterUI();
 
-  if(viewingExtra){ removeFromExtraKeepingReveal(item); return; }
+  if(viewingExtra || filterExtraOnly){ removeFromExtraKeepingReveal(item); return; }
 
   const nowMarked = !wasMarked;
   grid.querySelectorAll('.cell').forEach(el => {
@@ -624,6 +650,7 @@ function removeFromExtraKeepingReveal(item){
 
   currentList = currentList.filter(i => i.id !== item.id);
   expandedExampleIds.delete(item.id);
+  clearExampleAnswersFor(item.id);
   renderGrid();
 
   requestAnimationFrame(() => {
@@ -715,11 +742,14 @@ function loadList(){
     renderIrregularCards(section);
     currentList = [];
   } else {
-    currentList = viewingExtra ? Object.values(markedItems) : buildItems(sectionIndex, currentType);
+    currentList = viewingExtra
+      ? Object.values(markedItems)
+      : buildItems(sectionIndex, currentType).filter(item => !filterExtraOnly || markedItems[item.id]);
     futureNote.style.display = 'none';
     irregularCards.style.display = 'none';
   }
 
+  updateExtraFilterUI();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, false); });
 }
@@ -734,7 +764,7 @@ function renderNormalGrid(){
   if(currentList.length === 0){
     const msg = viewingExtra
       ? 'Ekstra pugg er tom. Trykk på et norsk ord i et kapittel for å legge det hit.'
-      : 'Ingen rader her.';
+      : (filterExtraOnly ? 'Ingen ord i Ekstra pugg for dette kapittelet ennå.' : 'Ingen rader her.');
     grid.innerHTML = '<p style="padding:20px;color:var(--ink-soft);">' + msg + '</p>';
     return;
   }
@@ -755,11 +785,14 @@ function renderNormalGrid(){
           + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
     if(examples && expandedExampleIds.has(item.id)){
-      html += '<div class="examples-panel' + alt + '">' + examples.map(ex =>
-        '<div class="example-row"><div class="example-norsk">' + escapeHtml(ex.norsk) + '</div>'
-        + '<div class="example-pt">' + escapeHtml(ex.port)
-        + ' <span class="example-ut">[' + escapeHtml(ex.uttale) + ']</span></div></div>'
-      ).join('') + '</div>';
+      const answersShown = revealedExampleAnswerItems.has(item.id);
+      const norskCol = '<div class="ex-norsk-col">' + examples.map(ex => '<div>' + escapeHtml(ex.norsk) + '</div>').join('') + '</div>';
+      const rightCol = answersShown
+        ? '<div class="ex-pt-col">' + examples.map(ex =>
+            '<div>' + escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>'
+          ).join('') + '</div>'
+        : '<div class="ex-veil" data-id="' + idAttr + '"><span class="pt-veil">Trykk E (eller her) for å vise</span></div>';
+      html += '<div class="example-line example-wrap' + alt + '">' + norskCol + rightCol + '</div>';
     }
   });
   grid.innerHTML = html;
@@ -773,6 +806,10 @@ function getActiveRowItem(){
   return currentList[revealedCount - 1] || null;
 }
 
+function clearExampleAnswersFor(id){
+  revealedExampleAnswerItems.delete(id);
+}
+
 function toggleExamples(id){
   const idx = currentList.findIndex(item => item.id === id);
   const isOpening = !expandedExampleIds.has(id);
@@ -781,7 +818,7 @@ function toggleExamples(id){
   const oldTotalHeight = totalHeight;
 
   if(isOpening) expandedExampleIds.add(id);
-  else expandedExampleIds.delete(id);
+  else { expandedExampleIds.delete(id); clearExampleAnswersFor(id); }
 
   renderGrid();
   requestAnimationFrame(() => {
@@ -793,6 +830,23 @@ function toggleExamples(id){
       setReveal(keepReveal, false);
     }
   });
+}
+
+function revealAllExampleAnswers(item){
+  if(revealedExampleAnswerItems.has(item.id)) return;
+  const oldTotalHeight = totalHeight;
+  const keepReveal = revealY;
+  revealedExampleAnswerItems.add(item.id);
+  renderGrid();
+  requestAnimationFrame(() => {
+    measure();
+    const delta = totalHeight - oldTotalHeight;
+    setReveal(keepReveal + delta, false);
+  });
+}
+
+function hasVeiledExampleAnswers(item){
+  return EXAMPLES[item.id] && !revealedExampleAnswerItems.has(item.id);
 }
 
 function formCellHtml(form){
@@ -845,9 +899,10 @@ function measureNormal(){
     const r1 = noCells[k].getBoundingClientRect();
     const r2 = ptCells[k].getBoundingClientRect();
     let bottom = Math.max(r1.bottom, r2.bottom);
-    const next = ptCells[k].nextElementSibling;
-    if(next && next.classList.contains('examples-panel')){
+    let next = ptCells[k].nextElementSibling;
+    while(next && next.classList.contains('example-line')){
       bottom = Math.max(bottom, next.getBoundingClientRect().bottom);
+      next = next.nextElementSibling;
     }
     rowBottoms.push(bottom - boardRect.top);
   }
@@ -979,6 +1034,15 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
+  if(e.key !== 'k' && e.key !== 'K') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if(extraFilterBtn.style.display === 'none') return;
+  extraFilterBtn.click();
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', (e) => {
   if(e.key !== 'Enter') return;
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
@@ -992,7 +1056,11 @@ document.addEventListener('keydown', (e) => {
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
   const item = getActiveRowItem();
-  if(item && item.type === 'gloser' && EXAMPLES[item.id]) toggleExamples(item.id);
+  if(item && item.type === 'gloser' && EXAMPLES[item.id]){
+    if(!expandedExampleIds.has(item.id)) toggleExamples(item.id);
+    else if(hasVeiledExampleAnswers(item)) revealAllExampleAnswers(item);
+    else toggleExamples(item.id);
+  }
   e.preventDefault();
 });
 
@@ -1012,6 +1080,12 @@ grid.addEventListener('click', (e) => {
   if(cellNo){
     const item = renderedItemsById.get(cellNo.dataset.id);
     if(item) toggleMark(item);
+    return;
+  }
+  const exVeil = e.target.closest('.ex-veil');
+  if(exVeil){
+    const item = renderedItemsById.get(exVeil.dataset.id);
+    if(item) revealAllExampleAnswers(item);
     return;
   }
   const cellPt = e.target.closest('.cell-pt.has-examples');
@@ -1040,6 +1114,11 @@ typeTabs.addEventListener('click', (e) => {
   loadList();
 });
 
+extraFilterBtn.addEventListener('click', () => {
+  filterExtraOnly = !filterExtraOnly;
+  loadList();
+});
+
 shuffleBtn.addEventListener('click', () => {
   if(currentType === 'boyning' && !viewingExtra){
     for(let i = boyningGroups.length - 1; i > 0; i--){
@@ -1053,17 +1132,21 @@ shuffleBtn.addEventListener('click', () => {
     }
   }
   expandedExampleIds.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 hideBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 revealBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(totalHeight, true); });
 });
