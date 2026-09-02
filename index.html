@@ -154,17 +154,13 @@ code{
 .cell-pt.has-examples:hover{background-color:rgba(28,122,134,0.08);}
 .example-icon{font-size:0.72rem;margin-left:6px;opacity:0.7;vertical-align:middle;}
 
-.examples-panel{
-  grid-column:1 / -1;background:rgba(28,122,134,0.07);border-radius:10px;
-  padding:10px 14px;margin:2px 0 10px;display:flex;flex-direction:column;gap:8px;
-  position:relative;z-index:2;
-}
-.examples-panel.row-alt{background:rgba(28,122,134,0.1);}
-.example-row .example-norsk{font-size:0.82rem;color:var(--ink-soft);}
-.example-row .example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
-.example-row .example-ut{
+.cell.example-line{background:rgba(28,122,134,0.07);}
+.cell.example-line.row-alt{background:rgba(28,122,134,0.1);}
+.cell.example-line.example-no{font-size:0.82rem;color:var(--ink-soft);border-left:3px solid rgba(28,122,134,0.3);padding-left:9px;}
+.cell.example-line.example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
+.example-line .ut{
   font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
-  font-size:0.78rem;color:var(--ocean);
+  font-size:0.78rem;color:var(--ocean);display:block;margin-top:3px;
 }
 
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
@@ -774,11 +770,11 @@ function renderNormalGrid(){
           + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
     if(examples && expandedExampleIds.has(item.id)){
-      html += '<div class="examples-panel' + alt + '">' + examples.map(ex =>
-        '<div class="example-row"><div class="example-norsk">' + escapeHtml(ex.norsk) + '</div>'
-        + '<div class="example-pt">' + escapeHtml(ex.port)
-        + ' <span class="example-ut">[' + escapeHtml(ex.uttale) + ']</span></div></div>'
-      ).join('') + '</div>';
+      examples.forEach(ex => {
+        html += '<div class="cell example-line example-no' + alt + '">' + escapeHtml(ex.norsk) + '</div>';
+        html += '<div class="cell example-line example-pt' + alt + '">' + escapeHtml(ex.port)
+              + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>';
+      });
     }
   });
   grid.innerHTML = html;
@@ -864,9 +860,10 @@ function measureNormal(){
     const r1 = noCells[k].getBoundingClientRect();
     const r2 = ptCells[k].getBoundingClientRect();
     let bottom = Math.max(r1.bottom, r2.bottom);
-    const next = ptCells[k].nextElementSibling;
-    if(next && next.classList.contains('examples-panel')){
+    let next = ptCells[k].nextElementSibling;
+    while(next && next.classList.contains('example-line')){
       bottom = Math.max(bottom, next.getBoundingClientRect().bottom);
+      next = next.nextElementSibling;
     }
     rowBottoms.push(bottom - boardRect.top);
   }
@@ -1076,8 +1073,10 @@ shuffleBtn.addEventListener('click', () => {
       [currentList[i], currentList[j]] = [currentList[j], currentList[i]];
     }
   }
+  expandedExampleIds.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 hideBtn.addEventListener('click', () => {
