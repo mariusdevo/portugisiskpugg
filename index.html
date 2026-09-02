@@ -338,7 +338,7 @@ code{
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne).</p>
+    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord. Piltast opp/ned bytter kapittel.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -765,6 +765,14 @@ function renderNormalGrid(){
   grid.innerHTML = html;
 }
 
+function getActiveRowItem(){
+  if(currentType === 'boyning' && !viewingExtra) return null;
+  if(!currentList.length || !rowBottoms.length) return null;
+  const revealedCount = rowBottoms.filter(b => b <= revealY + 0.5).length;
+  if(revealedCount === 0) return null;
+  return currentList[revealedCount - 1] || null;
+}
+
 function toggleExamples(id){
   const idx = currentList.findIndex(item => item.id === id);
   const isOpening = !expandedExampleIds.has(id);
@@ -949,7 +957,7 @@ handle.addEventListener('keydown', (e) => {
   else if(e.key === 'ArrowUp' || e.key === 'PageUp'){ stepRevealBack(); e.preventDefault(); }
   else if(e.key === 'Home'){ setReveal(0, true); e.preventDefault(); }
   else if(e.key === 'End'){ setReveal(totalHeight, true); e.preventDefault(); }
-  else if(e.key === 'Enter' || e.key === ' '){ stepReveal(); e.preventDefault(); }
+  else if(e.key === ' '){ stepReveal(); e.preventDefault(); }
 });
 
 document.addEventListener('keydown', (e) => {
@@ -967,6 +975,33 @@ document.addEventListener('keydown', (e) => {
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
   shuffleBtn.click();
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 'Enter') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
+  const item = getActiveRowItem();
+  if(item) toggleMark(item);
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 'e' && e.key !== 'E') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
+  const item = getActiveRowItem();
+  if(item && item.type === 'gloser' && EXAMPLES[item.id]) toggleExamples(item.id);
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+  if(e.target === handle) return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
+  goToChapter(e.key === 'ArrowDown' ? 1 : -1);
   e.preventDefault();
 });
 
@@ -989,6 +1024,13 @@ chapterSelect.addEventListener('change', () => {
   else { viewingExtra = false; sectionIndex = Number(val); }
   loadList();
 });
+
+function goToChapter(delta){
+  sectionIndex = clamp(sectionIndex + delta, 0, SECTIONS.length - 1);
+  viewingExtra = false;
+  chapterSelect.value = String(sectionIndex);
+  loadList();
+}
 
 typeTabs.addEventListener('click', (e) => {
   const btn = e.target.closest('.tab');
