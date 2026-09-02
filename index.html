@@ -162,6 +162,11 @@ code{
   font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
   font-size:0.78rem;color:var(--ocean);display:block;margin-top:3px;
 }
+.example-pt.pt-hidden{cursor:pointer;}
+.example-pt.pt-hidden .pt-veil{
+  color:var(--ocean-deep);font-style:italic;font-weight:500;font-size:0.82rem;opacity:0.8;
+}
+.example-pt.pt-hidden:hover .pt-veil{opacity:1;text-decoration:underline;}
 
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
 .cell-person{font-weight:600;font-size:0.98rem;color:var(--ink);}
@@ -337,7 +342,7 @@ code{
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord. Piltast venstre/høyre bytter kapittel.</p>
+    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord — den portugisiske oversettelsen er skjult til du trykker <strong>E</strong> igjen (eller på setningen selv), så du kan øve på å huske den. Piltast venstre/høyre bytter kapittel.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -400,6 +405,7 @@ let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
 let expandedExampleIds = new Set();
+let revealedExampleAnswers = new Set();
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -636,6 +642,7 @@ function removeFromExtraKeepingReveal(item){
 
   currentList = currentList.filter(i => i.id !== item.id);
   expandedExampleIds.delete(item.id);
+  clearExampleAnswersFor(item.id);
   renderGrid();
 
   requestAnimationFrame(() => {
@@ -770,10 +777,15 @@ function renderNormalGrid(){
           + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
     if(examples && expandedExampleIds.has(item.id)){
-      examples.forEach(ex => {
+      examples.forEach((ex, exi) => {
+        const exId = item.id + '#' + exi;
+        const answerShown = revealedExampleAnswers.has(exId);
         html += '<div class="cell example-line example-no' + alt + '">' + escapeHtml(ex.norsk) + '</div>';
-        html += '<div class="cell example-line example-pt' + alt + '">' + escapeHtml(ex.port)
-              + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>';
+        html += '<div class="cell example-line example-pt' + alt + (answerShown ? '' : ' pt-hidden') + '" data-ex-id="' + escapeHtml(exId) + '">'
+              + (answerShown
+                  ? (escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span>')
+                  : '<span class="pt-veil">Trykk for å vise</span>')
+              + '</div>';
       });
     }
   });
@@ -788,6 +800,11 @@ function getActiveRowItem(){
   return currentList[revealedCount - 1] || null;
 }
 
+function clearExampleAnswersFor(id){
+  const prefix = id + '#';
+  [...revealedExampleAnswers].forEach(k => { if(k.startsWith(prefix)) revealedExampleAnswers.delete(k); });
+}
+
 function toggleExamples(id){
   const idx = currentList.findIndex(item => item.id === id);
   const isOpening = !expandedExampleIds.has(id);
@@ -796,7 +813,7 @@ function toggleExamples(id){
   const oldTotalHeight = totalHeight;
 
   if(isOpening) expandedExampleIds.add(id);
-  else expandedExampleIds.delete(id);
+  else { expandedExampleIds.delete(id); clearExampleAnswersFor(id); }
 
   renderGrid();
   requestAnimationFrame(() => {
@@ -808,6 +825,39 @@ function toggleExamples(id){
       setReveal(keepReveal, false);
     }
   });
+}
+
+function revealExampleAnswer(exId){
+  if(revealedExampleAnswers.has(exId)) return;
+  const oldTotalHeight = totalHeight;
+  const keepReveal = revealY;
+  revealedExampleAnswers.add(exId);
+  renderGrid();
+  requestAnimationFrame(() => {
+    measure();
+    const delta = totalHeight - oldTotalHeight;
+    setReveal(keepReveal + delta, false);
+  });
+}
+
+function revealAllExampleAnswers(item){
+  const examples = EXAMPLES[item.id];
+  if(!examples) return;
+  const oldTotalHeight = totalHeight;
+  const keepReveal = revealY;
+  examples.forEach((ex, exi) => revealedExampleAnswers.add(item.id + '#' + exi));
+  renderGrid();
+  requestAnimationFrame(() => {
+    measure();
+    const delta = totalHeight - oldTotalHeight;
+    setReveal(keepReveal + delta, false);
+  });
+}
+
+function hasVeiledExampleAnswers(item){
+  const examples = EXAMPLES[item.id];
+  if(!examples) return false;
+  return examples.some((ex, exi) => !revealedExampleAnswers.has(item.id + '#' + exi));
 }
 
 function formCellHtml(form){
@@ -1008,7 +1058,11 @@ document.addEventListener('keydown', (e) => {
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
   const item = getActiveRowItem();
-  if(item && item.type === 'gloser' && EXAMPLES[item.id]) toggleExamples(item.id);
+  if(item && item.type === 'gloser' && EXAMPLES[item.id]){
+    if(!expandedExampleIds.has(item.id)) toggleExamples(item.id);
+    else if(hasVeiledExampleAnswers(item)) revealAllExampleAnswers(item);
+    else toggleExamples(item.id);
+  }
   e.preventDefault();
 });
 
@@ -1030,6 +1084,8 @@ grid.addEventListener('click', (e) => {
     if(item) toggleMark(item);
     return;
   }
+  const exPt = e.target.closest('.example-pt.pt-hidden');
+  if(exPt){ revealExampleAnswer(exPt.dataset.exId); return; }
   const cellPt = e.target.closest('.cell-pt.has-examples');
   if(cellPt) toggleExamples(cellPt.dataset.id);
 });
@@ -1074,6 +1130,7 @@ shuffleBtn.addEventListener('click', () => {
     }
   }
   expandedExampleIds.clear();
+  revealedExampleAnswers.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1081,11 +1138,13 @@ shuffleBtn.addEventListener('click', () => {
 
 hideBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
+  revealedExampleAnswers.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 revealBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
+  revealedExampleAnswers.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(totalHeight, true); });
 });
