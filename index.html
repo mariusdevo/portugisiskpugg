@@ -334,7 +334,7 @@ code{
           <button class="tab" data-type="boyning" type="button" id="boyningTab" style="display:none;">Bøyning</button>
         </div>
 
-        <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg</button>
+        <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg (k)</button>
 
         <div class="actions">
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om (s)</button>
@@ -596,7 +596,7 @@ function updateExtraFilterUI(){
   const count = buildItems(sectionIndex, currentType).filter(item => markedItems[item.id]).length;
   extraFilterBtn.classList.toggle('active', filterExtraOnly);
   extraFilterBtn.setAttribute('aria-pressed', String(filterExtraOnly));
-  extraFilterBtn.textContent = (filterExtraOnly ? '★' : '☆') + ' Kun ekstra pugg (' + count + ')';
+  extraFilterBtn.textContent = (filterExtraOnly ? '★' : '☆') + ' Kun ekstra pugg (k) (' + count + ')';
 }
 
 function buildChapterOptions(){
@@ -1030,6 +1030,15 @@ document.addEventListener('keydown', (e) => {
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
   shuffleBtn.click();
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 'k' && e.key !== 'K') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if(extraFilterBtn.style.display === 'none') return;
+  extraFilterBtn.click();
   e.preventDefault();
 });
 
