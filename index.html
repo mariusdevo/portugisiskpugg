@@ -135,6 +135,7 @@ code{
   -webkit-tap-highlight-color:transparent;
 }
 .cell-no:hover{background-color:rgba(226,99,123,0.08);}
+.cell-no:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
 .cell-no.marked{border-left:4px solid var(--coral);padding-left:10px;background-color:rgba(226,99,123,0.08);}
 .cell-pt.marked{background-color:rgba(226,99,123,0.08);}
 
@@ -338,7 +339,7 @@ code{
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne).</p>
+    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne). Bruk piltastene for å flytte mellom ordene, <strong>Enter</strong> for å merke, og <strong>E</strong> for å vise eksempelsetninger.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -399,6 +400,7 @@ let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
 let expandedExampleIds = new Set();
+let focusedRowId = null;
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -609,7 +611,10 @@ function toggleMark(item){
 
   const nowMarked = !wasMarked;
   grid.querySelectorAll('.cell').forEach(el => {
-    if(el.dataset.id === item.id) el.classList.toggle('marked', nowMarked);
+    if(el.dataset.id === item.id){
+      el.classList.toggle('marked', nowMarked);
+      if(el.classList.contains('cell-no')) el.setAttribute('aria-pressed', nowMarked ? 'true' : 'false');
+    }
   });
 }
 
@@ -624,7 +629,12 @@ function removeFromExtraKeepingReveal(item){
 
   currentList = currentList.filter(i => i.id !== item.id);
   expandedExampleIds.delete(item.id);
+  if(focusedRowId === item.id && currentList.length){
+    const nextIdx = clamp(oldIndex, 0, currentList.length - 1);
+    focusedRowId = currentList[nextIdx].id;
+  }
   renderGrid();
+  restoreGridFocus();
 
   requestAnimationFrame(() => {
     measure();
@@ -738,6 +748,9 @@ function renderNormalGrid(){
     grid.innerHTML = '<p style="padding:20px;color:var(--ink-soft);">' + msg + '</p>';
     return;
   }
+  if(!currentList.some(item => item.id === focusedRowId)){
+    focusedRowId = currentList[0].id;
+  }
   let html = '';
   currentList.forEach((item, i) => {
     renderedItemsById.set(item.id, item);
@@ -749,7 +762,9 @@ function renderNormalGrid(){
     const idAttr = escapeHtml(item.id);
     const examples = item.type === 'gloser' ? EXAMPLES[item.id] : null;
     const exampleIcon = examples ? '<span class="example-icon" title="Se eksempelsetninger">💬</span>' : '';
-    html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '">'
+    const isFocusable = item.id === focusedRowId;
+    html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '"'
+          + ' role="button" tabindex="' + (isFocusable ? '0' : '-1') + '" aria-pressed="' + (markedItems[item.id] ? 'true' : 'false') + '">'
           + escapeHtml(item.norsk) + srcTag + '</div>';
     html += '<div class="cell cell-pt' + alt + marked + (examples ? ' has-examples' : '') + '" data-id="' + idAttr + '">'
           + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
@@ -765,6 +780,48 @@ function renderNormalGrid(){
   grid.innerHTML = html;
 }
 
+function restoreGridFocus(){
+  if(currentType === 'boyning' && !viewingExtra) return;
+  const el = grid.querySelector('.cell-no[data-id="' + CSS.escape(focusedRowId || '') + '"]');
+  if(el) el.focus();
+}
+
+function isRowRevealed(id){
+  const idx = currentList.findIndex(item => item.id === id);
+  if(idx < 0) return false;
+  return revealY >= (rowBottoms[idx] || 0) - 0.5;
+}
+
+function moveRowFocus(delta){
+  if(currentList.length === 0) return;
+  const idx = currentList.findIndex(item => item.id === focusedRowId);
+  const nextIdx = clamp((idx < 0 ? 0 : idx) + delta, 0, currentList.length - 1);
+  focusedRowId = currentList[nextIdx].id;
+  renderGrid();
+  restoreGridFocus();
+}
+
+grid.addEventListener('keydown', (e) => {
+  const cellNo = e.target.closest('.cell-no');
+  if(!cellNo) return;
+  const id = cellNo.dataset.id;
+  if(e.key === 'ArrowDown'){ moveRowFocus(1); e.preventDefault(); }
+  else if(e.key === 'ArrowUp'){ moveRowFocus(-1); e.preventDefault(); }
+  else if(e.key === 'Home'){ focusedRowId = currentList[0].id; renderGrid(); restoreGridFocus(); e.preventDefault(); }
+  else if(e.key === 'End'){ focusedRowId = currentList[currentList.length - 1].id; renderGrid(); restoreGridFocus(); e.preventDefault(); }
+  else if(e.key === 'Enter'){
+    const item = renderedItemsById.get(id);
+    if(item) toggleMark(item);
+    e.preventDefault();
+  } else if(e.key === 'e' || e.key === 'E'){
+    const item = renderedItemsById.get(id);
+    if(item && item.type === 'gloser' && EXAMPLES[id] && isRowRevealed(id)){
+      toggleExamples(id);
+    }
+    e.preventDefault();
+  }
+});
+
 function toggleExamples(id){
   const idx = currentList.findIndex(item => item.id === id);
   const isOpening = !expandedExampleIds.has(id);
@@ -776,6 +833,7 @@ function toggleExamples(id){
   else expandedExampleIds.delete(id);
 
   renderGrid();
+  restoreGridFocus();
   requestAnimationFrame(() => {
     measure();
     if(wasRevealed && idx >= 0){
@@ -1012,6 +1070,7 @@ shuffleBtn.addEventListener('click', () => {
   }
   expandedExampleIds.clear();
   renderGrid();
+  restoreGridFocus();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 
