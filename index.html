@@ -338,7 +338,7 @@ code{
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
 
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord. Piltast opp/ned bytter kapittel.</p>
+    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord. Piltast venstre/høyre bytter kapittel.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -997,11 +997,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if(e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+  if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
   if(e.target === handle) return;
   const tag = (e.target && e.target.tagName) || '';
   if(tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
-  goToChapter(e.key === 'ArrowDown' ? 1 : -1);
+  goToChapter(e.key === 'ArrowRight' ? 1 : -1);
   e.preventDefault();
 });
 
