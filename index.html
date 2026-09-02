@@ -92,6 +92,7 @@ select:focus-visible{outline:2px solid var(--coral);outline-offset:1px;}
 .btn.primary{background:var(--coral);color:#fff;}
 .btn.primary:hover{background:var(--coral-dark);}
 .btn:focus-visible{outline:2px solid var(--ocean-deep);outline-offset:2px;}
+.btn.ghost.active{background:var(--coral);border-color:var(--coral);color:#fff;}
 
 .hint{font-size:0.85rem;color:var(--ink-soft);margin:0 2px 6px;}
 
@@ -324,6 +325,8 @@ code{
           <button class="tab" data-type="boyning" type="button" id="boyningTab" style="display:none;">Bøyning</button>
         </div>
 
+        <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg</button>
+
         <div class="actions">
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om (s)</button>
           <button id="hideBtn" class="btn ghost" type="button">Skjul alt</button>
@@ -386,6 +389,7 @@ const coverHint = document.getElementById('coverHint');
 const handle = document.getElementById('handle');
 const counterEl = document.getElementById('counter');
 const shuffleBtn = document.getElementById('shuffleBtn');
+const extraFilterBtn = document.getElementById('extraFilterBtn');
 const hideBtn = document.getElementById('hideBtn');
 const revealBtn = document.getElementById('revealBtn');
 const pdfBtn = document.getElementById('pdfBtn');
@@ -395,6 +399,7 @@ let SECTIONS = [];
 let sectionIndex = 0;
 let currentType = 'gloser';
 let viewingExtra = false;
+let filterExtraOnly = false;
 let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
@@ -574,6 +579,16 @@ function updateEkstraLabel(){
   }
 }
 
+function updateExtraFilterUI(){
+  const relevant = !viewingExtra && currentType !== 'boyning';
+  extraFilterBtn.style.display = relevant ? '' : 'none';
+  if(!relevant) return;
+  const count = buildItems(sectionIndex, currentType).filter(item => markedItems[item.id]).length;
+  extraFilterBtn.classList.toggle('active', filterExtraOnly);
+  extraFilterBtn.setAttribute('aria-pressed', String(filterExtraOnly));
+  extraFilterBtn.textContent = (filterExtraOnly ? '★' : '☆') + ' Kun ekstra pugg (' + count + ')';
+}
+
 function buildChapterOptions(){
   chapterSelect.innerHTML = '';
   ekstraOption = document.createElement('option');
@@ -604,8 +619,9 @@ function toggleMark(item){
   else { markedItems[item.id] = item; }
   persistMarked();
   updateEkstraLabel();
+  updateExtraFilterUI();
 
-  if(viewingExtra){ removeFromExtraKeepingReveal(item); return; }
+  if(viewingExtra || filterExtraOnly){ removeFromExtraKeepingReveal(item); return; }
 
   const nowMarked = !wasMarked;
   grid.querySelectorAll('.cell').forEach(el => {
@@ -715,11 +731,14 @@ function loadList(){
     renderIrregularCards(section);
     currentList = [];
   } else {
-    currentList = viewingExtra ? Object.values(markedItems) : buildItems(sectionIndex, currentType);
+    currentList = viewingExtra
+      ? Object.values(markedItems)
+      : buildItems(sectionIndex, currentType).filter(item => !filterExtraOnly || markedItems[item.id]);
     futureNote.style.display = 'none';
     irregularCards.style.display = 'none';
   }
 
+  updateExtraFilterUI();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, false); });
 }
@@ -734,7 +753,7 @@ function renderNormalGrid(){
   if(currentList.length === 0){
     const msg = viewingExtra
       ? 'Ekstra pugg er tom. Trykk på et norsk ord i et kapittel for å legge det hit.'
-      : 'Ingen rader her.';
+      : (filterExtraOnly ? 'Ingen ord i Ekstra pugg for dette kapittelet ennå.' : 'Ingen rader her.');
     grid.innerHTML = '<p style="padding:20px;color:var(--ink-soft);">' + msg + '</p>';
     return;
   }
@@ -1040,6 +1059,11 @@ typeTabs.addEventListener('click', (e) => {
   loadList();
 });
 
+extraFilterBtn.addEventListener('click', () => {
+  filterExtraOnly = !filterExtraOnly;
+  loadList();
+});
+
 shuffleBtn.addEventListener('click', () => {
   if(currentType === 'boyning' && !viewingExtra){
     for(let i = boyningGroups.length - 1; i > 0; i--){
@@ -1052,7 +1076,6 @@ shuffleBtn.addEventListener('click', () => {
       [currentList[i], currentList[j]] = [currentList[j], currentList[i]];
     }
   }
-  expandedExampleIds.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
