@@ -154,19 +154,27 @@ code{
 .cell-pt.has-examples:hover{background-color:rgba(28,122,134,0.08);}
 .example-icon{font-size:0.72rem;margin-left:6px;opacity:0.7;vertical-align:middle;}
 
-.cell.example-line{background:rgba(28,122,134,0.07);}
-.cell.example-line.row-alt{background:rgba(28,122,134,0.1);}
-.cell.example-line.example-no{font-size:0.82rem;color:var(--ink-soft);border-left:3px solid rgba(28,122,134,0.3);padding-left:9px;}
-.cell.example-line.example-pt{font-weight:600;font-size:0.92rem;color:var(--ink);}
-.example-line .ut{
+.example-wrap{
+  grid-column:1 / -1;display:grid;
+  grid-template-columns: minmax(96px,0.85fr) minmax(150px,1.15fr);column-gap:16px;
+  background:rgba(28,122,134,0.07);border-radius:10px;padding:6px 0;margin:2px 0 10px;
+}
+.example-wrap.row-alt{background:rgba(28,122,134,0.1);}
+.example-wrap .ex-norsk-col{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:5px 2px;}
+.example-wrap .ex-norsk-col > div{font-size:0.82rem;color:var(--ink-soft);}
+.example-wrap .ex-pt-col{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:5px 2px;}
+.example-wrap .ex-pt-col > div{font-weight:600;font-size:0.92rem;color:var(--ink);}
+.example-wrap .ut{
   font-family:'IBM Plex Mono','Courier New',monospace;font-weight:500;
   font-size:0.78rem;color:var(--ocean);display:block;margin-top:3px;
 }
-.example-pt.pt-hidden{cursor:pointer;}
-.example-pt.pt-hidden .pt-veil{
+.example-wrap .ex-veil{
+  display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;
+}
+.example-wrap .ex-veil .pt-veil{
   color:var(--ocean-deep);font-style:italic;font-weight:500;font-size:0.82rem;opacity:0.8;
 }
-.example-pt.pt-hidden:hover .pt-veil{opacity:1;text-decoration:underline;}
+.example-wrap .ex-veil:hover .pt-veil{opacity:1;text-decoration:underline;}
 
 .grid.boyning{grid-template-columns: minmax(140px,1fr) minmax(100px,0.9fr) minmax(100px,0.9fr);}
 .cell-person{font-weight:600;font-size:0.98rem;color:var(--ink);}
@@ -405,7 +413,7 @@ let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
 let expandedExampleIds = new Set();
-let revealedExampleAnswers = new Set();
+let revealedExampleAnswerItems = new Set();
 let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
@@ -777,16 +785,14 @@ function renderNormalGrid(){
           + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
           + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
     if(examples && expandedExampleIds.has(item.id)){
-      examples.forEach((ex, exi) => {
-        const exId = item.id + '#' + exi;
-        const answerShown = revealedExampleAnswers.has(exId);
-        html += '<div class="cell example-line example-no' + alt + '">' + escapeHtml(ex.norsk) + '</div>';
-        html += '<div class="cell example-line example-pt' + alt + (answerShown ? '' : ' pt-hidden') + '" data-ex-id="' + escapeHtml(exId) + '">'
-              + (answerShown
-                  ? (escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span>')
-                  : '<span class="pt-veil">Trykk E (eller her) for å vise</span>')
-              + '</div>';
-      });
+      const answersShown = revealedExampleAnswerItems.has(item.id);
+      const norskCol = '<div class="ex-norsk-col">' + examples.map(ex => '<div>' + escapeHtml(ex.norsk) + '</div>').join('') + '</div>';
+      const rightCol = answersShown
+        ? '<div class="ex-pt-col">' + examples.map(ex =>
+            '<div>' + escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>'
+          ).join('') + '</div>'
+        : '<div class="ex-veil" data-id="' + idAttr + '"><span class="pt-veil">Trykk E (eller her) for å vise</span></div>';
+      html += '<div class="example-line example-wrap' + alt + '">' + norskCol + rightCol + '</div>';
     }
   });
   grid.innerHTML = html;
@@ -801,8 +807,7 @@ function getActiveRowItem(){
 }
 
 function clearExampleAnswersFor(id){
-  const prefix = id + '#';
-  [...revealedExampleAnswers].forEach(k => { if(k.startsWith(prefix)) revealedExampleAnswers.delete(k); });
+  revealedExampleAnswerItems.delete(id);
 }
 
 function toggleExamples(id){
@@ -827,25 +832,11 @@ function toggleExamples(id){
   });
 }
 
-function revealExampleAnswer(exId){
-  if(revealedExampleAnswers.has(exId)) return;
-  const oldTotalHeight = totalHeight;
-  const keepReveal = revealY;
-  revealedExampleAnswers.add(exId);
-  renderGrid();
-  requestAnimationFrame(() => {
-    measure();
-    const delta = totalHeight - oldTotalHeight;
-    setReveal(keepReveal + delta, false);
-  });
-}
-
 function revealAllExampleAnswers(item){
-  const examples = EXAMPLES[item.id];
-  if(!examples) return;
+  if(revealedExampleAnswerItems.has(item.id)) return;
   const oldTotalHeight = totalHeight;
   const keepReveal = revealY;
-  examples.forEach((ex, exi) => revealedExampleAnswers.add(item.id + '#' + exi));
+  revealedExampleAnswerItems.add(item.id);
   renderGrid();
   requestAnimationFrame(() => {
     measure();
@@ -855,9 +846,7 @@ function revealAllExampleAnswers(item){
 }
 
 function hasVeiledExampleAnswers(item){
-  const examples = EXAMPLES[item.id];
-  if(!examples) return false;
-  return examples.some((ex, exi) => !revealedExampleAnswers.has(item.id + '#' + exi));
+  return EXAMPLES[item.id] && !revealedExampleAnswerItems.has(item.id);
 }
 
 function formCellHtml(form){
@@ -1084,8 +1073,12 @@ grid.addEventListener('click', (e) => {
     if(item) toggleMark(item);
     return;
   }
-  const exPt = e.target.closest('.example-pt.pt-hidden');
-  if(exPt){ revealExampleAnswer(exPt.dataset.exId); return; }
+  const exVeil = e.target.closest('.ex-veil');
+  if(exVeil){
+    const item = renderedItemsById.get(exVeil.dataset.id);
+    if(item) revealAllExampleAnswers(item);
+    return;
+  }
   const cellPt = e.target.closest('.cell-pt.has-examples');
   if(cellPt) toggleExamples(cellPt.dataset.id);
 });
@@ -1130,7 +1123,7 @@ shuffleBtn.addEventListener('click', () => {
     }
   }
   expandedExampleIds.clear();
-  revealedExampleAnswers.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1138,13 +1131,13 @@ shuffleBtn.addEventListener('click', () => {
 
 hideBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
-  revealedExampleAnswers.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 revealBtn.addEventListener('click', () => {
   expandedExampleIds.clear();
-  revealedExampleAnswers.clear();
+  revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(totalHeight, true); });
 });
