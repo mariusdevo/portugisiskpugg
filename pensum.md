@@ -1296,3 +1296,41 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Det er vårt. | É da gente. | [Æ da ZJẼ-tsji] |
 | Boka til Ana. | O livro da Ana. | [o LI-vro da Ã-na] |
 | Vennene deres. | Os amigos deles. | [os a-MI-gos DE-lis] |
+
+## Appendiks E: Gloser fra «Minha mãe é demais»
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| hvilken som helst | qualquer | [kwao-KÆR] |
+| til når, hvor lenge | até quando | [a-TÆ KWÃ-do] |
+| noe | algo | [AO-go] |
+| mens | enquanto | [ẽ-KWÃ-to] |
+| en / noen (ubestemt) | algum / alguma / alguns / algumas | [ao-GŨ / ao-GŨ-ma / ao-GŨS / ao-GŨ-mas] |
+| noen (person) | alguém | [ao-GẼI] |
+| likevel | mesmo assim | [MES-mo a-SĨ] |
+| å gjøre, å lage | fazer | [fa-ZER] |
+| på en eller annen måte | de alguma forma | [dji ao-GŨ-ma FÅR-ma] |
+| nesten | quase | [KWA-zi] |
+| irritert, lei seg (mann / kvinne) | chateado / chateada | [sja-tsje-A-do / sja-tsje-A-da] |
+| å føle, å kjenne | sentir | [sẽ-TSJIR] |
+| full, mett (mann / kvinne) | cheio / cheia | [SJEI-o / SJEI-a] |
+| sammen (menn / kvinner) | juntos / juntas | [ZJŨ-tos / ZJŨ-tas] |
+| å komme, å ankomme | chegar | [sje-GAR] |
+| å sette, å legge, å plassere | colocar | [ko-lo-KAR] |
+| seng | cama | [KA-ma] |
+| deg (foran verb) | te | [tsji] |
+| å sovne | adormecer | [a-dor-me-SER] |
+| gjennom, i (sammentrekning av por + a) | pela | [PE-la] |
+| ansikt | rosto | [HÅS-to] |
+| lukket (mann / kvinne) | fechado / fechada | [fe-SJA-do / fe-SJA-da] |
+| å vokse | crescer | [kres-SER] |
+| gjett! | adivinhe | [a-dji-VI-nji] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg elsker deg, min rose. | Eu te amo, minha rosa. | [eo tsji A-mo, MI-nja HÅ-za] |
+| Når natten kommer, … | Quando a noite chega, … | [KWÃ-do a NÅI-tsji SJÆ-ga] |
