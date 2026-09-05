@@ -1334,3 +1334,45 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 |---|---|---|
 | Jeg elsker deg, min rose. | Eu te amo, minha rosa. | [eo tsji A-mo, MI-nja HÅ-za] |
 | Når natten kommer, … | Quando a noite chega, … | [KWÃ-do a NÅI-tsji SJÆ-ga] |
+
+## Appendiks F: Gloser fra «A Lagarta Viajante»
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| larven | a lagarta | [a la-GAR-ta] |
+| skogen | a floresta | [a flo-RES-ta] |
+| familien | a família | [a fa-MI-lia] |
+| bygningen | o prédio | [o PRÆ-djo] |
+| person / folk | a pessoa / as pessoas | [a pe-SO-a / as pe-SO-as] |
+| esken, boksen | a caixa | [a KAI-sha] |
+| gulvet, bakken | o chão | [o SJÃO] |
+| magen | o estômago | [o es-TO-ma-go] |
+| vinduet | a janela | [a zja-NE-la] |
+| skyen / skyene | a nuvem / as nuvens | [a NU-vẽi / as NU-vẽis] |
+| himmelen | o céu | [o SÆO] |
+| lukten | o cheiro | [o SJEI-ro] |
+| vannet | a água | [a A-gwa] |
+| eventyret | a aventura | [a a-vẽ-TU-ra] |
+| mamma | a mamãe | [a ma-MÃI] |
+| pappa | o papai | [o pa-PAI] |
+| å forandre seg | mudar | [mu-DAR] |
+| å leve | viver | [vi-VER] |
+| å gå tur | caminhar | [ka-mi-NJAR] |
+| å klatre | escalar | [es-ka-LAR] |
+| å klatre opp, å stige | subir | [su-BIR] |
+| å begynne | começar | [ko-me-SAR] |
+| å holde | segurar | [se-gu-RAR] |
+| å falle | cair | [ka-IR] |
+| å smile | sorrir | [so-HIR] |
+| å klemme | abraçar | [a-bra-SAR] |
+| å dra / komme tilbake | voltar | [vou-TAR] |
+| å skrike | gritar | [gri-TAR] |
+| felles, vanlig | comum | [ko-MŨ] |
+| skinnende | brilhante | [bri-LJÃ-tsji] |
+| enorm | enorme | [e-NÅR-mi] |
+| rar, merkelig (mann / kvinne) | estranho / estranha | [es-TRA-njo / es-TRA-nja] |
+| hvit (mann / kvinne) | branco / branca | [BRÃ-ko / BRÃ-ka] |
+| deilig (mann / kvinne) | delicioso / deliciosa | [de-li-SIO-zo / de-li-SIO-za] |
+| stram, tett (mann / kvinne) | apertado / apertada | [a-per-TA-do / a-per-TA-da] |
