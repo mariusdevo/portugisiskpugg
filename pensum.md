@@ -1135,6 +1135,74 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Altfor godt. | Bom demais. | [bõ dji-MAIS] |
 | Bilen er rask, men gammel. | O carro é rápido, mas velho. | [o KA-ho Æ HA-pi-do, mas VÆ-ljo] |
 
+## 15. A lagarta viajante
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| for … siden | há | [A] |
+| forandret seg fullstendig | mudou completamente | [mo-DO kõ-ple-ta-MẼ-tsji] |
+| vanlig, alminnelig | comum | [ko-MŨ] |
+| jeg dro ut, jeg gikk ut | saí | [sa-I] |
+| skinnende, blank | brilhante | [bri-LJÃ-tsji] |
+| under, nedenunder | embaixo | [ẽi-BAI-sjo] |
+| nydelig, vakker | lindo | [LĨ-do] |
+| så (+ adjektiv) | tão | [TÃO] |
+| en morgen | numa manhã | [NŨ-ma ma-NJÃ] |
+| å komme fram | chegar | [sje-GAR] |
+| tilbake | de volta | [dji VÅO-ta] |
+| i stedet for | ao invés de | [ao ĩ-VÆS dji] |
+| steiner | pedras | [PÆ-dras] |
+| omgitt (av) | rodeada | [ho-dji-A-da] |
+| mon tro? tro om …? | Será (que) …? | [se-RA ki] |
+| ville klare | conseguiria | [kõ-se-gi-RI-a] |
+| var (fortid, tilstand) | estava / tava | [es-TA-va / TA-va] |
+| ville lete etter | procuraria | [pro-ko-ra-RI-a] |
+| ropte på meg | me chamou | [mi sja-MO] |
+| i den, på den | nele | [NE-li] |
+| tok lang tid | demorou | [dji-mo-RO] |
+| langt fra folkemengden | longe da multidão | [LÕ-zji da mo-tsji-DÃO] |
+| jeg krøp, jeg ålte meg | rastejei | [has-te-ZJEI] |
+| oppå, over | em cima de | [ẽi SI-ma dji] |
+| å hvile | descansar | [des-kã-SAR] |
+| sult | fome | [FÅ-mi] |
+| jeg håper | espero | [es-PÆ-ro] |
+| at (jeg/han) klarer | consiga | [kõ-SI-ga] |
+| snart | em breve | [ẽi BRÆ-vi] |
+| de må | devem | [DÆ-vẽi] |
+| like etterpå, straks etter | logo em seguida | [LÅ-go ẽi se-GI-da] |
+| ved et uhell | acidentalmente | [a-si-dẽ-tao-MẼ-tsji] |
+| mistet, lot falle | deixou cair | [dei-SJO ka-IR] |
+| bit, stykke | pedaço | [pe-DA-so] |
+| bakken, gulvet | chão | [SJÃO] |
+| jeg tok en bit | dei uma mordida | [DEI Ũ-ma mor-DJI-da] |
+| sånn! | assim! | [a-SĨ] |
+| jeg klatret opp | subi | [so-BI] |
+| jeg sovnet | caí no sono | [ka-I no SO-no] |
+| jeg fikk, jeg hadde | tive | [TSJI-vi] |
+| det fantes, det var | havia | [a-VI-a] |
+| sittende (hunkjønn fl.) | sentadas | [sẽ-TA-das] |
+| stoler | cadeiras | [ka-DEI-ras] |
+| ved siden av, på siden | do lado | [do LA-do] |
+| smilte | sorriu | [so-HIO] |
+| holdt fast | segurou | [se-go-RO] |
+| å nå, å rekke | alcançar | [ao-kã-SAR] |
+| utsikt | vista | [VIS-ta] |
+| på toppen | no topo | [no TO-po] |
+| skyer | nuvens | [NO-vẽis] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg var bare en helt vanlig larve som bodde i skogen med familien min. | Eu era apenas uma lagarta comum vivendo na floresta com a minha família. | [eo Æ-ra a-PE-nas Ũ-ma la-GAR-ta ko-MŨ vi-VẼ-do na flo-RÆS-ta kõ a MI-nja fa-MI-lia] |
+| Det var en stor greie. | Era uma coisa grande. | [Æ-ra Ũ-ma KÅI-za GRÃ-dji] |
+| Før jeg rakk å komme meg til toppen, begynte den å bevege seg. | Antes que eu conseguisse chegar ao topo, ele começou a se mover. | [Ã-tsjis ki eo kõ-se-GI-si sje-GAR ao TO-po, E-li ko-me-SO a si mo-VER] |
+| Jeg visste ikke hva jeg skulle gjøre, så jeg holdt meg fast så hardt jeg kunne. | Não sabia o que fazer, então me segurei o mais forte que podia. | [não sa-BI-a o ki fa-ZER, ẽ-TÃO mi se-go-REI o MAIS FÅR-tsji ki po-DJI-a] |
+| Vi fór så fort av gårde at jeg trodde jeg kom til å fly av. | Estávamos indo tão rápido que pensei que iria sair voando. | [es-TA-va-mos Ĩ-do TÃO HA-pi-do ki pẽ-SEI ki i-RI-a sa-IR vo-Ã-do] |
+| Jeg hoppet ut av den. | Eu saltei para fora dele. | [eo sao-TEI pra FÅ-ra DE-li] |
+
 # Appendiks
 
 ## Appendiks A: Spørreord
