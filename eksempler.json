@@ -5195,18 +5195,6 @@
       "uttale": "o pro-fe-SOR mi sja-MO"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::i det, på det (sammentrekning av em + ele)::nele": [
-    {
-      "norsk": "Jeg stoler på ham.",
-      "port": "Confio nele.",
-      "uttale": "kõ-FI-o NE-li"
-    },
-    {
-      "norsk": "Jeg klatret opp på den.",
-      "port": "Eu subi nele.",
-      "uttale": "eo so-BI NE-li"
-    }
-  ],
   "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::tok lang tid::demorou": [
     {
       "norsk": "Det tok lang tid.",
@@ -5937,6 +5925,366 @@
       "norsk": "Skjorten er tett.",
       "port": "A camisa está apertada.",
       "uttale": "a ka-MI-za es-TA a-per-TA-da"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::dette / denne (nær meg)::este / esta": [
+    {
+      "norsk": "Dette er boken min.",
+      "port": "Este é o meu livro.",
+      "uttale": "ES-tsji Æ o meo LI-vro"
+    },
+    {
+      "norsk": "Dette huset er nytt.",
+      "port": "Esta casa é nova.",
+      "uttale": "ES-ta KA-za Æ NO-va"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::dette (generelt, upersonlig)::isto": [
+    {
+      "norsk": "Dette er viktig.",
+      "port": "Isto é importante.",
+      "uttale": "IS-to Æ ĩ-por-TÃ-tsji"
+    },
+    {
+      "norsk": "Hva er dette?",
+      "port": "O que é isto?",
+      "uttale": "o ki Æ IS-to"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::det / den (nær deg — mest brukt i tale)::esse / essa": [
+    {
+      "norsk": "Er den bilen din?",
+      "port": "Esse carro é seu?",
+      "uttale": "E-si KA-ho Æ SEO"
+    },
+    {
+      "norsk": "Den ideen er god.",
+      "port": "Essa ideia é boa.",
+      "uttale": "E-sa i-DEI-a Æ BÅ-a"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::det, dette (generelt, upersonlig — svært vanlig)::isso": [
+    {
+      "norsk": "Nettopp!",
+      "port": "Isso mesmo!",
+      "uttale": "I-so MES-mo"
+    },
+    {
+      "norsk": "Hvorfor gjorde du det?",
+      "port": "Por que você fez isso?",
+      "uttale": "por-KI vo-SE FES I-so"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::det der / den der (langt unna)::aquele / aquela": [
+    {
+      "norsk": "Den bygningen der borte er enorm.",
+      "port": "Aquele prédio é enorme.",
+      "uttale": "a-KE-li PRÆ-djo Æ e-NÅR-mi"
+    },
+    {
+      "norsk": "Den kvinnen der borte er tanten min.",
+      "port": "Aquela mulher é minha tia.",
+      "uttale": "a-KE-la mo-LJÆR Æ MI-nja TSJI-a"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::det der (generelt, langt unna)::aquilo": [
+    {
+      "norsk": "Det der borte er et fjell.",
+      "port": "Aquilo é uma montanha.",
+      "uttale": "a-KI-lo Æ Ũ-ma mõ-TÃ-nja"
+    },
+    {
+      "norsk": "Jeg forstår ikke det der.",
+      "port": "Eu não entendo aquilo.",
+      "uttale": "eo não ẽ-TẼ-do a-KI-lo"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::disse (nær meg, flertall)::estes / estas": [
+    {
+      "norsk": "Disse skoene er mine.",
+      "port": "Estes sapatos são meus.",
+      "uttale": "ES-tsjis sa-PA-tos são MEOS"
+    },
+    {
+      "norsk": "Disse blomstene er vakre.",
+      "port": "Estas flores são lindas.",
+      "uttale": "ES-tas FLÅ-ris são LĨ-das"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::disse, de der (nær deg, flertall)::esses / essas": [
+    {
+      "norsk": "De bøkene der er interessante.",
+      "port": "Esses livros são interessantes.",
+      "uttale": "E-sis LI-vros são ĩ-te-re-SÃ-tsjis"
+    },
+    {
+      "norsk": "De barna der er hyggelige.",
+      "port": "Essas crianças são simpáticas.",
+      "uttale": "E-sas kri-Ã-sas são sĩ-PA-tsji-kas"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::de der (langt unna, flertall)::aqueles / aquelas": [
+    {
+      "norsk": "De mennene der borte jobber her.",
+      "port": "Aqueles homens trabalham aqui.",
+      "uttale": "a-KE-lis Å-mẽis tra-BA-ljão a-KI"
+    },
+    {
+      "norsk": "De husene der borte er gamle.",
+      "port": "Aquelas casas são antigas.",
+      "uttale": "a-KE-las KA-zas são Ã-tsji-gas"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på ham, i / på den (hankjønn)::nele": [
+    {
+      "norsk": "Jeg stoler på ham.",
+      "port": "Confio nele.",
+      "uttale": "kõ-FI-o NE-li"
+    },
+    {
+      "norsk": "Jeg tenkte på ham hele dagen.",
+      "port": "Pensei nele o dia todo.",
+      "uttale": "pẽ-SEI NE-li o DJI-a TO-do"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på henne, i / på den (hunkjønn)::nela": [
+    {
+      "norsk": "Han tenker alltid på henne.",
+      "port": "Ele pensa nela sempre.",
+      "uttale": "E-li PẼ-sa NE-la SẼI-pri"
+    },
+    {
+      "norsk": "Jeg tror ikke på henne.",
+      "port": "Não acredito nela.",
+      "uttale": "não a-kre-DJI-to NE-la"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dem (hankjønn)::neles": [
+    {
+      "norsk": "Vi stoler på dem.",
+      "port": "Confiamos neles.",
+      "uttale": "kõ-fi-Ã-mos NE-lis"
+    },
+    {
+      "norsk": "Vi tenker på dem hver dag.",
+      "port": "Pensamos neles todos os dias.",
+      "uttale": "pẽ-SÃ-mos NE-lis TO-dos os DJI-as"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dem (hunkjønn)::nelas": [
+    {
+      "norsk": "Jeg tror på dem.",
+      "port": "Acredito nelas.",
+      "uttale": "a-kre-DJI-to NE-las"
+    },
+    {
+      "norsk": "Jeg tenkte på dem i går.",
+      "port": "Pensei nelas ontem.",
+      "uttale": "pẽ-SEI NE-las Õ-tẽi"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dette::neste / nesta": [
+    {
+      "norsk": "Jeg bor i dette nabolaget.",
+      "port": "Moro neste bairro.",
+      "uttale": "MÅ-ro NES-tsji BAI-ho"
+    },
+    {
+      "norsk": "I denne byen er det mye folk.",
+      "port": "Nesta cidade tem muita gente.",
+      "uttale": "NES-ta si-DA-dji tẽi MŨI-ta ZJẼ-tsji"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dette (generelt)::nisto": [
+    {
+      "norsk": "Ikke tenk på dette nå.",
+      "port": "Não pense nisto agora.",
+      "uttale": "não PẼ-si NIS-to a-GÅ-ra"
+    },
+    {
+      "norsk": "Jeg er enig i dette.",
+      "port": "Concordo nisto.",
+      "uttale": "kõ-KÅR-do NIS-to"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det / den der::nesse / nessa": [
+    {
+      "norsk": "Jeg bor i den bygningen.",
+      "port": "Moro nesse prédio.",
+      "uttale": "MÅ-ro NE-si PRÆ-djo"
+    },
+    {
+      "norsk": "I den butikken er det alt.",
+      "port": "Nessa loja tem tudo.",
+      "uttale": "NE-sa LÅ-zja tẽi TO-do"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det (generelt)::nisso": [
+    {
+      "norsk": "Ikke tenk på det.",
+      "port": "Não pense nisso.",
+      "uttale": "não PẼ-si NI-so"
+    },
+    {
+      "norsk": "Vi snakker om det senere.",
+      "port": "Vamos falar nisso depois.",
+      "uttale": "VÃ-mos fa-LAR NI-so de-PÅIS"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det der borte::naquele / naquela": [
+    {
+      "norsk": "Han bor i den bygningen der borte.",
+      "port": "Ele mora naquele prédio.",
+      "uttale": "E-li MÅ-ra na-KE-li PRÆ-djo"
+    },
+    {
+      "norsk": "Jeg satte meg på den stolen der borte.",
+      "port": "Sentei naquela cadeira.",
+      "uttale": "sẽ-TEI na-KE-la ka-DEI-ra"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det der (generelt)::naquilo": [
+    {
+      "norsk": "Ikke tenk på det der.",
+      "port": "Não pense naquilo.",
+      "uttale": "não PẼ-si na-KI-lo"
+    },
+    {
+      "norsk": "Jeg tror på det han sa.",
+      "port": "Acredito naquilo que ele disse.",
+      "uttale": "a-kre-DJI-to na-KI-lo ki E-li DJI-si"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra dette::deste / desta": [
+    {
+      "norsk": "Jeg liker denne boken.",
+      "port": "Gosto deste livro.",
+      "uttale": "GÅS-to DES-tsji LI-vro"
+    },
+    {
+      "norsk": "Denne gangen går det bra.",
+      "port": "Desta vez vai dar certo.",
+      "uttale": "DES-ta VES VAI DAR SÆR-to"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra dette (generelt)::disto": [
+    {
+      "norsk": "Jeg trenger dette nå.",
+      "port": "Preciso disto agora.",
+      "uttale": "pre-SI-zo DJIS-to a-GÅ-ra"
+    },
+    {
+      "norsk": "Jeg liker dette veldig godt.",
+      "port": "Gosto muito disto.",
+      "uttale": "GÅS-to MŨI-to DJIS-to"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det / den der::desse / dessa": [
+    {
+      "norsk": "Jeg liker den filmen.",
+      "port": "Gosto desse filme.",
+      "uttale": "GÅS-to DE-si FIO-mi"
+    },
+    {
+      "norsk": "Jeg trenger den informasjonen.",
+      "port": "Preciso dessa informação.",
+      "uttale": "pre-SI-zo DE-sa ĩ-for-ma-SÃO"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det (generelt — svært vanlig)::disso": [
+    {
+      "norsk": "Jeg liker det.",
+      "port": "Gosto disso.",
+      "uttale": "GÅS-to DJI-so"
+    },
+    {
+      "norsk": "Jeg trenger det nå.",
+      "port": "Preciso disso agora.",
+      "uttale": "pre-SI-zo DJI-so a-GÅ-ra"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det der borte::daquele / daquela": [
+    {
+      "norsk": "Jeg liker det stedet der borte.",
+      "port": "Gosto daquele lugar.",
+      "uttale": "GÅS-to da-KE-li lo-GAR"
+    },
+    {
+      "norsk": "Jeg husker den reisen der borte.",
+      "port": "Lembro daquela viagem.",
+      "uttale": "LẼI-bro da-KE-la vi-A-zjẽi"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det der (generelt)::daquilo": [
+    {
+      "norsk": "Jeg liker det der.",
+      "port": "Gosto daquilo.",
+      "uttale": "GÅS-to da-KI-lo"
+    },
+    {
+      "norsk": "Jeg trenger det der også.",
+      "port": "Preciso daquilo também.",
+      "uttale": "pre-SI-zo da-KI-lo tãi-BẼI"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på (hankjønn / hunkjønn)::no / na": [
+    {
+      "norsk": "Boken ligger på gulvet.",
+      "port": "O livro está no chão.",
+      "uttale": "o LI-vro es-TA no SJÃO"
+    },
+    {
+      "norsk": "Hun bor i byen.",
+      "port": "Ela mora na cidade.",
+      "uttale": "E-la MÅ-ra na si-DA-dji"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::av, fra, sin (hankjønn / hunkjønn)::do / da": [
+    {
+      "norsk": "Bilen til faren min.",
+      "port": "O carro do meu pai.",
+      "uttale": "o KA-ho do meo PAI"
+    },
+    {
+      "norsk": "Huset til bestemoren min.",
+      "port": "A casa da minha avó.",
+      "uttale": "a KA-za da MI-nja a-VÅ"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::til (hankjønn / hunkjønn)::ao / à": [
+    {
+      "norsk": "Jeg drar til butikken.",
+      "port": "Vou ao mercado.",
+      "uttale": "VO ao mer-KA-do"
+    },
+    {
+      "norsk": "Vi kom fram til skolen.",
+      "port": "Chegamos à escola.",
+      "uttale": "sje-GA-mos a es-KÅ-la"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::gjennom, langs (hankjønn / hunkjønn)::pelo / pela": [
+    {
+      "norsk": "Vi gikk gjennom parken.",
+      "port": "Andamos pelo parque.",
+      "uttale": "ã-DA-mos PE-lo PAR-ki"
+    },
+    {
+      "norsk": "Hun gikk gjennom døren.",
+      "port": "Ela passou pela porta.",
+      "uttale": "E-la pa-SO PE-la PÅR-ta"
+    }
+  ],
+  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på en (ubestemt, hankjønn / hunkjønn)::num / numa": [
+    {
+      "norsk": "Jeg bor i en liten leilighet.",
+      "port": "Moro num apartamento pequeno.",
+      "uttale": "MÅ-ro nũ a-par-ta-MẼ-to pe-KE-no"
+    },
+    {
+      "norsk": "En morgen forandret alt seg.",
+      "port": "Numa manhã, tudo mudou.",
+      "uttale": "NŨ-ma ma-NJÃ, TO-do mo-DO"
     }
   ]
 }
