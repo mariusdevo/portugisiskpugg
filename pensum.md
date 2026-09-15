@@ -1341,7 +1341,7 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| for … siden | há | [A] |
+| det finnes, det er; for … siden (om tid) | há | [A] |
 | forandret seg fullstendig | mudou completamente | [mo-DO kõ-ple-ta-MẼ-tsji] |
 | vanlig, alminnelig | comum | [ko-MŨ] |
 | jeg dro ut, jeg gikk ut | saí | [sa-I] |
@@ -1360,7 +1360,7 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | var (fortid, tilstand) | estava / tava | [es-TA-va / TA-va] |
 | ville lete etter | procuraria | [pro-ko-ra-RI-a] |
 | ropte på meg | me chamou | [mi sja-MO] |
-| i den, på den | nele | [NE-li] |
+| i det, på det (sammentrekning av em + ele) | nele | [NE-li] |
 | tok lang tid | demorou | [dji-mo-RO] |
 | langt fra folkemengden | longe da multidão | [LÕ-zji da mo-tsji-DÃO] |
 | jeg krøp, jeg ålte meg | rastejei | [has-te-ZJEI] |
@@ -1368,7 +1368,7 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | å hvile | descansar | [des-kã-SAR] |
 | sult | fome | [FÅ-mi] |
 | jeg håper | espero | [es-PÆ-ro] |
-| at (jeg/han) klarer | consiga | [kõ-SI-ga] |
+| at (jeg/han) klarer (konjunktiv, etter f.eks. "espero que") | consiga | [kõ-SI-ga] |
 | snart | em breve | [ẽi BRÆ-vi] |
 | de må | devem | [DÆ-vẽi] |
 | like etterpå, straks etter | logo em seguida | [LÅ-go ẽi se-GI-da] |
@@ -1377,14 +1377,14 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | bit, stykke | pedaço | [pe-DA-so] |
 | bakken, gulvet | chão | [SJÃO] |
 | jeg tok en bit | dei uma mordida | [DEI Ũ-ma mor-DJI-da] |
-| sånn! | assim! | [a-SĨ] |
+| slik, sånn | assim | [a-SĨ] |
 | jeg klatret opp | subi | [so-BI] |
 | jeg sovnet | caí no sono | [ka-I no SO-no] |
 | jeg fikk, jeg hadde | tive | [TSJI-vi] |
-| det fantes, det var | havia | [a-VI-a] |
+| det fantes, det var (datid av "há") | havia | [a-VI-a] |
 | sittende (hunkjønn fl.) | sentadas | [sẽ-TA-das] |
 | stoler | cadeiras | [ka-DEI-ras] |
-| ved siden av, på siden | do lado | [do LA-do] |
+| ved siden av | ao lado (de) | [ao LA-do (dji)] |
 | smilte | sorriu | [so-HIO] |
 | holdt fast | segurou | [se-go-RO] |
 | å nå, å rekke | alcançar | [ao-kã-SAR] |
