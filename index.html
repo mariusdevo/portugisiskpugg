@@ -53,8 +53,26 @@ h1{
   margin:0 0 4px;letter-spacing:-0.01em;
 }
 .wave-underline{display:block;margin:0 0 8px;}
-.tagline{margin:0;color:var(--ink-soft);font-size:0.95rem;}
-.howto{margin:8px 0 0;color:var(--ink-soft);font-size:0.88rem;line-height:1.5;max-width:56ch;}
+.tagline{margin:0 0 10px;color:var(--ink-soft);font-size:0.95rem;}
+.info-toggle{font-size:0.82rem;padding:7px 12px;}
+
+.info-panel{
+  background:var(--paper);border-radius:var(--radius);padding:22px 24px;
+  box-shadow:0 16px 36px -22px rgba(11,59,68,0.45);margin-bottom:16px;
+  color:var(--ink);line-height:1.6;
+}
+.info-panel h2{
+  font-family:'Fraunces',Georgia,serif;font-size:1.3rem;color:var(--ocean-deep);
+  margin:0 0 12px;font-weight:600;
+}
+.info-panel h3{
+  font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--coral-dark);
+  margin:20px 0 6px;font-weight:700;
+}
+.info-panel p{margin:0 0 4px;color:var(--ink);}
+.info-panel ul{margin:8px 0 0;padding-left:22px;}
+.info-panel li{margin-bottom:6px;}
+.info-panel button{margin-top:22px;}
 
 .panel{
   background:var(--paper);border-radius:16px;padding:16px;
@@ -145,7 +163,7 @@ code{
 }
 
 .cell-pt .pt{font-weight:600;font-size:0.98rem;color:var(--ink);}
-.cell-pt .ut{
+.cell-pt .ut, .cell-no .ut{
   font-family:'IBM Plex Mono','Courier New',monospace;
   font-size:0.82rem;color:var(--ocean);margin-top:3px;letter-spacing:0.01em;
 }
@@ -315,10 +333,46 @@ code{
       <path d="M1 7 Q12 1 23 7 T45 7 T67 7 T89 7" fill="none" stroke="#1C7A86" stroke-width="2.2" stroke-linecap="round"/>
     </svg>
     <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
-    <p class="howto">Hvert kapittel har egne gloser — substantiv, verb og adjektiv knyttet til temaet. Pugg disse først, og bytt så til <strong>Setninger</strong>-fanen for å øve på å bygge setninger med dem.</p>
+    <button id="infoToggleBtn" class="btn ghost info-toggle" type="button">ℹ️ Hvordan bruke Onda</button>
   </div>
 
   <div id="statusBox" class="status">Laster pensum …</div>
+
+  <div id="infoPanel" class="info-panel" style="display:none;">
+    <h2>Hvordan bruke Onda</h2>
+    <p>Onda er bygget for å gi deg frihet i puggingen, i motsetning til f.eks. Duolingo som tvinger deg gjennom faste steg i en bestemt rekkefølge og lar deg bruke tid på stoff du allerede kan. Her velger du selv hvilket <strong>kapittel</strong> du vil øve på — gloser er sortert i temaer, så du kan hoppe rett til det du trenger akkurat nå.</p>
+
+    <h3>Slik er hvert kapittel bygget opp</h3>
+    <p>Hvert kapittel har egne gloser — substantiv, verb og adjektiv knyttet til temaet. Pugg disse først, og bytt så til <strong>Setninger</strong>-fanen for å øve på å bygge setninger med dem.</p>
+
+    <h3>Bølgen</h3>
+    <p>Portugisisk og uttale ligger skjult under en «bølge» (<em>onda</em>). Dra den nedover, klikk på den, eller trykk <strong>mellomrom</strong> for å avsløre én rad om gangen. Det norske ordet er alltid synlig.</p>
+
+    <h3>Ekstra pugg</h3>
+    <p>Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne). Du kan filtrere et kapittel til å vise <strong>kun</strong> ordene du har lagt i Ekstra pugg, eller velge «★ Ekstra pugg» i kapittelvelgeren for å se alt du har samlet fra alle kapitler under ett.</p>
+
+    <h3>Eksempelsetninger</h3>
+    <p>Ord med 💬 har eksempelsetninger. Trykk på ordet (eller <strong>E</strong>) for å vise dem — den portugisiske oversettelsen holdes skjult til du ber om å se den, slik at du også kan øve på å huske den, ikke bare lese den.</p>
+
+    <h3>Retning: norsk → portugisisk, eller omvendt</h3>
+    <p>Bytt-knappen lar deg snu øvingen — i stedet for å se norsk og avsløre portugisisk, ser du portugisisk og avslører norsk. Fin variasjon når du vil øve på å forstå heller enn å produsere.</p>
+
+    <h3>Fullt tastaturstyrt</h3>
+    <p>Hele siden er laget for at du skal kunne øve uten å ta hånden av tastaturet:</p>
+    <ul>
+      <li><strong>Mellomrom</strong> — avslør neste rad</li>
+      <li><strong>← / →</strong> — forrige / neste kapittel</li>
+      <li><strong>Enter</strong> — legg sist avslørte rad i Ekstra pugg (eller fjern den)</li>
+      <li><strong>E</strong> — vis eksempelsetninger for sist avslørte ord</li>
+      <li><strong>S</strong> — stokk om rekkefølgen</li>
+      <li><strong>K</strong> — filtrer kapittelet til kun Ekstra pugg</li>
+    </ul>
+
+    <h3>Om uttalen</h3>
+    <p>Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt.</p>
+
+    <button id="infoToggleBtnBottom" class="btn primary" type="button">← Tilbake til øving</button>
+  </div>
 
   <div id="ui" style="display:none;">
     <div class="panel">
@@ -335,6 +389,7 @@ code{
         </div>
 
         <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg (k)</button>
+        <button id="reverseBtn" class="btn ghost" type="button" aria-pressed="false">🔄 NO → PT</button>
 
         <div class="actions">
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om (s)</button>
@@ -349,8 +404,6 @@ code{
       <span>Blandet liste — gloser og setninger sammen. Trykk på en rad for å fjerne den fra Ekstra pugg.</span>
       <button id="clearExtraBtn" class="btn ghost" type="button">Tøm Ekstra pugg</button>
     </div>
-
-    <p class="hint" id="hintText">Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt. Trykk på det norske ordet for å legge raden i <strong>Ekstra pugg</strong> (trykk igjen for å fjerne), eller bruk <strong>Enter</strong> for å gjøre det samme med sist avslørte rad. <strong>E</strong> viser eksempelsetninger for sist avslørte ord — den portugisiske oversettelsen er skjult til du trykker <strong>E</strong> igjen (eller på setningen selv), så du kan øve på å huske den. Piltast venstre/høyre bytter kapittel.</p>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
 
@@ -387,7 +440,6 @@ const typeTabs = document.getElementById('typeTabs');
 const boyningTab = document.getElementById('boyningTab');
 const extraNote = document.getElementById('extraNote');
 const clearExtraBtn = document.getElementById('clearExtraBtn');
-const hintText = document.getElementById('hintText');
 const futureNote = document.getElementById('futureNote');
 const colHeads = document.getElementById('colHeads');
 const irregularCards = document.getElementById('irregularCards');
@@ -399,16 +451,21 @@ const handle = document.getElementById('handle');
 const counterEl = document.getElementById('counter');
 const shuffleBtn = document.getElementById('shuffleBtn');
 const extraFilterBtn = document.getElementById('extraFilterBtn');
+const reverseBtn = document.getElementById('reverseBtn');
 const hideBtn = document.getElementById('hideBtn');
 const revealBtn = document.getElementById('revealBtn');
 const pdfBtn = document.getElementById('pdfBtn');
 const printView = document.getElementById('printView');
+const infoPanel = document.getElementById('infoPanel');
+const infoToggleBtn = document.getElementById('infoToggleBtn');
+const infoToggleBtnBottom = document.getElementById('infoToggleBtnBottom');
 
 let SECTIONS = [];
 let sectionIndex = 0;
 let currentType = 'gloser';
 let viewingExtra = false;
 let filterExtraOnly = false;
+let reversed = false;
 let currentList = [];
 let boyningGroups = [];
 let EXAMPLES = {};
@@ -599,6 +656,15 @@ function updateExtraFilterUI(){
   extraFilterBtn.textContent = (filterExtraOnly ? '★' : '☆') + ' Kun ekstra pugg (k) (' + count + ')';
 }
 
+function updateReverseUI(){
+  const relevant = currentType !== 'boyning';
+  reverseBtn.style.display = relevant ? '' : 'none';
+  if(!relevant) return;
+  reverseBtn.classList.toggle('active', reversed);
+  reverseBtn.setAttribute('aria-pressed', String(reversed));
+  reverseBtn.textContent = reversed ? '🔄 PT → NO' : '🔄 NO → PT';
+}
+
 function buildChapterOptions(){
   chapterSelect.innerHTML = '';
   ekstraOption = document.createElement('option');
@@ -732,7 +798,6 @@ function loadList(){
   const section = !viewingExtra ? SECTIONS[sectionIndex] : null;
   const showBoyning = !viewingExtra && currentType === 'boyning' && section;
 
-  hintText.style.display = showBoyning ? 'none' : '';
   colHeads.style.display = showBoyning ? 'grid' : 'none';
   grid.classList.toggle('boyning', showBoyning);
 
@@ -750,6 +815,7 @@ function loadList(){
   }
 
   updateExtraFilterUI();
+  updateReverseUI();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, false); });
 }
@@ -779,18 +845,26 @@ function renderNormalGrid(){
     const idAttr = escapeHtml(item.id);
     const examples = item.type === 'gloser' ? EXAMPLES[item.id] : null;
     const exampleIcon = examples ? '<span class="example-icon" title="Se eksempelsetninger">💬</span>' : '';
+    const visibleText = reversed ? item.port : item.norsk;
+    const visibleUttale = reversed ? '<div class="ut">[' + escapeHtml(item.uttale) + ']</div>' : '';
+    const hiddenText = reversed ? item.norsk : item.port;
+    const hiddenUttale = reversed ? '' : '<div class="ut">[' + escapeHtml(item.uttale) + ']</div>';
     html += '<div class="cell cell-no' + alt + marked + '" data-id="' + idAttr + '">'
-          + escapeHtml(item.norsk) + srcTag + '</div>';
+          + escapeHtml(visibleText) + visibleUttale + srcTag + '</div>';
     html += '<div class="cell cell-pt' + alt + marked + (examples ? ' has-examples' : '') + '" data-id="' + idAttr + '">'
-          + '<div class="pt">' + escapeHtml(item.port) + exampleIcon + '</div>'
-          + '<div class="ut">[' + escapeHtml(item.uttale) + ']</div></div>';
+          + '<div class="pt">' + escapeHtml(hiddenText) + exampleIcon + '</div>'
+          + hiddenUttale + '</div>';
     if(examples && expandedExampleIds.has(item.id)){
       const answersShown = revealedExampleAnswerItems.has(item.id);
-      const norskCol = '<div class="ex-norsk-col">' + examples.map(ex => '<div>' + escapeHtml(ex.norsk) + '</div>').join('') + '</div>';
+      const exVisible = ex => reversed
+        ? '<div>' + escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>'
+        : '<div>' + escapeHtml(ex.norsk) + '</div>';
+      const exHidden = ex => reversed
+        ? '<div>' + escapeHtml(ex.norsk) + '</div>'
+        : '<div>' + escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>';
+      const norskCol = '<div class="ex-norsk-col">' + examples.map(exVisible).join('') + '</div>';
       const rightCol = answersShown
-        ? '<div class="ex-pt-col">' + examples.map(ex =>
-            '<div>' + escapeHtml(ex.port) + '<span class="ut">[' + escapeHtml(ex.uttale) + ']</span></div>'
-          ).join('') + '</div>'
+        ? '<div class="ex-pt-col">' + examples.map(exHidden).join('') + '</div>'
         : '<div class="ex-veil" data-id="' + idAttr + '"><span class="pt-veil">Trykk E (eller her) for å vise</span></div>';
       html += '<div class="example-line example-wrap' + alt + '">' + norskCol + rightCol + '</div>';
     }
@@ -1118,6 +1192,20 @@ extraFilterBtn.addEventListener('click', () => {
   filterExtraOnly = !filterExtraOnly;
   loadList();
 });
+
+reverseBtn.addEventListener('click', () => {
+  reversed = !reversed;
+  loadList();
+});
+
+function toggleInfoPanel(){
+  const showingInfo = infoPanel.style.display !== 'none';
+  infoPanel.style.display = showingInfo ? 'none' : 'block';
+  ui.style.display = showingInfo ? 'block' : 'none';
+  infoToggleBtn.textContent = showingInfo ? 'ℹ️ Hvordan bruke Onda' : '← Tilbake til øving';
+}
+infoToggleBtn.addEventListener('click', toggleInfoPanel);
+infoToggleBtnBottom.addEventListener('click', toggleInfoPanel);
 
 shuffleBtn.addEventListener('click', () => {
   if(currentType === 'boyning' && !viewingExtra){
