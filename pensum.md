@@ -1322,7 +1322,6 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | seng | cama | [KA-ma] |
 | deg (foran verb) | te | [tsji] |
 | å sovne | adormecer | [a-dor-me-SER] |
-| gjennom, i (sammentrekning av por + a) | pela | [PE-la] |
 | ansikt | rosto | [HÅS-to] |
 | lukket (mann / kvinne) | fechado / fechada | [fe-SJA-do / fe-SJA-da] |
 | å vokse | crescer | [kres-SER] |
@@ -1360,7 +1359,6 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | var (fortid, tilstand) | estava / tava | [es-TA-va / TA-va] |
 | ville lete etter | procuraria | [pro-ko-ra-RI-a] |
 | ropte på meg | me chamou | [mi sja-MO] |
-| i det, på det (sammentrekning av em + ele) | nele | [NE-li] |
 | tok lang tid | demorou | [dji-mo-RO] |
 | langt fra folkemengden | longe da multidão | [LÕ-zji da mo-tsji-DÃO] |
 | jeg krøp, jeg ålte meg | rastejei | [has-te-ZJEI] |
@@ -1433,3 +1431,44 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Jeg visste ikke hva jeg skulle gjøre, så jeg holdt meg fast så hardt jeg kunne. | Não sabia o que fazer, então me segurei o mais forte que podia. | [não sa-BI-a o ki fa-ZER, ẽ-TÃO mi se-go-REI o MAIS FÅR-tsji ki po-DJI-a] |
 | Vi fór så fort av gårde at jeg trodde jeg kom til å fly av. | Estávamos indo tão rápido que pensei que iria sair voando. | [es-TA-va-mos Ĩ-do TÃO HA-pi-do ki pẽ-SEI ki i-RI-a sa-IR vo-Ã-do] |
 | Jeg hoppet ut av den. | Eu saltei para fora dele. | [eo sao-TEI pra FÅ-ra DE-li] |
+
+## Appendiks G: Pekeord og sammentrekninger
+
+Portugisisk skiller mellom tre "avstander" for pekeord: nær den som snakker (*este/esta/isto*), nær den man snakker til (*esse/essa/isso*), og langt fra begge (*aquele/aquela/aquilo*). I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
+
+Portugisisk trekker også ofte sammen en preposisjon og et pekeord/pronomen til ett ord, f.eks. *em* ("i/på") + *ele* ("han/den") = *nele*. Under er de vanligste sammentrekningene du støter på i dagligtale.
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| dette / denne (nær meg) | este / esta | [ES-tsji / ES-ta] |
+| dette (generelt, upersonlig) | isto | [IS-to] |
+| det / den (nær deg — mest brukt i tale) | esse / essa | [E-si / E-sa] |
+| det, dette (generelt, upersonlig — svært vanlig) | isso | [I-so] |
+| det der / den der (langt unna) | aquele / aquela | [a-KE-li / a-KE-la] |
+| det der (generelt, langt unna) | aquilo | [a-KI-lo] |
+| disse (nær meg, flertall) | estes / estas | [ES-tsjis / ES-tas] |
+| disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
+| de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
+| i / på ham, i / på den (hankjønn) | nele | [NE-li] |
+| i / på henne, i / på den (hunkjønn) | nela | [NE-la] |
+| i / på dem (hankjønn) | neles | [NE-lis] |
+| i / på dem (hunkjønn) | nelas | [NE-las] |
+| i / på dette | neste / nesta | [NES-tsji / NES-ta] |
+| i / på dette (generelt) | nisto | [NIS-to] |
+| i / på det / den der | nesse / nessa | [NE-si / NE-sa] |
+| i / på det (generelt) | nisso | [NI-so] |
+| i / på det der borte | naquele / naquela | [na-KE-li / na-KE-la] |
+| i / på det der (generelt) | naquilo | [na-KI-lo] |
+| av / fra dette | deste / desta | [DES-tsji / DES-ta] |
+| av / fra dette (generelt) | disto | [DJIS-to] |
+| av / fra det / den der | desse / dessa | [DE-si / DE-sa] |
+| av / fra det (generelt — svært vanlig) | disso | [DJI-so] |
+| av / fra det der borte | daquele / daquela | [da-KE-li / da-KE-la] |
+| av / fra det der (generelt) | daquilo | [da-KI-lo] |
+| i / på (hankjønn / hunkjønn) | no / na | [no / na] |
+| av, fra, sin (hankjønn / hunkjønn) | do / da | [do / da] |
+| til (hankjønn / hunkjønn) | ao / à | [ao / a] |
+| gjennom, langs (hankjønn / hunkjønn) | pelo / pela | [PE-lo / PE-la] |
+| i / på en (ubestemt, hankjønn / hunkjønn) | num / numa | [nũ / NŨ-ma] |
