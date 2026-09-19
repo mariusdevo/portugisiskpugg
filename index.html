@@ -763,17 +763,9 @@ async function connectSync(){
       syncGistInput.value = created.id;
       setSyncStatus('Tilkoblet! Synk-ID: ' + created.id + ' — kopier denne (og tokenet) til dine andre enheter.', 'ok');
     } else {
-      const gist = await githubGistFetch(token, 'GET', gistId);
-      const file = gist.files && gist.files[GIST_FILENAME];
-      const remote = file ? JSON.parse(file.content) : {};
-      markedItems = mergeMarkedItems(remote);
-      persistMarkedLocalOnly();
       saveSyncConfig(token, gistId);
-      await pushSync();
-      updateEkstraLabel();
-      updateExtraFilterUI();
-      if(viewingExtra) loadList();
-      setSyncStatus('Tilkoblet og synkronisert (' + Object.keys(markedItems).length + ' ord i Ekstra pugg).', 'ok');
+      const count = await pullAndMerge();
+      setSyncStatus('Tilkoblet og synkronisert (' + count + ' ord i Ekstra pugg).', 'ok');
     }
   }catch(err){
     setSyncStatus('Kunne ikke koble til: ' + err.message, 'error');
@@ -797,20 +789,38 @@ async function pushSync(){
   }
 }
 
-async function pullAndMergeAtStartup(){
+let syncInFlight = false;
+
+async function pullAndMerge(){
   const { token, gistId } = getSyncConfig();
-  if(!token || !gistId) return;
+  if(!token || !gistId) return Object.keys(markedItems).length;
+  if(syncInFlight) return Object.keys(markedItems).length;
+  syncInFlight = true;
   try{
     const gist = await githubGistFetch(token, 'GET', gistId);
     const file = gist.files && gist.files[GIST_FILENAME];
     const remote = file ? JSON.parse(file.content) : {};
+    const before = JSON.stringify(markedItems);
     markedItems = mergeMarkedItems(remote);
     persistMarkedLocalOnly();
-    await pushSync();
+    updateEkstraLabel();
+    updateExtraFilterUI();
+    if(viewingExtra || JSON.stringify(markedItems) !== before) loadList();
+    if(JSON.stringify(markedItems) !== JSON.stringify(remote)) await pushSync();
+    else setSyncStatus('Sist synkronisert: ' + new Date().toLocaleTimeString('nb-NO'), 'ok');
+    return Object.keys(markedItems).length;
   }catch(err){
-    setSyncStatus('Kunne ikke hente synk ved oppstart: ' + err.message, 'error');
+    setSyncStatus('Synk feilet: ' + err.message, 'error');
+    return Object.keys(markedItems).length;
+  }finally{
+    syncInFlight = false;
   }
 }
+
+document.addEventListener('visibilitychange', () => {
+  if(document.visibilityState === 'visible') pullAndMerge();
+});
+window.addEventListener('focus', () => { pullAndMerge(); });
 
 function disconnectSync(){
   clearSyncConfig();
@@ -1417,7 +1427,7 @@ syncConnectBtn.addEventListener('click', connectSync);
 syncNowBtn.addEventListener('click', () => {
   const { token, gistId } = getSyncConfig();
   if(!token || !gistId){ setSyncStatus('Ikke tilkoblet ennå — fyll inn token og trykk «Koble til» først.', 'error'); return; }
-  pushSync();
+  pullAndMerge();
 });
 syncDisconnectBtn.addEventListener('click', disconnectSync);
 
@@ -1506,7 +1516,7 @@ function showError(title, bodyHtml){
 
 async function init(){
   loadMarked();
-  await pullAndMergeAtStartup();
+  await pullAndMerge();
 
   let text;
   try{
