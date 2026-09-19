@@ -54,7 +54,18 @@ h1{
 }
 .wave-underline{display:block;margin:0 0 8px;}
 .tagline{margin:0 0 10px;color:var(--ink-soft);font-size:0.95rem;}
+.topbar-actions{display:flex;gap:8px;flex-wrap:wrap;}
 .info-toggle{font-size:0.82rem;padding:7px 12px;}
+.sync-field{display:flex;flex-direction:column;gap:6px;margin:10px 0;font-size:0.85rem;}
+.sync-field label{font-weight:600;color:var(--ink);}
+.sync-field input{
+  font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.85rem;
+  padding:9px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);
+}
+.sync-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.sync-status{margin-top:12px;font-size:0.85rem;color:var(--ink-soft);}
+.sync-status.error{color:var(--coral-dark);}
+.sync-status.ok{color:var(--ocean-deep);}
 
 .info-panel{
   background:var(--paper);border-radius:var(--radius);padding:22px 24px;
@@ -333,7 +344,10 @@ code{
       <path d="M1 7 Q12 1 23 7 T45 7 T67 7 T89 7" fill="none" stroke="#1C7A86" stroke-width="2.2" stroke-linecap="round"/>
     </svg>
     <p class="tagline">Dra bølgen nedover for å lære portugisisk, rad for rad.</p>
-    <button id="infoToggleBtn" class="btn ghost info-toggle" type="button">ℹ️ Hvordan bruke Onda</button>
+    <div class="topbar-actions">
+      <button id="infoToggleBtn" class="btn ghost info-toggle" type="button">ℹ️ Hvordan bruke Onda</button>
+      <button id="syncToggleBtn" class="btn ghost info-toggle" type="button">🔄 Synk mellom enheter</button>
+    </div>
   </div>
 
   <div id="statusBox" class="status">Laster pensum …</div>
@@ -372,6 +386,39 @@ code{
     <p>Teksten i <strong>klammeparentes</strong>, f.eks. [o NO-mi], er en norsk-tilpasset uttale — ikke offisiell lydskrift. Bokstaver med tilde (ã, õ, ẽ) uttales nasalt.</p>
 
     <button id="infoToggleBtnBottom" class="btn primary" type="button">← Tilbake til øving</button>
+  </div>
+
+  <div id="syncPanel" class="info-panel" style="display:none;">
+    <h2>Synk Ekstra pugg mellom enheter</h2>
+    <p>Onda lagrer normalt Ekstra pugg kun i denne nettleseren. For å dele lista mellom PC, mobil og nettbrett, kan du koble den til en privat <strong>GitHub Gist</strong> på din egen GitHub-konto.</p>
+
+    <h3>Slik lager du en tilgangsnøkkel (én gang, på GitHub)</h3>
+    <ol style="margin:8px 0 0;padding-left:22px;line-height:1.6;">
+      <li>Gå til GitHub → <strong>Settings</strong> → <strong>Developer settings</strong> → <strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong> → <strong>Generate new token (classic)</strong></li>
+      <li>Gi den et navn (f.eks. «Onda synk»), velg en utløpsdato du er komfortabel med</li>
+      <li>Huk av <strong>kun</strong> for scopet <code>gist</code> — ikke gi den tilgang til noe annet</li>
+      <li>Generer, og lim inn tokenet under</li>
+    </ol>
+
+    <div class="sync-field">
+      <label for="syncTokenInput">GitHub-token (kun scopet «gist»)</label>
+      <input id="syncTokenInput" type="password" autocomplete="off" placeholder="ghp_...">
+    </div>
+    <div class="sync-field">
+      <label for="syncGistInput">Synk-ID</label>
+      <input id="syncGistInput" type="text" autocomplete="off" placeholder="La stå tom første gang — fylles ut automatisk">
+    </div>
+
+    <p style="font-size:0.85rem;color:var(--ink-soft);">Første enhet lar du Synk-ID stå tom — Onda oppretter en ny privat Gist og viser deg IDen. Kopier den samme IDen (og samme token, eller lag et nytt med samme scope) inn på de andre enhetene dine.</p>
+
+    <div class="sync-actions">
+      <button id="syncConnectBtn" class="btn primary" type="button">Koble til</button>
+      <button id="syncNowBtn" class="btn ghost" type="button">Synk nå</button>
+      <button id="syncDisconnectBtn" class="btn ghost" type="button">Koble fra denne enheten</button>
+    </div>
+    <p id="syncStatus" class="sync-status"></p>
+
+    <button id="syncToggleBtnBottom" class="btn primary" type="button">← Tilbake til øving</button>
   </div>
 
   <div id="ui" style="display:none;">
@@ -432,6 +479,9 @@ code{
 const STORAGE_KEY = 'ekstra-pugg-v1';
 const DATA_FILE = 'pensum.md';
 const EXAMPLES_FILE = 'eksempler.json';
+const SYNC_TOKEN_KEY = 'onda-sync-token';
+const SYNC_GIST_KEY = 'onda-sync-gist-id';
+const GIST_FILENAME = 'onda-ekstra-pugg.json';
 
 const statusBox = document.getElementById('statusBox');
 const ui = document.getElementById('ui');
@@ -459,6 +509,15 @@ const printView = document.getElementById('printView');
 const infoPanel = document.getElementById('infoPanel');
 const infoToggleBtn = document.getElementById('infoToggleBtn');
 const infoToggleBtnBottom = document.getElementById('infoToggleBtnBottom');
+const syncPanel = document.getElementById('syncPanel');
+const syncToggleBtn = document.getElementById('syncToggleBtn');
+const syncToggleBtnBottom = document.getElementById('syncToggleBtnBottom');
+const syncTokenInput = document.getElementById('syncTokenInput');
+const syncGistInput = document.getElementById('syncGistInput');
+const syncConnectBtn = document.getElementById('syncConnectBtn');
+const syncNowBtn = document.getElementById('syncNowBtn');
+const syncDisconnectBtn = document.getElementById('syncDisconnectBtn');
+const syncStatus = document.getElementById('syncStatus');
 
 let SECTIONS = [];
 let sectionIndex = 0;
@@ -627,6 +686,144 @@ function persistMarked(){
   try{
     localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems));
   }catch(e){ /* privat modus e.l. — lista lever da bare i denne økta */ }
+  pushSync();
+}
+
+/* ---------- Synk mot GitHub Gist ---------- */
+
+function getSyncConfig(){
+  let token = null, gistId = null;
+  try{
+    token = localStorage.getItem(SYNC_TOKEN_KEY);
+    gistId = localStorage.getItem(SYNC_GIST_KEY);
+  }catch(e){}
+  return { token, gistId };
+}
+
+function saveSyncConfig(token, gistId){
+  try{
+    localStorage.setItem(SYNC_TOKEN_KEY, token);
+    localStorage.setItem(SYNC_GIST_KEY, gistId);
+  }catch(e){}
+}
+
+function clearSyncConfig(){
+  try{
+    localStorage.removeItem(SYNC_TOKEN_KEY);
+    localStorage.removeItem(SYNC_GIST_KEY);
+  }catch(e){}
+}
+
+function setSyncStatus(msg, kind){
+  syncStatus.textContent = msg;
+  syncStatus.className = 'sync-status' + (kind ? ' ' + kind : '');
+}
+
+async function githubGistFetch(token, method, gistId, body){
+  const url = 'https://api.github.com/gists' + (gistId ? '/' + gistId : '');
+  const res = await fetch(url, {
+    method,
+    headers: {
+      'Authorization': 'Bearer ' + token,
+      'Accept': 'application/vnd.github+json',
+      'Content-Type': 'application/json'
+    },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  if(!res.ok){
+    let detail = '';
+    try{ detail = (await res.json()).message || ''; }catch(e){}
+    throw new Error('HTTP ' + res.status + (detail ? ' — ' + detail : ''));
+  }
+  return res.json();
+}
+
+function mergeMarkedItems(remote){
+  const merged = Object.assign({}, markedItems);
+  Object.keys(remote || {}).forEach(id => {
+    if(!merged[id]) merged[id] = remote[id];
+  });
+  return merged;
+}
+
+async function connectSync(){
+  const token = syncTokenInput.value.trim();
+  const gistId = syncGistInput.value.trim();
+  if(!token){ setSyncStatus('Lim inn et GitHub-token først.', 'error'); return; }
+
+  setSyncStatus('Kobler til …');
+  try{
+    if(!gistId){
+      const created = await githubGistFetch(token, 'POST', null, {
+        description: 'Onda — Ekstra pugg',
+        public: false,
+        files: { [GIST_FILENAME]: { content: JSON.stringify(markedItems, null, 2) } }
+      });
+      saveSyncConfig(token, created.id);
+      syncGistInput.value = created.id;
+      setSyncStatus('Tilkoblet! Synk-ID: ' + created.id + ' — kopier denne (og tokenet) til dine andre enheter.', 'ok');
+    } else {
+      const gist = await githubGistFetch(token, 'GET', gistId);
+      const file = gist.files && gist.files[GIST_FILENAME];
+      const remote = file ? JSON.parse(file.content) : {};
+      markedItems = mergeMarkedItems(remote);
+      persistMarkedLocalOnly();
+      saveSyncConfig(token, gistId);
+      await pushSync();
+      updateEkstraLabel();
+      updateExtraFilterUI();
+      if(viewingExtra) loadList();
+      setSyncStatus('Tilkoblet og synkronisert (' + Object.keys(markedItems).length + ' ord i Ekstra pugg).', 'ok');
+    }
+  }catch(err){
+    setSyncStatus('Kunne ikke koble til: ' + err.message, 'error');
+  }
+}
+
+function persistMarkedLocalOnly(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems)); }catch(e){}
+}
+
+async function pushSync(){
+  const { token, gistId } = getSyncConfig();
+  if(!token || !gistId) return;
+  try{
+    await githubGistFetch(token, 'PATCH', gistId, {
+      files: { [GIST_FILENAME]: { content: JSON.stringify(markedItems, null, 2) } }
+    });
+    setSyncStatus('Sist synkronisert: ' + new Date().toLocaleTimeString('nb-NO'), 'ok');
+  }catch(err){
+    setSyncStatus('Synk feilet: ' + err.message, 'error');
+  }
+}
+
+async function pullAndMergeAtStartup(){
+  const { token, gistId } = getSyncConfig();
+  if(!token || !gistId) return;
+  try{
+    const gist = await githubGistFetch(token, 'GET', gistId);
+    const file = gist.files && gist.files[GIST_FILENAME];
+    const remote = file ? JSON.parse(file.content) : {};
+    markedItems = mergeMarkedItems(remote);
+    persistMarkedLocalOnly();
+    await pushSync();
+  }catch(err){
+    setSyncStatus('Kunne ikke hente synk ved oppstart: ' + err.message, 'error');
+  }
+}
+
+function disconnectSync(){
+  clearSyncConfig();
+  syncTokenInput.value = '';
+  syncGistInput.value = '';
+  setSyncStatus('Koblet fra. Ekstra pugg lagres nå kun i denne nettleseren.');
+}
+
+function updateSyncUI(){
+  const { token, gistId } = getSyncConfig();
+  if(token) syncTokenInput.value = token;
+  if(gistId) syncGistInput.value = gistId;
+  if(token && gistId) setSyncStatus('Tilkoblet (Synk-ID: ' + gistId + ').', 'ok');
 }
 
 /* ---------- Bygging av lister ---------- */
@@ -1207,6 +1404,23 @@ function toggleInfoPanel(){
 infoToggleBtn.addEventListener('click', toggleInfoPanel);
 infoToggleBtnBottom.addEventListener('click', toggleInfoPanel);
 
+function toggleSyncPanel(){
+  const showingSync = syncPanel.style.display !== 'none';
+  syncPanel.style.display = showingSync ? 'none' : 'block';
+  ui.style.display = showingSync ? 'block' : 'none';
+  syncToggleBtn.textContent = showingSync ? '🔄 Synk mellom enheter' : '← Tilbake til øving';
+  if(!showingSync) updateSyncUI();
+}
+syncToggleBtn.addEventListener('click', toggleSyncPanel);
+syncToggleBtnBottom.addEventListener('click', toggleSyncPanel);
+syncConnectBtn.addEventListener('click', connectSync);
+syncNowBtn.addEventListener('click', () => {
+  const { token, gistId } = getSyncConfig();
+  if(!token || !gistId){ setSyncStatus('Ikke tilkoblet ennå — fyll inn token og trykk «Koble til» først.', 'error'); return; }
+  pushSync();
+});
+syncDisconnectBtn.addEventListener('click', disconnectSync);
+
 shuffleBtn.addEventListener('click', () => {
   if(currentType === 'boyning' && !viewingExtra){
     for(let i = boyningGroups.length - 1; i > 0; i--){
@@ -1292,6 +1506,7 @@ function showError(title, bodyHtml){
 
 async function init(){
   loadMarked();
+  await pullAndMergeAtStartup();
 
   let text;
   try{
