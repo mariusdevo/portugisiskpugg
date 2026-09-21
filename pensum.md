@@ -1227,6 +1227,60 @@ Portugisisk skiller mellom tre "avstander" for pekeord: nær den som snakker (*e
 | disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
 | de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
 
+### Hvordan si «det» på portugisisk
+
+Norsk krever et grammatisk subjekt i nesten hver setning, og «det» er ofte akkurat det — en plassholder uten egen betydning, satt inn fordi norsk ordstilling krever det. Portugisisk trenger ikke noe subjekt i det hele tatt: verbendelsen alene viser hvem eller hva som handler. Derfor er hovedregelen at «det» som oftest **ikke oversettes til noe ord** — det forsvinner bare, og verbet står igjen alene. *Isso* (og este/esse/aquele-familien over) brukes kun når «det» faktisk peker på noe konkret som er nevnt eller sagt — da er det et ekte pekeord, ikke en plassholder.
+
+**Vær, tid og dato**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Det regner. | Chove. | [SJÅ-vi] |
+| Det er varmt i dag. | Faz calor hoje. | [fas ka-LOR O-zji] |
+| Det er kaldt. | Tá frio. | [ta FRI-o] |
+| Det er søndag. | É domingo. | [Æ do-MĨ-go] |
+
+**Hvordan man har det**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg har det bra. | Tô bem. | [TO BẼI] |
+| Jeg har det vondt, jeg har det dårlig. | Tô mal. | [TO MAO] |
+| Hvordan går det? | Como vai? | [KO-mo VAI] |
+| Går det bra (med deg)? | Tudo bem? | [TO-do BẼI] |
+
+**Upersonlige uttrykk**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Det er viktig å lære portugisisk. | É importante aprender português. | [Æ ĩ-por-TÃ-tsji a-prẽ-DER por-to-GES] |
+| Det hender. | Acontece. | [a-kõ-TÆ-si] |
+| Det kommer an på. | Depende. | [dji-PẼ-dji] |
+
+> Legg merke til at ingen av disse trenger et eget ord for «det» — verbet (*chove, faz, tá, é, tô, vai, acontece, depende* …) bærer hele meningen alene.
+
+**Eksistens: det finnes / det er**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Det er en bok her. | Tem um livro aqui. | [tẽi ũ LI-vro a-KI] |
+
+> Se også *há* under Appendiks C (Gloser fra «A Lagarta Viajante») — *tem* og *há* dekker begge norsk «det finnes / det er», og brukes om hverandre i tale.
+
+**Å peke på et sted**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Er det her du bor? | É aqui que você mora? | [Æ a-KI ki vo-SE MÅ-ra] |
+
+**Når «det» faktisk viser til noe konkret**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg visste ikke det. | Eu não sabia disso. | [eo não sa-BI-a DJI-so] |
+| Det er sant. | Isso é verdade. | [I-so Æ ver-DA-dji] |
+| Gjør det! | Faz isso! | [fas I-so] |
+
 ### Spørreord
 
 | Norsk | Portugisisk | Uttale |
