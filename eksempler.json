@@ -4067,534 +4067,6 @@
       "uttale": "o ka-FÆ Æ dji GRA-sa a-KI"
     }
   ],
-  "Appendiks A: Spørreord::gloser::hva::o que": [
-    {
-      "norsk": "Hva er dette?",
-      "port": "O que é isso?",
-      "uttale": "o ki Æ I-so"
-    },
-    {
-      "norsk": "Hvorfor det?",
-      "port": "Por quê?",
-      "uttale": "por KE"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvem::quem": [
-    {
-      "norsk": "Hvem er det?",
-      "port": "Quem é?",
-      "uttale": "kẽi Æ"
-    },
-    {
-      "norsk": "Hvem er han?",
-      "port": "Quem é ele?",
-      "uttale": "KẼI Æ E-li"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvor::onde": [
-    {
-      "norsk": "Hvor er toalettet?",
-      "port": "Onde fica o banheiro?",
-      "uttale": "Õ-dji FI-ka o ba-NJEI-ro"
-    },
-    {
-      "norsk": "Hvor er mobilen min?",
-      "port": "Cadê meu celular?",
-      "uttale": "ka-DE meo se-lo-LAR"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvor er (den)::cadê": [
-    {
-      "norsk": "Hvor er mobilen min?",
-      "port": "Cadê meu celular?",
-      "uttale": "ka-DE meo se-lo-LAR"
-    },
-    {
-      "norsk": "Hvor er vennen min?",
-      "port": "Cadê meu amigo?",
-      "uttale": "ka-DE meo a-MI-go"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::når::quando": [
-    {
-      "norsk": "Når begynner det?",
-      "port": "Quando começa?",
-      "uttale": "KWÃ-do ko-MÆ-sa"
-    },
-    {
-      "norsk": "Når er prøven?",
-      "port": "Quando é a prova?",
-      "uttale": "KWÃ-do Æ a PRÅ-va"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvorfor::por que": [
-    {
-      "norsk": "Hvorfor det?",
-      "port": "Por quê?",
-      "uttale": "por KE"
-    },
-    {
-      "norsk": "Hvorfor er du i Brasil?",
-      "port": "Por que você tá no Brasil?",
-      "uttale": "por KI vo-SE ta no bra-SIO"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvordan::como": [
-    {
-      "norsk": "Hvordan sier man det?",
-      "port": "Como se diz?",
-      "uttale": "KO-mo si DJIS"
-    },
-    {
-      "norsk": "Hva heter du?",
-      "port": "Como você se chama?",
-      "uttale": "KO-mo vo-SE si SJÃ-ma"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvor mye::quanto": [
-    {
-      "norsk": "Hvor mye koster det?",
-      "port": "Quanto custa?",
-      "uttale": "KWÃ-to KOS-ta"
-    },
-    {
-      "norsk": "Hvor lenge har du vært her?",
-      "port": "Faz quanto tempo que você tá aqui?",
-      "uttale": "fas KWÃ-to TẼI-po ki vo-SE ta a-KI"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvor mange::quantos": [
-    {
-      "norsk": "Hvor mange er dere?",
-      "port": "Quantos vocês são?",
-      "uttale": "KWÃ-tos vo-SES SÃO"
-    },
-    {
-      "norsk": "Hvor gammel er du?",
-      "port": "Quantos anos você tem?",
-      "uttale": "KWÃ-tos Ã-nos vo-SE tẽi"
-    }
-  ],
-  "Appendiks A: Spørreord::gloser::hvilken::qual": [
-    {
-      "norsk": "Hva heter du?",
-      "port": "Qual é o seu nome?",
-      "uttale": "KWAO Æ o seo NO-mi"
-    },
-    {
-      "norsk": "Hva er forskjellen?",
-      "port": "Qual é a diferença?",
-      "uttale": "KWAO Æ a dji-fe-RẼ-sa"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::av, fra::de": [
-    {
-      "norsk": "Boka er fra biblioteket.",
-      "port": "O livro é da biblioteca.",
-      "uttale": "o LI-vro Æ da bi-bli-o-TÆ-ka"
-    },
-    {
-      "norsk": "Han kommer fra Brasil.",
-      "port": "Ele é do Brasil.",
-      "uttale": "E-li Æ do bra-SIO"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::i, på (hankjønn / hunkjønn)::no / na": [
-    {
-      "norsk": "Jeg er i klasserommet.",
-      "port": "Tô na sala de aula.",
-      "uttale": "to na SA-la dji AO-la"
-    },
-    {
-      "norsk": "Boka er på bordet.",
-      "port": "O livro tá na mesa.",
-      "uttale": "o LI-vro ta na ME-za"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::i (om byer)::em": [
-    {
-      "norsk": "Jeg bor i Floripa.",
-      "port": "Moro em Floripa.",
-      "uttale": "MÅ-ro ẽi flo-RI-pa"
-    },
-    {
-      "norsk": "Han er i São Paulo.",
-      "port": "Ele tá em São Paulo.",
-      "uttale": "E-li ta ẽi SÃO PAO-lo"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::til, for::pra": [
-    {
-      "norsk": "Jeg drar hjem.",
-      "port": "Vou pra casa.",
-      "uttale": "VO pra KA-za"
-    },
-    {
-      "norsk": "Av og til drar jeg på stranda.",
-      "port": "Às vezes vou pra praia.",
-      "uttale": "as VE-zis VO pra PRAI-a"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::med::com": [
-    {
-      "norsk": "Jeg blir med deg.",
-      "port": "Vou com você.",
-      "uttale": "VO kõ vo-SE"
-    },
-    {
-      "norsk": "Jeg er sulten.",
-      "port": "Tô com fome.",
-      "uttale": "to kõ FÅ-mi"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::uten::sem": [
-    {
-      "norsk": "Uten sukker.",
-      "port": "Sem açúcar.",
-      "uttale": "sẽi a-SO-kar"
-    },
-    {
-      "norsk": "Uten sukker, takk.",
-      "port": "Sem açúcar, por favor.",
-      "uttale": "sẽi a-SO-kar, por fa-VOR"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::til (og med)::até": [
-    {
-      "norsk": "Vi ses i morgen.",
-      "port": "Até amanhã.",
-      "uttale": "a-TÆ a-ma-NJÃ"
-    },
-    {
-      "norsk": "Greit, vi ses da.",
-      "port": "Beleza, até lá.",
-      "uttale": "be-LE-za, a-TÆ LA"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::etter::depois de": [
-    {
-      "norsk": "Jeg drar etter timen.",
-      "port": "Vou depois da aula.",
-      "uttale": "VO dji-PÅIS da AO-la"
-    },
-    {
-      "norsk": "Etter festen drar jeg hjem.",
-      "port": "Depois da festa vou pra casa.",
-      "uttale": "dji-PÅIS da FÆS-ta VO pra KA-za"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::før::antes de": [
-    {
-      "norsk": "Før klokka ni.",
-      "port": "Antes das nove.",
-      "uttale": "Ã-tsjis das NÅ-vi"
-    },
-    {
-      "norsk": "Jeg spiser før timen.",
-      "port": "Como antes da aula.",
-      "uttale": "KO-mo Ã-tsjis da AO-la"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::mellom::entre": [
-    {
-      "norsk": "Klasserommet er mellom biblioteket og kantina.",
-      "port": "A sala de aula fica entre a biblioteca e o RU.",
-      "uttale": "a SA-la dji AO-la FI-ka Ẽ-tri a bi-bli-o-TÆ-ka i o HU"
-    },
-    {
-      "norsk": "Det er mellom oss to.",
-      "port": "Isso é entre nós dois.",
-      "uttale": "I-so Æ Ẽ-tri nos DÅIS"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::nær::perto de": [
-    {
-      "norsk": "Jeg bor nær universitetet.",
-      "port": "Moro perto da universidade.",
-      "uttale": "MÅ-ro PÆR-to da o-ni-ver-si-DA-dji"
-    },
-    {
-      "norsk": "Butikken er nær hjørnet.",
-      "port": "A loja fica perto da esquina.",
-      "uttale": "a LÅ-zja FI-ka PÆR-to da es-KI-na"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::langt fra::longe de": [
-    {
-      "norsk": "Jeg bor langt fra sentrum.",
-      "port": "Moro longe do centro.",
-      "uttale": "MÅ-ro LÕ-zji do SẼ-tro"
-    },
-    {
-      "norsk": "Universitetet ligger langt fra huset mitt.",
-      "port": "A universidade fica longe da minha casa.",
-      "uttale": "a o-ni-ver-si-DA-dji FI-ka LÕ-zji da MI-nja KA-za"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::ved siden av::ao lado de": [
-    {
-      "norsk": "Banken ligger ved siden av butikken.",
-      "port": "O banco fica ao lado da loja.",
-      "uttale": "o BÃ-ko FI-ka ao LA-do da LÅ-zja"
-    },
-    {
-      "norsk": "Stranda ligger ved siden av byen.",
-      "port": "A praia fica ao lado da cidade.",
-      "uttale": "a PRAI-a FI-ka ao LA-do da si-DA-dji"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::rett overfor::em frente a": [
-    {
-      "norsk": "Restauranten ligger rett overfor plassen.",
-      "port": "O restaurante fica em frente à praça.",
-      "uttale": "o hes-tao-RÃ-tsji FI-ka ẽi FRẼ-tsji a PRA-sa"
-    },
-    {
-      "norsk": "Butikken er rett overfor stranda.",
-      "port": "A loja fica em frente à praia.",
-      "uttale": "a LÅ-zja FI-ka ẽi FRẼ-tsji a PRAI-a"
-    }
-  ],
-  "Appendiks B: Preposisjoner::gloser::bak::atrás de": [
-    {
-      "norsk": "Det ligger bak kirken.",
-      "port": "Fica atrás da igreja.",
-      "uttale": "FI-ka a-TRAS da i-GRE-zja"
-    },
-    {
-      "norsk": "Bilen står bak huset.",
-      "port": "O carro tá atrás da casa.",
-      "uttale": "o KA-ho ta a-TRAS da KA-za"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::og::e": [
-    {
-      "norsk": "Jeg og du.",
-      "port": "Eu e você.",
-      "uttale": "eo i vo-SE"
-    },
-    {
-      "norsk": "Kaffe og kake.",
-      "port": "Café e bolo.",
-      "uttale": "ka-FÆ i BÅ-lo"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::men::mas": [
-    {
-      "norsk": "Jeg er sulten, men det er ingenting her.",
-      "port": "Tô com fome, mas não tem nada aqui.",
-      "uttale": "to kõ FÅ-mi, mas não tẽi NA-da a-KI"
-    },
-    {
-      "norsk": "Jeg ville hjelpe, men fikk det ikke til.",
-      "port": "Quis ajudar, mas não consegui.",
-      "uttale": "KIS a-zjo-DAR, mas não kõ-se-GI"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::eller::ou": [
-    {
-      "norsk": "Kaffe eller te?",
-      "port": "Café ou chá?",
-      "uttale": "ka-FÆ o SJA"
-    },
-    {
-      "norsk": "I dag eller i morgen?",
-      "port": "Hoje ou amanhã?",
-      "uttale": "O-zji o a-ma-NJÃ"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::fordi::porque": [
-    {
-      "norsk": "Jeg drar ikke, fordi jeg er sliten.",
-      "port": "Não vou porque tô cansado.",
-      "uttale": "não VO por-KI to kã-SA-do"
-    },
-    {
-      "norsk": "Jeg er glad fordi jeg er her.",
-      "port": "Tô feliz porque tô aqui.",
-      "uttale": "to fe-LIS por-KI to a-KI"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::så, altså::então": [
-    {
-      "norsk": "Så, hva gjør vi?",
-      "port": "Então, o que a gente faz?",
-      "uttale": "ẽ-TÃO, o ki a ZJẼ-tsji FAS"
-    },
-    {
-      "norsk": "Så, vi drar nå.",
-      "port": "Então, vamos agora.",
-      "uttale": "ẽ-TÃO, VÃ-mos a-GÅ-ra"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::så, deretter::aí": [
-    {
-      "norsk": "Jeg spiste, så sov jeg.",
-      "port": "Comi, aí dormi.",
-      "uttale": "ko-MI, a-Í dor-MI"
-    },
-    {
-      "norsk": "Studer først, så dra ut.",
-      "port": "Estuda, aí sai.",
-      "uttale": "es-TO-da, a-Í SAI"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::hvis::se": [
-    {
-      "norsk": "Hvis det regner, drar jeg ikke.",
-      "port": "Se chover, não vou.",
-      "uttale": "si sjo-VER, não VO"
-    },
-    {
-      "norsk": "Hvis du vil, kan vi dra.",
-      "port": "Se você quer, vamos.",
-      "uttale": "si vo-SE KÆR, VÃ-mos"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::også::também": [
-    {
-      "norsk": "Jeg også.",
-      "port": "Eu também.",
-      "uttale": "eo tãi-BẼI"
-    },
-    {
-      "norsk": "Jeg liker kaffe også.",
-      "port": "Gosto de café também.",
-      "uttale": "GÅS-to dji ka-FÆ tãi-BẼI"
-    }
-  ],
-  "Appendiks C: Bindeord::gloser::derfor::por isso": [
-    {
-      "norsk": "Det regner, derfor blir jeg hjemme.",
-      "port": "Tá chovendo, por isso vou ficar em casa.",
-      "uttale": "ta sjo-VẼ-do, por I-so VO fi-KAR ẽi KA-za"
-    },
-    {
-      "norsk": "Jeg er trøtt, derfor legger jeg meg.",
-      "port": "Tô cansado, por isso vou dormir.",
-      "uttale": "to kã-SA-do, por I-so VO dor-MIR"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::min / mi / mitt::meu / minha": [
-    {
-      "norsk": "Navnet mitt er Maripus.",
-      "port": "Meu nome é Maripus.",
-      "uttale": "meo NO-mi Æ ma-RI-pos"
-    },
-    {
-      "norsk": "Vennen min.",
-      "port": "Meu amigo.",
-      "uttale": "meo a-MI-go"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::mine::meus / minhas": [
-    {
-      "norsk": "Vennene mine er hyggelige.",
-      "port": "Meus amigos são simpáticos.",
-      "uttale": "MEOS a-MI-gos SÃO sĩ-PA-tsji-kos"
-    },
-    {
-      "norsk": "Bøkene mine er der.",
-      "port": "Meus livros tão lá.",
-      "uttale": "MEOS LI-vros TÃO LA"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::din / di / ditt::seu / sua": [
-    {
-      "norsk": "Er dette din?",
-      "port": "É seu?",
-      "uttale": "Æ SEO"
-    },
-    {
-      "norsk": "Hva heter mora di?",
-      "port": "Como se chama a sua mãe?",
-      "uttale": "KO-mo si SJÃ-ma a SO-a MÃI"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::dine::seus / suas": [
-    {
-      "norsk": "Hvor er vennene dine?",
-      "port": "Cadê seus amigos?",
-      "uttale": "ka-DE SEOS a-MI-gos"
-    },
-    {
-      "norsk": "Bøkene dine er fine.",
-      "port": "Seus livros são legais.",
-      "uttale": "SEOS LI-vros SÃO le-GAIS"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::hans::dele": [
-    {
-      "norsk": "Bilen hans.",
-      "port": "O carro dele.",
-      "uttale": "o KA-ho DE-li"
-    },
-    {
-      "norsk": "Vennen hans er hyggelig.",
-      "port": "O amigo dele é simpático.",
-      "uttale": "o a-MI-go DE-li Æ sĩ-PA-tsji-ko"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::hennes::dela": [
-    {
-      "norsk": "Huset hennes.",
-      "port": "A casa dela.",
-      "uttale": "a KA-za DÆ-la"
-    },
-    {
-      "norsk": "Vennen hennes er brasiliansk.",
-      "port": "O amigo dela é brasileiro.",
-      "uttale": "o a-MI-go DÆ-la Æ bra-zi-LEI-ro"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::vår / vårt::da gente": [
-    {
-      "norsk": "Det er vårt.",
-      "port": "É da gente.",
-      "uttale": "Æ da ZJẼ-tsji"
-    },
-    {
-      "norsk": "Huset er vårt.",
-      "port": "A casa é da gente.",
-      "uttale": "a KA-za Æ da ZJẼ-tsji"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::vår / vårt (skriftlig)::nosso / nossa": [
-    {
-      "norsk": "Vårt hus er stort.",
-      "port": "Nossa casa é grande.",
-      "uttale": "NÅ-sa KA-za Æ GRÃ-dji"
-    },
-    {
-      "norsk": "Vår gruppe er god.",
-      "port": "Nossa turma é boa.",
-      "uttale": "NÅ-sa TOR-ma Æ BO-a"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::deres (flere)::deles / delas": [
-    {
-      "norsk": "Vennene deres.",
-      "port": "Os amigos deles.",
-      "uttale": "os a-MI-gos DE-lis"
-    },
-    {
-      "norsk": "Huset deres er fint.",
-      "port": "A casa deles é legal.",
-      "uttale": "a KA-za DE-lis Æ le-GAO"
-    }
-  ],
-  "Appendiks D: Eiendomsord::gloser::til (om person)::de": [
-    {
-      "norsk": "Boka er til deg.",
-      "port": "O livro é pra você.",
-      "uttale": "o LI-vro Æ pra vo-SE"
-    },
-    {
-      "norsk": "Dette er en gave til deg.",
-      "port": "Isso é um presente pra você.",
-      "uttale": "I-so Æ ũ pre-ZẼ-tsji pra vo-SE"
-    }
-  ],
   "8. Transport og finne fram::gloser::foran::na frente de": [
     {
       "norsk": "Bussen stopper foran biblioteket.",
@@ -4679,7 +4151,7 @@
       "uttale": "a PRAI-a FI-ka do O-tro LA-do da si-DA-dji"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::hvilken som helst::qualquer": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::hvilken som helst::qualquer": [
     {
       "norsk": "Hva som helst går bra.",
       "port": "Qualquer coisa serve.",
@@ -4691,7 +4163,7 @@
       "uttale": "kwao-KÆR DJI-a SÆR-vi"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::til når, hvor lenge::até quando": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::til når, hvor lenge::até quando": [
     {
       "norsk": "Til når blir du?",
       "port": "Até quando você vai ficar?",
@@ -4703,7 +4175,7 @@
       "uttale": "a-TÆ KWÃ-do I-so VAI do-RAR"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::noe::algo": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::noe::algo": [
     {
       "norsk": "Noe skjedde.",
       "port": "Algo aconteceu.",
@@ -4715,7 +4187,7 @@
       "uttale": "KÆ-ro ko-MER AO-go"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::mens::enquanto": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::mens::enquanto": [
     {
       "norsk": "Han sov mens jeg jobbet.",
       "port": "Ele dormiu enquanto eu trabalhava.",
@@ -4727,7 +4199,7 @@
       "uttale": "es-PE-ra a-KI ẽ-KWÃ-to eo VÅO-to"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::en / noen (ubestemt)::algum / alguma / alguns / algumas": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::en / noen (ubestemt)::algum / alguma / alguns / algumas": [
     {
       "norsk": "Er det et sted her i nærheten?",
       "port": "Tem algum lugar por aqui?",
@@ -4739,7 +4211,7 @@
       "uttale": "vo-SE TẼI ao-GŨ pro-BLE-ma"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::noen (person)::alguém": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::noen (person)::alguém": [
     {
       "norsk": "Er det noen her?",
       "port": "Tem alguém aqui?",
@@ -4751,7 +4223,7 @@
       "uttale": "ao-GẼI per-gũ-TO por vo-SE"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::likevel::mesmo assim": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::likevel::mesmo assim": [
     {
       "norsk": "Jeg var redd, men dro likevel.",
       "port": "Estava com medo, mas fui mesmo assim.",
@@ -4763,7 +4235,7 @@
       "uttale": "MES-mo a-SĨ, E-li não de-zis-TSJIO"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å gjøre, å lage::fazer": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å gjøre, å lage::fazer": [
     {
       "norsk": "Jeg skal lage en kake.",
       "port": "Vou fazer um bolo.",
@@ -4775,7 +4247,7 @@
       "uttale": "do ki vo-SE GÅS-ta dji fa-ZER"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::på en eller annen måte::de alguma forma": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::på en eller annen måte::de alguma forma": [
     {
       "norsk": "Vi løser dette på en eller annen måte.",
       "port": "Vamos resolver isso de alguma forma.",
@@ -4787,7 +4259,7 @@
       "uttale": "dji ao-GŨ-ma FÅR-ma, E-li SẼI-pri SA-bi"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::nesten::quase": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::nesten::quase": [
     {
       "norsk": "Jeg er nesten ferdig.",
       "port": "Tô quase pronto.",
@@ -4799,7 +4271,7 @@
       "uttale": "são KWA-zi SÆ-tsji Å-ras"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::irritert, lei seg (mann / kvinne)::chateado / chateada": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::irritert, lei seg (mann / kvinne)::chateado / chateada": [
     {
       "norsk": "Hun er lei seg for broren.",
       "port": "Ela está chateada com o irmão.",
@@ -4811,7 +4283,7 @@
       "uttale": "fi-KEI sja-tsje-A-do kõ a no-TSJI-sia"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å føle, å kjenne::sentir": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å føle, å kjenne::sentir": [
     {
       "norsk": "Jeg beklager så mye.",
       "port": "Eu sinto muito.",
@@ -4823,7 +4295,7 @@
       "uttale": "vo-SE SẼ-tsji o SJEI-ro"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::full, mett (mann / kvinne)::cheio / cheia": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::full, mett (mann / kvinne)::cheio / cheia": [
     {
       "norsk": "Jeg er mett.",
       "port": "Estou cheia.",
@@ -4835,7 +4307,7 @@
       "uttale": "o O-ni-bos es-TA SJEI-o"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::sammen (menn / kvinner)::juntos / juntas": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::sammen (menn / kvinner)::juntos / juntas": [
     {
       "norsk": "Vi (kvinner) var sammen hele natten.",
       "port": "Nós ficamos juntas a noite toda.",
@@ -4847,7 +4319,7 @@
       "uttale": "E-lis MÅ-rão ZJŨ-tos"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å komme, å ankomme::chegar": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å komme, å ankomme::chegar": [
     {
       "norsk": "Når natten kommer, blir alt stille.",
       "port": "Quando a noite chega, tudo fica quieto.",
@@ -4859,7 +4331,7 @@
       "uttale": "o ve-RÃO SJÆ-ga ẽi dji-ZẼI-bro"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å sette, å legge, å plassere::colocar": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å sette, å legge, å plassere::colocar": [
     {
       "norsk": "Sett det på bordet.",
       "port": "Coloca isso na mesa.",
@@ -4871,7 +4343,7 @@
       "uttale": "VO ko-lo-KAR a KA-ma a-KI"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::seng::cama": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::seng::cama": [
     {
       "norsk": "Jeg skal legge meg i sengen.",
       "port": "Vou deitar na cama.",
@@ -4883,7 +4355,7 @@
       "uttale": "a KA-ma es-TA KẼ-tsji"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::deg (foran verb)::te": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::deg (foran verb)::te": [
     {
       "norsk": "Jeg elsker deg.",
       "port": "Eu te amo.",
@@ -4895,7 +4367,7 @@
       "uttale": "tsji VE-zjo a-ma-NJÃ"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å sovne::adormecer": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å sovne::adormecer": [
     {
       "norsk": "Hun sovnet i sofaen.",
       "port": "Ela adormeceu no sofá.",
@@ -4907,7 +4379,7 @@
       "uttale": "eo SẼI-pri a-dor-ME-so TAR-dji"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::gjennom, i (sammentrekning av por + a)::pela": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::gjennom, i (sammentrekning av por + a)::pela": [
     {
       "norsk": "Han gikk gjennom døren.",
       "port": "Ele passou pela porta.",
@@ -4919,7 +4391,7 @@
       "uttale": "ka-mi-NJÃ-mos PE-la PRAI-a"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::ansikt::rosto": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::ansikt::rosto": [
     {
       "norsk": "Hun har et pent ansikt.",
       "port": "Ela tem um rosto bonito.",
@@ -4931,7 +4403,7 @@
       "uttale": "E-li la-VO o HÅS-to"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::lukket (mann / kvinne)::fechado / fechada": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::lukket (mann / kvinne)::fechado / fechada": [
     {
       "norsk": "Øynene var lukket.",
       "port": "Os olhos estavam fechados.",
@@ -4943,7 +4415,7 @@
       "uttale": "a LÅ-zja es-TA fe-SJA-da"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::å vokse::crescer": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::å vokse::crescer": [
     {
       "norsk": "Jeg vil vokse fort.",
       "port": "Quero crescer rápido.",
@@ -4955,7 +4427,7 @@
       "uttale": "as kri-Ã-sas KRÆS-sẽi HA-pi-do"
     }
   ],
-  "Appendiks E: Gloser fra «Minha mãe é demais»::gloser::gjett!::adivinhe": [
+  "Appendiks B: Gloser fra «Minha mãe é demais»::gloser::gjett!::adivinhe": [
     {
       "norsk": "Gjett hvem som kom!",
       "port": "Adivinhe quem chegou!",
@@ -4967,7 +4439,7 @@
       "uttale": "a-dji-VI-nji o ki eo TRO-si"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::det finnes, det er; for … siden (om tid)::há": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::det finnes, det er; for … siden (om tid)::há": [
     {
       "norsk": "Det er et problem her.",
       "port": "Há um problema aqui.",
@@ -4979,7 +4451,7 @@
       "uttale": "sje-GEI A Ũ-ma Å-ra"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::vanlig, alminnelig::comum": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::vanlig, alminnelig::comum": [
     {
       "norsk": "Det er et vanlig navn her.",
       "port": "É um nome comum aqui.",
@@ -4991,7 +4463,7 @@
       "uttale": "I-so Æ bẽi ko-MŨ"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::skinnende, blank::brilhante": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::skinnende, blank::brilhante": [
     {
       "norsk": "Solen skinte.",
       "port": "O sol estava brilhante.",
@@ -5003,7 +4475,7 @@
       "uttale": "E-la TSJI-nja ũ so-HI-zo bri-LJÃ-tsji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::under, nedenunder::embaixo": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::under, nedenunder::embaixo": [
     {
       "norsk": "Katten er under bordet.",
       "port": "O gato está embaixo da mesa.",
@@ -5015,7 +4487,7 @@
       "uttale": "os sa-PA-tos es-TÃO ẽi-BAI-sjo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::nydelig, vakker::lindo": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::nydelig, vakker::lindo": [
     {
       "norsk": "For en vakker hage!",
       "port": "Que jardim lindo!",
@@ -5027,7 +4499,7 @@
       "uttale": "o be-BE Æ LĨ-do"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::så (+ adjektiv)::tão": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::så (+ adjektiv)::tão": [
     {
       "norsk": "Hun er så glad.",
       "port": "Ela está tão feliz.",
@@ -5039,7 +4511,7 @@
       "uttale": "es-TA TÃO KẼ-tsji O-zji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::en morgen::numa manhã": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::en morgen::numa manhã": [
     {
       "norsk": "En morgen våknet jeg tidlig.",
       "port": "Numa manhã, acordei cedo.",
@@ -5051,7 +4523,7 @@
       "uttale": "NŨ-ma ma-NJÃ, TO-do ko-me-SO a mu-DAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å komme fram::chegar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å komme fram::chegar": [
     {
       "norsk": "Vi skal komme fram klokka ti.",
       "port": "Vamos chegar às dez.",
@@ -5063,7 +4535,7 @@
       "uttale": "KWÃ-do o O-ni-bos VAI sje-GAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::tilbake::de volta": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::tilbake::de volta": [
     {
       "norsk": "Jeg er tilbake nå.",
       "port": "Estou de volta agora.",
@@ -5075,7 +4547,7 @@
       "uttale": "bẽi-VĨ-do dji VÅO-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::i stedet for::ao invés de": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::i stedet for::ao invés de": [
     {
       "norsk": "I stedet for å gå, løp vi.",
       "port": "Ao invés de andar, corremos.",
@@ -5087,7 +4559,7 @@
       "uttale": "to-MEI ka-FÆ ao ĩ-VÆS dji SJA"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::omgitt (av)::rodeada": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::omgitt (av)::rodeada": [
     {
       "norsk": "Hun var omgitt av venner.",
       "port": "Ela estava rodeada de amigos.",
@@ -5099,7 +4571,7 @@
       "uttale": "a si-DA-dji Æ ho-dji-A-da dji mõ-TÃ-njas"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::mon tro? tro om …?::Será (que) …?": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::mon tro? tro om …?::Será (que) …?": [
     {
       "norsk": "Mon tro han kommer?",
       "port": "Será que ele vem?",
@@ -5111,7 +4583,7 @@
       "uttale": "se-RA ki Æ ver-DA-dji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::var (fortid, tilstand)::estava / tava": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::var (fortid, tilstand)::estava / tava": [
     {
       "norsk": "Jeg var trøtt.",
       "port": "Eu tava cansado.",
@@ -5123,7 +4595,7 @@
       "uttale": "E-la es-TA-va fe-LIS"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::langt fra folkemengden::longe da multidão": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::langt fra folkemengden::longe da multidão": [
     {
       "norsk": "Vi gikk langt fra folkemengden.",
       "port": "Andamos longe da multidão.",
@@ -5135,7 +4607,7 @@
       "uttale": "E-li a-SJO ũ lo-GAR LÕ-zji da mo-tsji-DÃO"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::oppå, over::em cima de": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::oppå, over::em cima de": [
     {
       "norsk": "Boka ligger oppå bordet.",
       "port": "O livro está em cima da mesa.",
@@ -5147,7 +4619,7 @@
       "uttale": "o GA-to es-TA ẽi SI-ma da KAI-sha"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å hvile::descansar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å hvile::descansar": [
     {
       "norsk": "Jeg trenger å hvile litt.",
       "port": "Preciso descansar um pouco.",
@@ -5159,7 +4631,7 @@
       "uttale": "sẽ-TA-mos pra des-kã-SAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::sult::fome": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::sult::fome": [
     {
       "norsk": "Jeg er sulten.",
       "port": "Estou com fome.",
@@ -5171,7 +4643,7 @@
       "uttale": "MI-nja FÅ-mi Æ-ra GRÃ-dji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::snart::em breve": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::snart::em breve": [
     {
       "norsk": "Vi ses snart.",
       "port": "Nos vemos em breve.",
@@ -5183,7 +4655,7 @@
       "uttale": "VO pra KA-za ẽi BRÆ-vi"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::de må::devem": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::de må::devem": [
     {
       "norsk": "De må være sultne.",
       "port": "Eles devem estar com fome.",
@@ -5195,7 +4667,7 @@
       "uttale": "MEOS PAIS DÆ-vẽi es-TAR pre-o-ko-PA-dos"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::like etterpå, straks etter::logo em seguida": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::like etterpå, straks etter::logo em seguida": [
     {
       "norsk": "Like etterpå begynte det å regne.",
       "port": "Logo em seguida, começou a chover.",
@@ -5207,7 +4679,7 @@
       "uttale": "E-li sje-GO LÅ-go ẽi se-GI-da"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::ved et uhell::acidentalmente": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::ved et uhell::acidentalmente": [
     {
       "norsk": "Jeg slo den ned ved et uhell.",
       "port": "Derrubei acidentalmente.",
@@ -5219,7 +4691,7 @@
       "uttale": "E-li ẽi-vi-O a mẽ-SA-zjẽi a-si-dẽ-tao-MẼ-tsji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::bit, stykke::pedaço": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::bit, stykke::pedaço": [
     {
       "norsk": "Kan jeg få en bit til?",
       "port": "Posso comer mais um pedaço?",
@@ -5231,7 +4703,7 @@
       "uttale": "E-la mi DEO ũ pe-DA-so dji BÅ-lo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::bakken, gulvet::chão": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::bakken, gulvet::chão": [
     {
       "norsk": "Boken falt på gulvet.",
       "port": "O livro caiu no chão.",
@@ -5243,7 +4715,7 @@
       "uttale": "as kri-Ã-sas sẽ-TA-rão no SJÃO"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::slik, sånn::assim": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::slik, sånn::assim": [
     {
       "norsk": "Gjør det sånn.",
       "port": "Faz assim.",
@@ -5255,7 +4727,7 @@
       "uttale": "GÅS-to a-SĨ"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::det fantes, det var (datid av \"há\")::havia": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::det fantes, det var (datid av \"há\")::havia": [
     {
       "norsk": "Det var mange folk der.",
       "port": "Havia muita gente lá.",
@@ -5267,7 +4739,7 @@
       "uttale": "não a-VI-a ko-MI-da"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::ved siden av::ao lado (de)": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::ved siden av::ao lado (de)": [
     {
       "norsk": "Butikken ligger ved siden av skolen.",
       "port": "A loja fica ao lado da escola.",
@@ -5279,7 +4751,7 @@
       "uttale": "E-li sẽ-TO ao LA-do dji MĨ"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å nå, å rekke::alcançar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å nå, å rekke::alcançar": [
     {
       "norsk": "Jeg klarer ikke å nå hylla.",
       "port": "Não consigo alcançar a prateleira.",
@@ -5291,7 +4763,7 @@
       "uttale": "E-li kõ-se-GIO ao-kã-SAR o TRẼI"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::utsikt::vista": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::utsikt::vista": [
     {
       "norsk": "Utsikten herfra er vakker.",
       "port": "A vista daqui é linda.",
@@ -5303,7 +4775,7 @@
       "uttale": "ad-mi-RA-mos a VIS-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::på toppen::no topo": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::på toppen::no topo": [
     {
       "norsk": "Flagget er på toppen av fjellet.",
       "port": "A bandeira está no topo da montanha.",
@@ -5315,7 +4787,7 @@
       "uttale": "nos ẽ-kõ-TRA-mos no TO-po"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::larven::lagarta": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::larven::lagarta": [
     {
       "norsk": "Larven spiste et blad.",
       "port": "A lagarta comeu uma folha.",
@@ -5327,7 +4799,7 @@
       "uttale": "a-SJA-mos Ũ-ma la-GAR-ta no zjar-DĨ"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::skogen::floresta": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::skogen::floresta": [
     {
       "norsk": "Familien bor i skogen.",
       "port": "A família mora na floresta.",
@@ -5339,7 +4811,7 @@
       "uttale": "ka-mi-NJÃ-mos na flo-RES-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::familien::família": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::familien::família": [
     {
       "norsk": "Jeg elsker familien min.",
       "port": "Eu amo minha família.",
@@ -5351,7 +4823,7 @@
       "uttale": "a fa-MI-lia DE-li Æ GRÃ-dji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::bygningen::prédio": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::bygningen::prédio": [
     {
       "norsk": "Bygningen er veldig høy.",
       "port": "O prédio é muito alto.",
@@ -5363,7 +4835,7 @@
       "uttale": "MÅ-ra-mos no PRÆ-djo NO-vo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::person / folk::pessoa / pessoas": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::person / folk::pessoa / pessoas": [
     {
       "norsk": "Det var mange folk der.",
       "port": "Tinha muitas pessoas lá.",
@@ -5375,7 +4847,7 @@
       "uttale": "Ũ-ma pe-SO-a mi per-gũ-TO o ka-MI-njo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::esken, boksen::caixa": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::esken, boksen::caixa": [
     {
       "norsk": "Esken er full av leker.",
       "port": "A caixa está cheia de brinquedos.",
@@ -5387,7 +4859,7 @@
       "uttale": "ko-lo-KEI o LI-vro na KAI-sha"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::magen::estômago": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::magen::estômago": [
     {
       "norsk": "Magen min gjør vondt.",
       "port": "Meu estômago está doendo.",
@@ -5399,7 +4871,7 @@
       "uttale": "TSJI-vi Ũ-ma sẽ-sa-SÃO es-TRA-nja no es-TO-ma-go"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::vinduet::janela": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::vinduet::janela": [
     {
       "norsk": "Vinduet er åpent.",
       "port": "A janela está aberta.",
@@ -5411,7 +4883,7 @@
       "uttale": "E-li o-LJO PE-la zja-NE-la"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::himmelen::céu": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::himmelen::céu": [
     {
       "norsk": "Himmelen er blå i dag.",
       "port": "O céu está azul hoje.",
@@ -5423,7 +4895,7 @@
       "uttale": "as es-TRE-las bri-LJA-vão no SÆO"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::lukten::cheiro": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::lukten::cheiro": [
     {
       "norsk": "Det er en god lukt her.",
       "port": "Tem um cheiro bom aqui.",
@@ -5435,7 +4907,7 @@
       "uttale": "SẼ-tsji o SJEI-ro dji BÅ-lo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::vannet::água": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::vannet::água": [
     {
       "norsk": "Kan jeg få litt vann?",
       "port": "Posso beber água?",
@@ -5447,7 +4919,7 @@
       "uttale": "a A-gwa es-TA FRI-a"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::eventyret::aventura": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::eventyret::aventura": [
     {
       "norsk": "Dette var et fint eventyr.",
       "port": "Essa foi uma aventura legal.",
@@ -5459,7 +4931,7 @@
       "uttale": "so-NJÃ-mos kõ Ũ-ma a-vẽ-TU-ra"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::mamma::mamãe": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::mamma::mamãe": [
     {
       "norsk": "Mamma lager middag.",
       "port": "A mamãe está fazendo o jantar.",
@@ -5471,7 +4943,7 @@
       "uttale": "SĨ-to FAO-ta da ma-MÃI"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::pappa::papai": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::pappa::papai": [
     {
       "norsk": "Pappa jobber i dag.",
       "port": "O papai está trabalhando hoje.",
@@ -5483,7 +4955,7 @@
       "uttale": "o pa-PAI SJÆ-ga ẽi KA-za ẽi BRÆ-vi"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å forandre seg::mudar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å forandre seg::mudar": [
     {
       "norsk": "Jeg vil forandre meg.",
       "port": "Eu quero mudar.",
@@ -5495,7 +4967,7 @@
       "uttale": "TO-do PÅ-dji mu-DAR HA-pi-do"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å leve::viver": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å leve::viver": [
     {
       "norsk": "Jeg vil leve et enkelt liv.",
       "port": "Quero viver uma vida simples.",
@@ -5507,7 +4979,7 @@
       "uttale": "E-lis VI-vẽi no KÃ-po"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å gå tur::caminhar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å gå tur::caminhar": [
     {
       "norsk": "Vi liker å gå tur om kvelden.",
       "port": "Gostamos de caminhar à noite.",
@@ -5519,7 +4991,7 @@
       "uttale": "E-li ka-mi-NJO so-ZI-njo na flo-RES-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å klatre::escalar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å klatre::escalar": [
     {
       "norsk": "Jeg vil klatre i fjellet.",
       "port": "Quero escalar a montanha.",
@@ -5531,7 +5003,7 @@
       "uttale": "Æ pe-ri-GO-zo es-ka-LAR sẽi a-ZJU-da"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å klatre opp, å stige::subir": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å klatre opp, å stige::subir": [
     {
       "norsk": "Vi må klatre opp trappen.",
       "port": "Precisamos subir a escada.",
@@ -5543,7 +5015,7 @@
       "uttale": "os PRE-sos kõ-TSJI-nwão a so-BIR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å begynne::começar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å begynne::começar": [
     {
       "norsk": "Skal vi begynne nå?",
       "port": "Vamos começar agora?",
@@ -5555,7 +5027,7 @@
       "uttale": "o FIO-mi ko-ME-sa as Å-i-to"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å holde::segurar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å holde::segurar": [
     {
       "norsk": "Kan du holde denne litt?",
       "port": "Você pode segurar isso um pouco?",
@@ -5567,7 +5039,7 @@
       "uttale": "E-la se-go-RO bẽi a MÃO DE-li"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å falle::cair": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å falle::cair": [
     {
       "norsk": "Pass på så du ikke faller.",
       "port": "Cuidado para não cair.",
@@ -5579,7 +5051,7 @@
       "uttale": "o LI-vro ka-IO da pra-te-LEI-ra"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å smile::sorrir": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å smile::sorrir": [
     {
       "norsk": "Hun liker å smile til alle.",
       "port": "Ela gosta de sorrir para todos.",
@@ -5591,7 +5063,7 @@
       "uttale": "so-HI ũ PO-ko"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å klemme::abraçar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å klemme::abraçar": [
     {
       "norsk": "Jeg vil klemme mamma.",
       "port": "Quero abraçar a mamãe.",
@@ -5603,7 +5075,7 @@
       "uttale": "E-lis si a-bra-SA-rão por MŨI-to TẼI-po"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å dra / komme tilbake::voltar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å dra / komme tilbake::voltar": [
     {
       "norsk": "Jeg skal dra tilbake i morgen.",
       "port": "Vou voltar amanhã.",
@@ -5615,7 +5087,7 @@
       "uttale": "KWÃ-do vo-SE VAI vou-TAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å skrike::gritar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å skrike::gritar": [
     {
       "norsk": "Ikke skrik!",
       "port": "Não grita!",
@@ -5627,7 +5099,7 @@
       "uttale": "a kri-Ã-sa gri-TO dji ME-do"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::enorm::enorme": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::enorm::enorme": [
     {
       "norsk": "Huset er enormt.",
       "port": "A casa é enorme.",
@@ -5639,7 +5111,7 @@
       "uttale": "FOI Ũ-ma sor-PRE-za e-NÅR-mi"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::rar, merkelig (mann / kvinne)::estranho / estranha": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::rar, merkelig (mann / kvinne)::estranho / estranha": [
     {
       "norsk": "Det var en merkelig lyd.",
       "port": "Foi um som estranho.",
@@ -5651,7 +5123,7 @@
       "uttale": "E-la si sẽ-TSJIO es-TRA-nja O-zji"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::hvit (mann / kvinne)::branco / branca": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::hvit (mann / kvinne)::branco / branca": [
     {
       "norsk": "Katten er hvit.",
       "port": "O gato é branco.",
@@ -5663,7 +5135,7 @@
       "uttale": "E-la o-ZA-va ũ ves-TSJI-do BRÃ-ko"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::deilig (mann / kvinne)::delicioso / deliciosa": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::deilig (mann / kvinne)::delicioso / deliciosa": [
     {
       "norsk": "Maten var deilig.",
       "port": "A comida estava deliciosa.",
@@ -5675,7 +5147,7 @@
       "uttale": "ki BÅ-lo de-li-SIO-zo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::stram, tett (mann / kvinne)::apertado / apertada": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::stram, tett (mann / kvinne)::apertado / apertada": [
     {
       "norsk": "Skoene er for stramme.",
       "port": "Os sapatos estão apertados.",
@@ -5687,367 +5159,7 @@
       "uttale": "a ka-MI-za es-TA a-per-TA-da"
     }
   ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::dette / denne (nær meg)::este / esta": [
-    {
-      "norsk": "Dette er boken min.",
-      "port": "Este é o meu livro.",
-      "uttale": "ES-tsji Æ o meo LI-vro"
-    },
-    {
-      "norsk": "Dette huset er nytt.",
-      "port": "Esta casa é nova.",
-      "uttale": "ES-ta KA-za Æ NO-va"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::dette (generelt, upersonlig)::isto": [
-    {
-      "norsk": "Dette er viktig.",
-      "port": "Isto é importante.",
-      "uttale": "IS-to Æ ĩ-por-TÃ-tsji"
-    },
-    {
-      "norsk": "Hva er dette?",
-      "port": "O que é isto?",
-      "uttale": "o ki Æ IS-to"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::det / den (nær deg — mest brukt i tale)::esse / essa": [
-    {
-      "norsk": "Er den bilen din?",
-      "port": "Esse carro é seu?",
-      "uttale": "E-si KA-ho Æ SEO"
-    },
-    {
-      "norsk": "Den ideen er god.",
-      "port": "Essa ideia é boa.",
-      "uttale": "E-sa i-DEI-a Æ BÅ-a"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::det, dette (generelt, upersonlig — svært vanlig)::isso": [
-    {
-      "norsk": "Nettopp!",
-      "port": "Isso mesmo!",
-      "uttale": "I-so MES-mo"
-    },
-    {
-      "norsk": "Hvorfor gjorde du det?",
-      "port": "Por que você fez isso?",
-      "uttale": "por-KI vo-SE FES I-so"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::det der / den der (langt unna)::aquele / aquela": [
-    {
-      "norsk": "Den bygningen der borte er enorm.",
-      "port": "Aquele prédio é enorme.",
-      "uttale": "a-KE-li PRÆ-djo Æ e-NÅR-mi"
-    },
-    {
-      "norsk": "Den kvinnen der borte er tanten min.",
-      "port": "Aquela mulher é minha tia.",
-      "uttale": "a-KE-la mo-LJÆR Æ MI-nja TSJI-a"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::det der (generelt, langt unna)::aquilo": [
-    {
-      "norsk": "Det der borte er et fjell.",
-      "port": "Aquilo é uma montanha.",
-      "uttale": "a-KI-lo Æ Ũ-ma mõ-TÃ-nja"
-    },
-    {
-      "norsk": "Jeg forstår ikke det der.",
-      "port": "Eu não entendo aquilo.",
-      "uttale": "eo não ẽ-TẼ-do a-KI-lo"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::disse (nær meg, flertall)::estes / estas": [
-    {
-      "norsk": "Disse skoene er mine.",
-      "port": "Estes sapatos são meus.",
-      "uttale": "ES-tsjis sa-PA-tos são MEOS"
-    },
-    {
-      "norsk": "Disse blomstene er vakre.",
-      "port": "Estas flores são lindas.",
-      "uttale": "ES-tas FLÅ-ris são LĨ-das"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::disse, de der (nær deg, flertall)::esses / essas": [
-    {
-      "norsk": "De bøkene der er interessante.",
-      "port": "Esses livros são interessantes.",
-      "uttale": "E-sis LI-vros são ĩ-te-re-SÃ-tsjis"
-    },
-    {
-      "norsk": "De barna der er hyggelige.",
-      "port": "Essas crianças são simpáticas.",
-      "uttale": "E-sas kri-Ã-sas são sĩ-PA-tsji-kas"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::de der (langt unna, flertall)::aqueles / aquelas": [
-    {
-      "norsk": "De mennene der borte jobber her.",
-      "port": "Aqueles homens trabalham aqui.",
-      "uttale": "a-KE-lis Å-mẽis tra-BA-ljão a-KI"
-    },
-    {
-      "norsk": "De husene der borte er gamle.",
-      "port": "Aquelas casas são antigas.",
-      "uttale": "a-KE-las KA-zas são Ã-tsji-gas"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på ham, i / på den (hankjønn)::nele": [
-    {
-      "norsk": "Jeg stoler på ham.",
-      "port": "Confio nele.",
-      "uttale": "kõ-FI-o NE-li"
-    },
-    {
-      "norsk": "Jeg tenkte på ham hele dagen.",
-      "port": "Pensei nele o dia todo.",
-      "uttale": "pẽ-SEI NE-li o DJI-a TO-do"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på henne, i / på den (hunkjønn)::nela": [
-    {
-      "norsk": "Han tenker alltid på henne.",
-      "port": "Ele pensa nela sempre.",
-      "uttale": "E-li PẼ-sa NE-la SẼI-pri"
-    },
-    {
-      "norsk": "Jeg tror ikke på henne.",
-      "port": "Não acredito nela.",
-      "uttale": "não a-kre-DJI-to NE-la"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dem (hankjønn)::neles": [
-    {
-      "norsk": "Vi stoler på dem.",
-      "port": "Confiamos neles.",
-      "uttale": "kõ-fi-Ã-mos NE-lis"
-    },
-    {
-      "norsk": "Vi tenker på dem hver dag.",
-      "port": "Pensamos neles todos os dias.",
-      "uttale": "pẽ-SÃ-mos NE-lis TO-dos os DJI-as"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dem (hunkjønn)::nelas": [
-    {
-      "norsk": "Jeg tror på dem.",
-      "port": "Acredito nelas.",
-      "uttale": "a-kre-DJI-to NE-las"
-    },
-    {
-      "norsk": "Jeg tenkte på dem i går.",
-      "port": "Pensei nelas ontem.",
-      "uttale": "pẽ-SEI NE-las Õ-tẽi"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dette::neste / nesta": [
-    {
-      "norsk": "Jeg bor i dette nabolaget.",
-      "port": "Moro neste bairro.",
-      "uttale": "MÅ-ro NES-tsji BAI-ho"
-    },
-    {
-      "norsk": "I denne byen er det mye folk.",
-      "port": "Nesta cidade tem muita gente.",
-      "uttale": "NES-ta si-DA-dji tẽi MŨI-ta ZJẼ-tsji"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på dette (generelt)::nisto": [
-    {
-      "norsk": "Ikke tenk på dette nå.",
-      "port": "Não pense nisto agora.",
-      "uttale": "não PẼ-si NIS-to a-GÅ-ra"
-    },
-    {
-      "norsk": "Jeg er enig i dette.",
-      "port": "Concordo nisto.",
-      "uttale": "kõ-KÅR-do NIS-to"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det / den der::nesse / nessa": [
-    {
-      "norsk": "Jeg bor i den bygningen.",
-      "port": "Moro nesse prédio.",
-      "uttale": "MÅ-ro NE-si PRÆ-djo"
-    },
-    {
-      "norsk": "I den butikken er det alt.",
-      "port": "Nessa loja tem tudo.",
-      "uttale": "NE-sa LÅ-zja tẽi TO-do"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det (generelt)::nisso": [
-    {
-      "norsk": "Ikke tenk på det.",
-      "port": "Não pense nisso.",
-      "uttale": "não PẼ-si NI-so"
-    },
-    {
-      "norsk": "Vi snakker om det senere.",
-      "port": "Vamos falar nisso depois.",
-      "uttale": "VÃ-mos fa-LAR NI-so de-PÅIS"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det der borte::naquele / naquela": [
-    {
-      "norsk": "Han bor i den bygningen der borte.",
-      "port": "Ele mora naquele prédio.",
-      "uttale": "E-li MÅ-ra na-KE-li PRÆ-djo"
-    },
-    {
-      "norsk": "Jeg satte meg på den stolen der borte.",
-      "port": "Sentei naquela cadeira.",
-      "uttale": "sẽ-TEI na-KE-la ka-DEI-ra"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på det der (generelt)::naquilo": [
-    {
-      "norsk": "Ikke tenk på det der.",
-      "port": "Não pense naquilo.",
-      "uttale": "não PẼ-si na-KI-lo"
-    },
-    {
-      "norsk": "Jeg tror på det han sa.",
-      "port": "Acredito naquilo que ele disse.",
-      "uttale": "a-kre-DJI-to na-KI-lo ki E-li DJI-si"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra dette::deste / desta": [
-    {
-      "norsk": "Jeg liker denne boken.",
-      "port": "Gosto deste livro.",
-      "uttale": "GÅS-to DES-tsji LI-vro"
-    },
-    {
-      "norsk": "Denne gangen går det bra.",
-      "port": "Desta vez vai dar certo.",
-      "uttale": "DES-ta VES VAI DAR SÆR-to"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra dette (generelt)::disto": [
-    {
-      "norsk": "Jeg trenger dette nå.",
-      "port": "Preciso disto agora.",
-      "uttale": "pre-SI-zo DJIS-to a-GÅ-ra"
-    },
-    {
-      "norsk": "Jeg liker dette veldig godt.",
-      "port": "Gosto muito disto.",
-      "uttale": "GÅS-to MŨI-to DJIS-to"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det / den der::desse / dessa": [
-    {
-      "norsk": "Jeg liker den filmen.",
-      "port": "Gosto desse filme.",
-      "uttale": "GÅS-to DE-si FIO-mi"
-    },
-    {
-      "norsk": "Jeg trenger den informasjonen.",
-      "port": "Preciso dessa informação.",
-      "uttale": "pre-SI-zo DE-sa ĩ-for-ma-SÃO"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det (generelt — svært vanlig)::disso": [
-    {
-      "norsk": "Jeg liker det.",
-      "port": "Gosto disso.",
-      "uttale": "GÅS-to DJI-so"
-    },
-    {
-      "norsk": "Jeg trenger det nå.",
-      "port": "Preciso disso agora.",
-      "uttale": "pre-SI-zo DJI-so a-GÅ-ra"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det der borte::daquele / daquela": [
-    {
-      "norsk": "Jeg liker det stedet der borte.",
-      "port": "Gosto daquele lugar.",
-      "uttale": "GÅS-to da-KE-li lo-GAR"
-    },
-    {
-      "norsk": "Jeg husker den reisen der borte.",
-      "port": "Lembro daquela viagem.",
-      "uttale": "LẼI-bro da-KE-la vi-A-zjẽi"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av / fra det der (generelt)::daquilo": [
-    {
-      "norsk": "Jeg liker det der.",
-      "port": "Gosto daquilo.",
-      "uttale": "GÅS-to da-KI-lo"
-    },
-    {
-      "norsk": "Jeg trenger det der også.",
-      "port": "Preciso daquilo também.",
-      "uttale": "pre-SI-zo da-KI-lo tãi-BẼI"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på (hankjønn / hunkjønn)::no / na": [
-    {
-      "norsk": "Boken ligger på gulvet.",
-      "port": "O livro está no chão.",
-      "uttale": "o LI-vro es-TA no SJÃO"
-    },
-    {
-      "norsk": "Hun bor i byen.",
-      "port": "Ela mora na cidade.",
-      "uttale": "E-la MÅ-ra na si-DA-dji"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::av, fra, sin (hankjønn / hunkjønn)::do / da": [
-    {
-      "norsk": "Bilen til faren min.",
-      "port": "O carro do meu pai.",
-      "uttale": "o KA-ho do meo PAI"
-    },
-    {
-      "norsk": "Huset til bestemoren min.",
-      "port": "A casa da minha avó.",
-      "uttale": "a KA-za da MI-nja a-VÅ"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::til (hankjønn / hunkjønn)::ao / à": [
-    {
-      "norsk": "Jeg drar til butikken.",
-      "port": "Vou ao mercado.",
-      "uttale": "VO ao mer-KA-do"
-    },
-    {
-      "norsk": "Vi kom fram til skolen.",
-      "port": "Chegamos à escola.",
-      "uttale": "sje-GA-mos a es-KÅ-la"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::gjennom, langs (hankjønn / hunkjønn)::pelo / pela": [
-    {
-      "norsk": "Vi gikk gjennom parken.",
-      "port": "Andamos pelo parque.",
-      "uttale": "ã-DA-mos PE-lo PAR-ki"
-    },
-    {
-      "norsk": "Hun gikk gjennom døren.",
-      "port": "Ela passou pela porta.",
-      "uttale": "E-la pa-SO PE-la PÅR-ta"
-    }
-  ],
-  "Appendiks G: Pekeord og sammentrekninger::gloser::i / på en (ubestemt, hankjønn / hunkjønn)::num / numa": [
-    {
-      "norsk": "Jeg bor i en liten leilighet.",
-      "port": "Moro num apartamento pequeno.",
-      "uttale": "MÅ-ro nũ a-par-ta-MẼ-to pe-KE-no"
-    },
-    {
-      "norsk": "En morgen forandret alt seg.",
-      "port": "Numa manhã, tudo mudou.",
-      "uttale": "NŨ-ma ma-NJÃ, TO-do mo-DO"
-    }
-  ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å forandre seg fullstendig::mudar completamente": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å forandre seg fullstendig::mudar completamente": [
     {
       "norsk": "Han vil forandre seg fullstendig.",
       "port": "Ele quer mudar completamente.",
@@ -6059,7 +5171,7 @@
       "uttale": "eo pre-SI-zo mu-DAR kõ-ple-ta-MẼ-tsji dji VI-da"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å gå ut, å dra ut::sair": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å gå ut, å dra ut::sair": [
     {
       "norsk": "Jeg skal gå ut nå.",
       "port": "Vou sair agora.",
@@ -6071,7 +5183,7 @@
       "uttale": "E-la KÆR sa-IR dji KA-za"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::stein::pedra": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::stein::pedra": [
     {
       "norsk": "Jeg plukket opp en stein.",
       "port": "Eu peguei uma pedra.",
@@ -6083,7 +5195,7 @@
       "uttale": "tẽi Ũ-ma PÆ-dra no ka-MI-njo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å klare, å få til::conseguir": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å klare, å få til::conseguir": [
     {
       "norsk": "Jeg skal klare det.",
       "port": "Eu vou conseguir.",
@@ -6095,7 +5207,7 @@
       "uttale": "pre-SI-zo kõ-se-GIR E-si tra-BA-ljo"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å lete etter::procurar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å lete etter::procurar": [
     {
       "norsk": "Jeg skal lete etter mobilen min.",
       "port": "Vou procurar meu celular.",
@@ -6107,7 +5219,7 @@
       "uttale": "pre-SI-zo pro-ko-RAR ũ ẽi-PRE-go"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å rope, å kalle på::chamar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å rope, å kalle på::chamar": [
     {
       "norsk": "Jeg skal rope på henne.",
       "port": "Vou chamar ela.",
@@ -6119,7 +5231,7 @@
       "uttale": "E-li FOI sja-MAR a-ZJU-da"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å ta lang tid::demorar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å ta lang tid::demorar": [
     {
       "norsk": "Dette kommer til å ta lang tid.",
       "port": "Isso vai demorar muito.",
@@ -6131,7 +5243,7 @@
       "uttale": "não VO dji-mo-RAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å krype, å ale seg::rastejar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å krype, å ale seg::rastejar": [
     {
       "norsk": "Babyen begynte å krype.",
       "port": "O bebê começou a rastejar.",
@@ -6143,7 +5255,7 @@
       "uttale": "TSJI-vi ki has-te-ZJAR PA-ra pa-SAR"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å håpe, å vente::esperar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å håpe, å vente::esperar": [
     {
       "norsk": "Jeg skal vente her.",
       "port": "Vou esperar aqui.",
@@ -6155,7 +5267,7 @@
       "uttale": "es-PÆ-ro VER vo-SE ẽi BRÆ-vi"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å miste, å slippe::deixar cair": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å miste, å slippe::deixar cair": [
     {
       "norsk": "Pass på så du ikke mister det.",
       "port": "Cuidado para não deixar cair.",
@@ -6167,7 +5279,7 @@
       "uttale": "E-li FOI dei-SJAR ka-IR o KO-po"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å ta en bit::dar uma mordida": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å ta en bit::dar uma mordida": [
     {
       "norsk": "Jeg skal ta en bit av kaken.",
       "port": "Vou dar uma mordida no bolo.",
@@ -6179,7 +5291,7 @@
       "uttale": "E-la DEO Ũ-ma mor-DJI-da na FRU-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å sovne::cair no sono": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å sovne::cair no sono": [
     {
       "norsk": "Jeg kommer til å sovne tidlig i dag.",
       "port": "Vou cair no sono cedo hoje.",
@@ -6191,7 +5303,7 @@
       "uttale": "E-li SẼI-pri KAI no SO-no no so-FA"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å ha, å få::ter": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å ha, å få::ter": [
     {
       "norsk": "Jeg vil ha mer tid.",
       "port": "Quero ter mais tempo.",
@@ -6203,7 +5315,7 @@
       "uttale": "VÃ-mos TER Ũ-ma FES-ta"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::å sette seg::sentar": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::å sette seg::sentar": [
     {
       "norsk": "La oss sette oss her.",
       "port": "Vamos sentar aqui.",
@@ -6215,7 +5327,7 @@
       "uttale": "E-la FOI sẽ-TAR na ka-DEI-ra"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::stol::cadeira": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::stol::cadeira": [
     {
       "norsk": "Denne stolen er behagelig.",
       "port": "Essa cadeira é confortável.",
@@ -6227,7 +5339,7 @@
       "uttale": "sẽ-TEI na ka-DEI-ra"
     }
   ],
-  "Appendiks F: Gloser fra «A Lagarta Viajante»::gloser::sky::nuvem": [
+  "Appendiks C: Gloser fra «A Lagarta Viajante»::gloser::sky::nuvem": [
     {
       "norsk": "Den skyen der borte er enorm.",
       "port": "Aquela nuvem é enorme.",

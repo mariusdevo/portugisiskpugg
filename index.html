@@ -254,6 +254,32 @@ code{
 .special-card td:first-child{color:var(--ink-soft);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.03em;width:90px;}
 .special-card .ut{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--ocean);}
 
+.reference-view{
+  background:var(--paper);border-radius:var(--radius);padding:22px 24px;
+  box-shadow:0 16px 36px -22px rgba(11,59,68,0.45);margin-bottom:16px;
+  color:var(--ink);line-height:1.6;
+}
+.reference-view > p:first-child{margin-top:0;color:var(--ink-soft);}
+.reference-view h3{
+  font-family:'Fraunces',Georgia,serif;font-size:1.15rem;color:var(--ocean-deep);
+  margin:26px 0 8px;font-weight:600;
+}
+.reference-view h3:first-of-type{margin-top:0;}
+.reference-view h4{
+  font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--coral-dark);
+  margin:16px 0 6px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
+}
+.reference-view p{margin:0 0 10px;color:var(--ink);}
+.reference-view p.note{color:var(--ink-soft);font-size:0.87rem;font-style:italic;}
+.reference-view table{border-collapse:collapse;width:100%;margin:0 0 14px;}
+.reference-view th{
+  text-align:left;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.03em;
+  color:var(--ink-soft);padding:6px 10px;border-bottom:2px solid var(--line);
+}
+.reference-view td{padding:7px 10px;border-bottom:1px solid var(--line);font-size:0.9rem;}
+.reference-view td.ut{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--ocean);white-space:nowrap;}
+.reference-view tr:nth-child(even) td{background:rgba(27,36,48,0.03);}
+
 .cover{
   position:absolute;left:0;top:0;width:0;height:0;
   background:linear-gradient(165deg, var(--ocean-light) 0%, var(--ocean-deep) 88%);
@@ -438,7 +464,7 @@ code{
         <button id="extraFilterBtn" class="btn ghost" type="button" aria-pressed="false">☆ Kun ekstra pugg (k)</button>
         <button id="reverseBtn" class="btn ghost" type="button" aria-pressed="false">🔄 NO → PT</button>
 
-        <div class="actions">
+        <div class="actions" id="actionsBar">
           <button id="shuffleBtn" class="btn ghost" type="button">Stokk om (s)</button>
           <button id="hideBtn" class="btn ghost" type="button">Skjul alt</button>
           <button id="revealBtn" class="btn primary" type="button">Vis alt</button>
@@ -453,6 +479,8 @@ code{
     </div>
 
     <div class="future-note" id="futureNote" style="display:none;"></div>
+
+    <div id="referenceView" class="reference-view" style="display:none;"></div>
 
     <div class="colheads" id="colHeads" style="display:none;"><span>Person</span><span>Presens</span><span>Fortid</span></div>
     <div class="board" id="board">
@@ -492,6 +520,8 @@ const boyningTab = document.getElementById('boyningTab');
 const extraNote = document.getElementById('extraNote');
 const clearExtraBtn = document.getElementById('clearExtraBtn');
 const futureNote = document.getElementById('futureNote');
+const referenceView = document.getElementById('referenceView');
+const actionsBar = document.getElementById('actionsBar');
 const colHeads = document.getElementById('colHeads');
 const irregularCards = document.getElementById('irregularCards');
 const grid = document.getElementById('grid');
@@ -573,12 +603,25 @@ function parsePensum(text){
     const trimmed = line.trim();
 
     if(trimmed.startsWith('## ')){
-      section = { title: trimmed.slice(3).trim(), gloser: [], setninger: [], boyning: [], futureIntro: null };
+      section = { title: trimmed.slice(3).trim(), gloser: [], setninger: [], boyning: [], futureIntro: null, referenceMd: null };
       sections.push(section);
       bucket = null;
       boyningGroup = null;
       currentVerb = null;
-      i++; continue;
+      i++;
+
+      let j = i;
+      while(j < lines.length && lines[j].trim() === '') j++;
+      if(j < lines.length && lines[j].trim() === '<!-- oppslagsverk -->'){
+        i = j + 1;
+        const rawLines = [];
+        while(i < lines.length && !lines[i].trim().startsWith('## ')){
+          rawLines.push(lines[i]);
+          i++;
+        }
+        section.referenceMd = rawLines.join('\n').trim();
+      }
+      continue;
     }
 
     if(trimmed === '**Gloser**'){ bucket = 'gloser'; i++; continue; }
@@ -670,7 +713,73 @@ function parsePensum(text){
     i++;
   }
 
-  return { sections: sections.filter(s => s.gloser.length || s.setninger.length), warnings };
+  return { sections: sections.filter(s => s.gloser.length || s.setninger.length || s.referenceMd), warnings };
+}
+
+/* ---------- Oppslagsverk (referanse-appendiks uten bølge) ---------- */
+
+const REF_TABLE_ROW = /^\|.*\|$/;
+const REF_SEPARATOR_ROW = /^\|[\s:|-]+\|$/;
+
+function renderReferenceTable(headerCells, rows){
+  const isVocab = headerCells.length === 3 &&
+    /norsk/i.test(headerCells[0]) && /portugisisk/i.test(headerCells[1]) && /uttale/i.test(headerCells[2]);
+  let html = '<table><thead><tr>' + headerCells.map(c => '<th>' + mdBoldToHtml(c) + '</th>').join('') + '</tr></thead><tbody>';
+  rows.forEach(r => {
+    if(isVocab && r.length === 3){
+      let uttale = r[2];
+      if(uttale.startsWith('[') && uttale.endsWith(']')) uttale = uttale.slice(1, -1);
+      html += '<tr><td>' + mdBoldToHtml(r[0]) + '</td><td>' + mdBoldToHtml(r[1]) + '</td>'
+            + '<td class="ut">[' + escapeHtml(uttale) + ']</td></tr>';
+    } else {
+      html += '<tr>' + r.map(c => '<td>' + mdBoldToHtml(c) + '</td>').join('') + '</tr>';
+    }
+  });
+  html += '</tbody></table>';
+  return html;
+}
+
+function renderReferenceMarkdown(raw){
+  const lines = raw.split(/\r?\n/);
+  let html = '';
+  let i = 0;
+  while(i < lines.length){
+    const trimmed = lines[i].trim();
+
+    if(trimmed === ''){ i++; continue; }
+
+    if(trimmed.startsWith('### ')){
+      html += '<h3>' + mdBoldToHtml(trimmed.slice(4).trim()) + '</h3>';
+      i++; continue;
+    }
+
+    if(trimmed.startsWith('> ')){
+      html += '<p class="note">' + mdBoldToHtml(trimmed.slice(2).trim()) + '</p>';
+      i++; continue;
+    }
+
+    if(/^\*\*.+\*\*$/.test(trimmed)){
+      html += '<h4>' + escapeHtml(trimmed.slice(2, -2)) + '</h4>';
+      i++; continue;
+    }
+
+    if(REF_TABLE_ROW.test(trimmed)){
+      const headerCells = trimmed.split('|').slice(1, -1).map(c => c.trim());
+      i++;
+      if(i < lines.length && REF_SEPARATOR_ROW.test(lines[i].trim())) i++;
+      const rows = [];
+      while(i < lines.length && REF_TABLE_ROW.test(lines[i].trim())){
+        rows.push(lines[i].trim().split('|').slice(1, -1).map(c => c.trim()));
+        i++;
+      }
+      html += renderReferenceTable(headerCells, rows);
+      continue;
+    }
+
+    html += '<p>' + mdBoldToHtml(trimmed) + '</p>';
+    i++;
+  }
+  return html;
 }
 
 /* ---------- Lagring (per nettleser) ---------- */
@@ -902,8 +1011,17 @@ function updateEkstraLabel(){
   }
 }
 
+function currentSection(){
+  return !viewingExtra ? SECTIONS[sectionIndex] : null;
+}
+
+function isReferenceSection(){
+  const section = currentSection();
+  return !!(section && section.referenceMd);
+}
+
 function updateExtraFilterUI(){
-  const relevant = !viewingExtra && currentType !== 'boyning';
+  const relevant = !viewingExtra && currentType !== 'boyning' && !isReferenceSection();
   extraFilterBtn.style.display = relevant ? '' : 'none';
   if(!relevant) return;
   const count = buildItems(sectionIndex, currentType).filter(item => markedItems[item.id]).length;
@@ -913,7 +1031,7 @@ function updateExtraFilterUI(){
 }
 
 function updateReverseUI(){
-  const relevant = currentType !== 'boyning';
+  const relevant = currentType !== 'boyning' && !isReferenceSection();
   reverseBtn.style.display = relevant ? '' : 'none';
   if(!relevant) return;
   reverseBtn.classList.toggle('active', reversed);
@@ -1001,7 +1119,7 @@ function irregularVerbs(section){
 
 function updateBoyningTabVisibility(){
   const section = SECTIONS[sectionIndex];
-  const hasBoyning = !viewingExtra && section && boyningRows(section).length > 0;
+  const hasBoyning = !viewingExtra && section && !section.referenceMd && boyningRows(section).length > 0;
   boyningTab.style.display = hasBoyning ? '' : 'none';
   if(!hasBoyning && currentType === 'boyning'){
     currentType = 'gloser';
@@ -1047,6 +1165,34 @@ function renderIrregularCards(section){
 }
 
 function loadList(){
+  const section = !viewingExtra ? SECTIONS[sectionIndex] : null;
+  const showReference = !viewingExtra && section && !!section.referenceMd;
+
+  if(showReference){
+    typeTabs.style.display = 'none';
+    extraNote.style.display = 'none';
+    futureNote.style.display = 'none';
+    irregularCards.style.display = 'none';
+    colHeads.style.display = 'none';
+    grid.classList.remove('boyning');
+    board.style.display = 'none';
+    counterEl.style.display = 'none';
+    actionsBar.style.display = 'none';
+    referenceView.innerHTML = renderReferenceMarkdown(section.referenceMd);
+    referenceView.style.display = 'block';
+    currentList = [];
+    boyningGroups = [];
+    totalHeight = 0; rowBottoms = [];
+    updateExtraFilterUI();
+    updateReverseUI();
+    return;
+  }
+
+  board.style.display = '';
+  counterEl.style.display = '';
+  actionsBar.style.display = '';
+  referenceView.style.display = 'none';
+
   if(viewingExtra){
     typeTabs.style.display = 'none';
     extraNote.style.display = 'flex';
@@ -1056,7 +1202,6 @@ function loadList(){
     extraNote.style.display = 'none';
   }
 
-  const section = !viewingExtra ? SECTIONS[sectionIndex] : null;
   const showBoyning = !viewingExtra && currentType === 'boyning' && section;
 
   colHeads.style.display = showBoyning ? 'grid' : 'none';
@@ -1486,6 +1631,7 @@ syncNowBtn.addEventListener('click', () => {
 syncDisconnectBtn.addEventListener('click', disconnectSync);
 
 shuffleBtn.addEventListener('click', () => {
+  if(isReferenceSection()) return;
   if(currentType === 'boyning' && !viewingExtra){
     for(let i = boyningGroups.length - 1; i > 0; i--){
       const j = Math.floor(Math.random() * (i + 1));
@@ -1505,12 +1651,14 @@ shuffleBtn.addEventListener('click', () => {
 });
 
 hideBtn.addEventListener('click', () => {
+  if(isReferenceSection()) return;
   expandedExampleIds.clear();
   revealedExampleAnswerItems.clear();
   renderGrid();
   requestAnimationFrame(() => { measure(); setReveal(0, true); });
 });
 revealBtn.addEventListener('click', () => {
+  if(isReferenceSection()) return;
   expandedExampleIds.clear();
   revealedExampleAnswerItems.clear();
   renderGrid();
@@ -1521,6 +1669,10 @@ function buildPrintView(){
   let html = '<h1>Onda — brasiliansk portugisisk</h1>';
   SECTIONS.forEach(section => {
     html += '<h2>' + escapeHtml(section.title) + '</h2>';
+    if(section.referenceMd){
+      html += renderReferenceMarkdown(section.referenceMd);
+      return;
+    }
     [['gloser', 'Gloser'], ['setninger', 'Setninger']].forEach(([key, label]) => {
       const rows = section[key];
       if(!rows || !rows.length) return;

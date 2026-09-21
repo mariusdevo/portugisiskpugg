@@ -1137,9 +1137,97 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 
 # Appendiks
 
-## Appendiks A: Spørreord
+## Appendiks A: Grammatisk oppslagsverk
+<!-- oppslagsverk -->
 
-**Gloser**
+Ord som substantiv, verb og adjektiv er hovedtyngden av det du pugger i kapitlene — men portugisisk henger sammen med hjelp av en håndfull mindre ordklasser som dukker opp i nesten hver eneste setning: pronomen, preposisjoner, spørreord, bindeord og bøyingsmønstre. Denne appendiksen samler dem på ett sted, som et oppslagsverk du kan slå opp i — ingen bølge å dra her, bare tabellene rett fram.
+
+### Personlige pronomen
+
+Verbtabellene i kapittel 13 er alltid delt inn i fire rader — *eu*, *você/ele/ela*, *nós* og *vocês/eles* — fordi disse gruppene deler samme bøyingsform. Her er selve pronomenene:
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| jeg | eu | [eo] |
+| du | você | [vo-SE] |
+| han | ele | [E-li] |
+| hun | ela | [Æ-la] |
+| vi | nós | [NÅS] |
+| vi (uformelt, svært vanlig i tale) | a gente | [a ZJẼ-tsji] |
+| dere | vocês | [vo-SES] |
+| de (menn / blandet) | eles | [E-lis] |
+| de (bare kvinner) | elas | [Æ-las] |
+
+> *a gente* bøyes som *ele/ela* (3. person entall), selv om det betyr "vi" — f.eks. *a gente vai* ("vi drar"), ikke *a gente vamos*.
+
+### Objekt- og refleksive pronomen
+
+I tale står disse foran verbet, og dekker både direkte objekt, indirekte objekt og refleksiv betydning:
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| meg | me | [mi] |
+| deg | te | [tsji] |
+| ham, den (hankjønn) | ele | [E-li] |
+| henne, den (hunkjønn) | ela | [Æ-la] |
+| oss | a gente | [a ZJẼ-tsji] |
+| dere, dem | vocês / eles / elas | [vo-SES / E-lis / Æ-las] |
+| seg (refleksivt, 3. person) | se | [si] |
+
+> I muntlig brasiliansk portugisisk erstattes de formelle skriftformene *o/a/os/as* (ham/henne/dem som objekt) som regel med subjektsformen *ele/ela/eles/elas*, eller sløyfes helt. Refleksivt *se* ser du blant annet i *chamar-se* ("å hete", bokstavelig "å kalle seg") og *sentar-se* ("å sette seg").
+
+**Eksempler**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg elsker deg. | Eu te amo. | [eo tsji A-mo] |
+| Hva heter du? (bokst. "Hvordan kaller du deg?") | Como você se chama? | [KO-mo vo-SE si SJÃ-ma] |
+| Jeg satte meg på stolen. | Eu sentei na cadeira. | [eo sẽ-TEI na ka-DEI-ra] |
+
+### Eiendomsord (possessiver)
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| min / mi / mitt | meu / minha | [meo / MI-nja] |
+| mine | meus / minhas | [MEOS / MI-njas] |
+| din / di / ditt | seu / sua | [seo / SO-a] |
+| dine | seus / suas | [SEOS / SO-as] |
+| hans | dele | [DE-li] |
+| hennes | dela | [DÆ-la] |
+| vår / vårt | da gente | [da ZJẼ-tsji] |
+| vår / vårt (skriftlig) | nosso / nossa | [NÅ-so / NÅ-sa] |
+| deres (flere) | deles / delas | [DE-lis / DÆ-las] |
+| til (om person) | de | [dji] |
+
+**Eksempler**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Navnet mitt er Maripus. | Meu nome é Maripus. | [meo NO-mi Æ ma-RI-pos] |
+| Er dette din? | É seu? | [Æ SEO] |
+| Hva heter mora di? | Como se chama a sua mãe? | [KO-mo si SJÃ-ma a SO-a MÃI] |
+| Bilen hans. | O carro dele. | [o KA-ho DE-li] |
+| Huset hennes. | A casa dela. | [a KA-za DÆ-la] |
+| Det er vårt. | É da gente. | [Æ da ZJẼ-tsji] |
+| Vennene deres. | Os amigos deles. | [os a-MI-gos DE-lis] |
+
+### Pekeord (demonstrativer)
+
+Portugisisk skiller mellom tre "avstander" for pekeord: nær den som snakker (*este/esta/isto*), nær den man snakker til (*esse/essa/isso*), og langt fra begge (*aquele/aquela/aquilo*). I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| dette / denne (nær meg) | este / esta | [ES-tsji / ES-ta] |
+| dette (generelt, upersonlig) | isto | [IS-to] |
+| det / den (nær deg — mest brukt i tale) | esse / essa | [E-si / E-sa] |
+| det, dette (generelt, upersonlig — svært vanlig) | isso | [I-so] |
+| det der / den der (langt unna) | aquele / aquela | [a-KE-li / a-KE-la] |
+| det der (generelt, langt unna) | aquilo | [a-KI-lo] |
+| disse (nær meg, flertall) | estes / estas | [ES-tsjis / ES-tas] |
+| disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
+| de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
+
+### Spørreord
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
@@ -1154,7 +1242,7 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | hvor mange | quantos | [KWÃ-tos] |
 | hvilken | qual | [KWAO] |
 
-**Setninger**
+**Eksempler**
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
@@ -1169,9 +1257,31 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Hva heter du? | Qual é o seu nome? | [KWAO Æ o seo NO-mi] |
 | Hvor mange er dere? | Quantos vocês são? | [KWÃ-tos vo-SES SÃO] |
 
-## Appendiks B: Preposisjoner
+### Bindeord
 
-**Gloser**
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| og | e | [i] |
+| men | mas | [MAS] |
+| eller | ou | [O] |
+| fordi | porque | [por-KI] |
+| så, altså | então | [ẽ-TÃO] |
+| så, deretter | aí | [a-Í] |
+| hvis | se | [si] |
+| også | também | [tãi-BẼI] |
+| derfor | por isso | [por I-so] |
+
+**Eksempler**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg er sulten, men det er ingenting her. | Tô com fome, mas não tem nada aqui. | [to kõ FÅ-mi, mas não tẽi NA-da a-KI] |
+| Jeg drar ikke, fordi jeg er sliten. | Não vou porque tô cansado. | [não VO por-KI to kã-SA-do] |
+| Jeg også. | Eu também. | [eo tãi-BẼI] |
+| Kaffe eller te? | Café ou chá? | [ka-FÆ o SJA] |
+| Hvis det regner, drar jeg ikke. | Se chover, não vou. | [si sjo-VER, não VO] |
+
+### Preposisjoner
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
@@ -1191,9 +1301,25 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | rett overfor | em frente a | [ẽi FRẼ-tsji a] |
 | bak | atrás de | [a-TRAS dji] |
 
-**Sammentrekninger**
+**Eksempler**
 
-*Preposisjon + bestemt artikkel*
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg er fra Norge. | Sou da Noruega. | [SO da no-RWÆ-ga] |
+| Jeg bor i Floripa. | Moro em Floripa. | [MÅ-ro ẽi flo-RI-pa] |
+| Jeg drar hjem. | Vou pra casa. | [VO pra KA-za] |
+| Uten sukker. | Sem açúcar. | [sẽi a-SO-kar] |
+| Boka til Ana. (tilhørighet) | O livro da Ana. | [o LI-vro da Ã-na] |
+| Jeg er fra Brasil. (opprinnelse) | Sou do Brasil. | [SO do bra-SIO] |
+| Et bord av tre. (materiale) | Uma mesa de madeira. | [Ũ-ma ME-za dji ma-DEI-ra] |
+| Et glass vann. (innhold) | Um copo de água. | [ũ KÅ-po dji A-gwa] |
+| Banken ligger ved siden av butikken. | O banco fica ao lado da loja. | [o BÃ-ko FI-ka ao LA-do da LÅ-zja] |
+
+### Sammentrekninger
+
+Portugisisk trekker ofte sammen en preposisjon og et etterfølgende ord — artikkel, pekeord eller pronomen — til ett ord, f.eks. *em* ("i/på") + *ele* ("han/den") = *nele*. Under er de vanligste sammentrekningene du støter på i dagligtale.
+
+**Preposisjon + bestemt artikkel**
 
 | | + o | + a | + os | + as |
 |---|---|---|---|---|
@@ -1204,100 +1330,138 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 
 > à har crase-accent, men uttales som vanlig a [a].
 
-*Preposisjon + ubestemt artikkel / pekeord*
+**Preposisjon + ubestemt artikkel**
 
-| | + um / uma | + este/esse/aquele |
+| | + um | + uma |
 |---|---|---|
-| em | num / numa | neste / nesse / naquele |
-| de | dum / duma | deste / desse / daquele |
+| em | num | numa |
+| de | dum | duma |
 
-**Setninger**
+**Preposisjon + pekeord**
+
+| | este/esta | isto | esse/essa | isso | aquele/aquela | aquilo |
+|---|---|---|---|---|---|---|
+| em (i/på) | neste / nesta | nisto | nesse / nessa | nisso | naquele / naquela | naquilo |
+| de (av/fra) | deste / desta | disto | desse / dessa | disso | daquele / daquela | daquilo |
+
+**Preposisjon + 3. persons pronomen**
+
+| | + ele | + ela | + eles | + elas |
+|---|---|---|---|---|
+| em | nele | nela | neles | nelas |
+
+> de + ele/ela/eles/elas gir *dele/dela/deles/delas* — disse er allerede dekket under Eiendomsord ("hans/hennes/deres"), og gjentas ikke her.
+
+**Eksempler**
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| Jeg er fra Norge. | Sou da Noruega. | [SO da no-RWÆ-ga] |
-| Jeg er i sentrum. | Tô no centro. | [to no SẼ-tro] |
-| Jeg bor i Floripa. | Moro em Floripa. | [MÅ-ro ẽi flo-RI-pa] |
-| Jeg drar hjem. | Vou pra casa. | [VO pra KA-za] |
-| Jeg blir med deg. | Vou com você. | [VO kõ vo-SE] |
-| Uten sukker. | Sem açúcar. | [sẽi a-SO-kar] |
-| Vi ses i morgen. | Até amanhã. | [a-TÆ a-ma-NJÃ] |
-| Etter timen. | Depois da aula. | [dji-PÅIS da AO-la] |
-| Før klokka ni. | Antes das nove. | [Ã-tsjis das NÅ-vi] |
-| Boka til Ana. (tilhørighet) | O livro da Ana. | [o LI-vro da Ã-na] |
-| Jeg er fra Brasil. (opprinnelse) | Sou do Brasil. | [SO do bra-SIO] |
-| Et bord av tre. (materiale) | Uma mesa de madeira. | [Ũ-ma ME-za dji ma-DEI-ra] |
-| Et glass vann. (innhold) | Um copo de água. | [ũ KÅ-po dji A-gwa] |
 | Jeg drar til legen. | Vou ao médico. | [VO ao MÆ-dji-ko] |
 | Klokka åtte. | Às oito. | [as ÅI-to] |
 | Om morgenen. | Pela manhã. | [PE-la ma-NJÃ] |
 | Jeg betalte med kort. | Paguei no cartão. | [pa-GEI no kar-TÃO] |
 | Jeg liker den der. | Gosto daquele. | [GÅS-to da-KE-li] |
-| Apoteket ligger nært herfra. | A farmácia fica perto daqui. | [a far-MA-sia FI-ka PÆR-to da-KI] |
 | Det er langt fra stranda. | Fica longe da praia. | [FI-ka LÕ-zji da PRAI-a] |
-| Banken ligger ved siden av butikken. | O banco fica ao lado da loja. | [o BÃ-ko FI-ka ao LA-do da LÅ-zja] |
-| Restauranten ligger rett overfor plassen. | O restaurante fica em frente à praça. | [o hes-tao-RÃ-tsji FI-ka ẽi FRẼ-tsji a PRA-sa] |
-| Det ligger bak kirken. | Fica atrás da igreja. | [FI-ka a-TRAS da i-GRE-zja] |
 
-## Appendiks C: Bindeord
-
-**Gloser**
+### Nektelsesord
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| og | e | [i] |
-| men | mas | [MAS] |
-| eller | ou | [O] |
-| fordi | porque | [por-KI] |
-| så, altså | então | [ẽ-TÃO] |
-| så, deretter | aí | [a-Í] |
-| hvis | se | [si] |
-| også | também | [tãi-BẼI] |
-| derfor | por isso | [por I-so] |
+| ikke | não | [NÃO] |
+| aldri | nunca | [NŨ-ka] |
+| ingenting | nada | [NA-da] |
+| ingen (person) | ninguém | [nĩ-GẼI] |
+| ingen (av noe, foran substantiv) | nenhum / nenhuma | [ne-NJŨ / ne-NJŨ-ma] |
+| heller ikke | nem | [nẽi] |
+| heller ikke (helt til slutt i en setning) | também não | [tãi-BẼI não] |
 
-**Setninger**
+> Portugisisk krever ofte dobbel nekting, i motsetning til norsk: *Não tenho nada* betyr "jeg har ingenting" (bokstavelig "jeg har ikke ingenting"). Står nektingsordet først i setningen, trengs ikke *não* i tillegg: *Ninguém veio* ("ingen kom"), men *Não vi ninguém* ("jeg så ingen").
 
-| Norsk | Portugisisk | Uttale |
-|---|---|---|
-| Jeg er sulten, men det er ingenting her. | Tô com fome, mas não tem nada aqui. | [to kõ FÅ-mi, mas não tẽi NA-da a-KI] |
-| Jeg drar ikke, fordi jeg er sliten. | Não vou porque tô cansado. | [não VO por-KI to kã-SA-do] |
-| Jeg også. | Eu também. | [eo tãi-BẼI] |
-| Kaffe eller te? | Café ou chá? | [ka-FÆ o SJA] |
-| Hvis det regner, drar jeg ikke. | Se chover, não vou. | [si sjo-VER, não VO] |
-
-## Appendiks D: Eiendomsord
-
-**Gloser**
+**Eksempler**
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| min / mi / mitt | meu / minha | [meo / MI-nja] |
-| mine | meus / minhas | [MEOS / MI-njas] |
-| din / di / ditt | seu / sua | [seo / SO-a] |
-| dine | seus / suas | [SEOS / SO-as] |
-| hans | dele | [DE-li] |
-| hennes | dela | [DÆ-la] |
-| vår / vårt | da gente | [da ZJẼ-tsji] |
-| vår / vårt (skriftlig) | nosso / nossa | [NÅ-so / NÅ-sa] |
-| deres (flere) | deles / delas | [DE-lis / DÆ-las] |
-| til (om person) | de | [dji] |
+| Jeg har ingenting. | Não tenho nada. | [não TE-njo NA-da] |
+| Ingen kom. | Ninguém veio. | [nĩ-GẼI VEI-o] |
+| Jeg så ingen. | Não vi ninguém. | [não VI nĩ-GẼI] |
 
-**Setninger**
+### Sammenligning
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| Navnet mitt er Maripus. | Meu nome é Maripus. | [meo NO-mi Æ ma-RI-pos] |
-| Vennen min. | Meu amigo. | [meo a-MI-go] |
-| Mobilen min. | Meu celular. | [meo se-lo-LAR] |
-| Er dette din? | É seu? | [Æ SEO] |
-| Hva heter mora di? | Como se chama a sua mãe? | [KO-mo si SJÃ-ma a SO-a MÃI] |
-| Bilen hans. | O carro dele. | [o KA-ho DE-li] |
-| Huset hennes. | A casa dela. | [a KA-za DÆ-la] |
-| Det er vårt. | É da gente. | [Æ da ZJẼ-tsji] |
-| Boka til Ana. | O livro da Ana. | [o LI-vro da Ã-na] |
-| Vennene deres. | Os amigos deles. | [os a-MI-gos DE-lis] |
+| mer ... enn | mais ... que | [MAIS ... ki] |
+| mindre ... enn | menos ... que | [ME-nos ... ki] |
+| like ... som | tão ... quanto | [TÃO ... KWÃ-to] |
+| den/det beste | o melhor | [o me-LJOR] |
+| den/det verste | o pior | [o pi-OR] |
+| veldig ... (superlativ-endelse) | -íssimo / -íssima | [-I-si-mo / -I-si-ma] |
 
-## Appendiks E: Gloser fra «Minha mãe é demais»
+**Eksempler**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Denne er penere enn den andre. | Esta é mais linda que a outra. | [ES-ta Æ MAIS LĨ-da ki a O-tra] |
+| Jeg er like sliten som deg. | Tô tão cansado quanto você. | [TO TÃO kã-SA-do KWÃ-to vo-SE] |
+| Denne er verst. | Esta é a pior. | [ES-ta Æ a pi-OR] |
+| Den er veldig vakker. | Ela é lindíssima. | [Æ-la Æ lĩ-DJI-si-ma] |
+
+### Substantiv: kjønn og flertall
+
+Hankjønnsord ender oftest på *-o*, hunkjønnsord på *-a* (*o menino* / *a menina*) — men ikke uten unntak (*o problema*, *a viagem*). Flertall dannes normalt ved å legge til *-s* (*carro → carros*). Ord som ender på konsonant + *-m* i entall får *-ns* i flertall (*homem → homens*). Ord på *-ão* har ikke ett fast flertallsmønster — de fleste blir *-ões*, men noen få er *-ãos* eller *-ães*, og må læres per ord. Adjektiv bøyes alltid i kjønn og tall etter substantivet de beskriver.
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| bilen (hankjønn, entall) | o carro | [o KA-ho] |
+| bilene (hankjønn, flertall) | os carros | [os KA-hos] |
+| huset (hunkjønn, entall) | a casa | [a KA-za] |
+| husene (hunkjønn, flertall) | as casas | [as KA-zas] |
+| brødet | o pão | [o PÃO] |
+| brødene (uregelmessig flertall) | os pães | [os PÃIS] |
+| den hvite bilen / de hvite bilene | o carro branco / os carros brancos | [o KA-ho BRÃ-ko / os KA-hos BRÃ-kos] |
+
+### Adverb med -mente
+
+Tilsvarer norsk "-lig" eller engelsk "-ly": legg *-mente* til hunkjønnsformen av adjektivet.
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| raskt | rapidamente | [ha-pi-da-MẼ-tsji] |
+| tydelig, klart | claramente | [kla-ra-MẼ-tsji] |
+| heldigvis | felizmente | [fe-lis-MẼ-tsji] |
+
+**Eksempler**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Hun snakker raskt. | Ela fala rapidamente. | [Æ-la FA-la ha-pi-da-MẼ-tsji] |
+
+### Diminutiv: -inho / -inha
+
+Svært vanlig i brasiliansk hverdagstale — legg til *-inho* (hankjønn) / *-inha* (hunkjønn) for å uttrykke "liten", kjærtegn, eller for å myke opp og gjøre en setning hyggeligere. Ikke bare bokstavelig størrelse.
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| lite hus, koselig hus | casinha | [ka-ZI-nja] |
+| liten kaffe, en kopp kaffe | cafezinho | [ka-fe-ZĨ-njo] |
+| et lite øyeblikk | um minutinho | [ũ mi-nu-TSJI-njo] |
+
+### Ordenstall
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| første | primeiro / primeira | [pri-MEI-ro / pri-MEI-ra] |
+| andre | segundo / segunda | [se-GŨ-do / se-GŨ-da] |
+| tredje | terceiro / terceira | [ter-SEI-ro / ter-SEI-ra] |
+| fjerde | quarto / quarta | [KWAR-to / KWAR-ta] |
+| femte | quinto / quinta | [KĨ-to / KĨ-ta] |
+| sjette | sexto / sexta | [SES-to / SES-ta] |
+| sjuende | sétimo / sétima | [SÆ-tsji-mo / SÆ-tsji-ma] |
+| åttende | oitavo / oitava | [åi-TA-vo / åi-TA-va] |
+| niende | nono / nona | [NO-no / NO-na] |
+| tiende | décimo / décima | [DÆ-si-mo / DÆ-si-ma] |
+| siste | último / última | [ÚO-tsji-mo / ÚO-tsji-ma] |
+
+## Appendiks B: Gloser fra «Minha mãe é demais»
 
 **Gloser**
 
@@ -1334,7 +1498,7 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Jeg elsker deg, min rose. | Eu te amo, minha rosa. | [eo tsji A-mo, MI-nja HÅ-za] |
 | Når natten kommer, … | Quando a noite chega, … | [KWÃ-do a NÅI-tsji SJÆ-ga] |
 
-## Appendiks F: Gloser fra «A Lagarta Viajante»
+## Appendiks C: Gloser fra «A Lagarta Viajante»
 
 **Gloser**
 
@@ -1427,44 +1591,3 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Jeg visste ikke hva jeg skulle gjøre, så jeg holdt meg fast så hardt jeg kunne. | Não sabia o que fazer, então me segurei o mais forte que podia. | [não sa-BI-a o ki fa-ZER, ẽ-TÃO mi se-go-REI o MAIS FÅR-tsji ki po-DJI-a] |
 | Vi fór så fort av gårde at jeg trodde jeg kom til å fly av. | Estávamos indo tão rápido que pensei que iria sair voando. | [es-TA-va-mos Ĩ-do TÃO HA-pi-do ki pẽ-SEI ki i-RI-a sa-IR vo-Ã-do] |
 | Jeg hoppet ut av den. | Eu saltei para fora dele. | [eo sao-TEI pra FÅ-ra DE-li] |
-
-## Appendiks G: Pekeord og sammentrekninger
-
-Portugisisk skiller mellom tre "avstander" for pekeord: nær den som snakker (*este/esta/isto*), nær den man snakker til (*esse/essa/isso*), og langt fra begge (*aquele/aquela/aquilo*). I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
-
-Portugisisk trekker også ofte sammen en preposisjon og et pekeord/pronomen til ett ord, f.eks. *em* ("i/på") + *ele* ("han/den") = *nele*. Under er de vanligste sammentrekningene du støter på i dagligtale.
-
-**Gloser**
-
-| Norsk | Portugisisk | Uttale |
-|---|---|---|
-| dette / denne (nær meg) | este / esta | [ES-tsji / ES-ta] |
-| dette (generelt, upersonlig) | isto | [IS-to] |
-| det / den (nær deg — mest brukt i tale) | esse / essa | [E-si / E-sa] |
-| det, dette (generelt, upersonlig — svært vanlig) | isso | [I-so] |
-| det der / den der (langt unna) | aquele / aquela | [a-KE-li / a-KE-la] |
-| det der (generelt, langt unna) | aquilo | [a-KI-lo] |
-| disse (nær meg, flertall) | estes / estas | [ES-tsjis / ES-tas] |
-| disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
-| de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
-| i / på ham, i / på den (hankjønn) | nele | [NE-li] |
-| i / på henne, i / på den (hunkjønn) | nela | [NE-la] |
-| i / på dem (hankjønn) | neles | [NE-lis] |
-| i / på dem (hunkjønn) | nelas | [NE-las] |
-| i / på dette | neste / nesta | [NES-tsji / NES-ta] |
-| i / på dette (generelt) | nisto | [NIS-to] |
-| i / på det / den der | nesse / nessa | [NE-si / NE-sa] |
-| i / på det (generelt) | nisso | [NI-so] |
-| i / på det der borte | naquele / naquela | [na-KE-li / na-KE-la] |
-| i / på det der (generelt) | naquilo | [na-KI-lo] |
-| av / fra dette | deste / desta | [DES-tsji / DES-ta] |
-| av / fra dette (generelt) | disto | [DJIS-to] |
-| av / fra det / den der | desse / dessa | [DE-si / DE-sa] |
-| av / fra det (generelt — svært vanlig) | disso | [DJI-so] |
-| av / fra det der borte | daquele / daquela | [da-KE-li / da-KE-la] |
-| av / fra det der (generelt) | daquilo | [da-KI-lo] |
-| i / på (hankjønn / hunkjønn) | no / na | [no / na] |
-| av, fra, sin (hankjønn / hunkjønn) | do / da | [do / da] |
-| til (hankjønn / hunkjønn) | ao / à | [ao / a] |
-| gjennom, langs (hankjønn / hunkjønn) | pelo / pela | [PE-lo / PE-la] |
-| i / på en (ubestemt, hankjønn / hunkjønn) | num / numa | [nũ / NŨ-ma] |
