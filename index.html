@@ -477,6 +477,7 @@ code{
 "use strict";
 
 const STORAGE_KEY = 'ekstra-pugg-v1';
+const TOMBSTONES_KEY = 'ekstra-pugg-tombstones-v1';
 const DATA_FILE = 'pensum.md';
 const EXAMPLES_FILE = 'eksempler.json';
 const SYNC_TOKEN_KEY = 'onda-sync-token';
@@ -534,6 +535,7 @@ let rowBottoms = [];
 let overlayLeft = 0, overlayWidth = 0, totalHeight = 0;
 let revealY = 0;
 let markedItems = {};
+let removedTombstones = {};
 let ekstraOption = null;
 const renderedItemsById = new Map();
 
@@ -680,12 +682,16 @@ function loadMarked(){
   }catch(e){
     markedItems = {};
   }
+  try{
+    const rawT = localStorage.getItem(TOMBSTONES_KEY);
+    removedTombstones = rawT ? JSON.parse(rawT) : {};
+  }catch(e){
+    removedTombstones = {};
+  }
 }
 
 function persistMarked(){
-  try{
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems));
-  }catch(e){ /* privat modus e.l. — lista lever da bare i denne økta */ }
+  persistMarkedLocalOnly();
   pushSync();
 }
 
@@ -738,12 +744,47 @@ async function githubGistFetch(token, method, gistId, body){
   return res.json();
 }
 
-function mergeMarkedItems(remote){
-  const merged = Object.assign({}, markedItems);
-  Object.keys(remote || {}).forEach(id => {
-    if(!merged[id]) merged[id] = remote[id];
+function parseSyncPayload(content){
+  if(!content) return { markedItems: {}, tombstones: {} };
+  let parsed;
+  try{ parsed = JSON.parse(content); }catch(e){ return { markedItems: {}, tombstones: {} }; }
+  if(parsed && (parsed.markedItems || parsed.tombstones)){
+    return { markedItems: parsed.markedItems || {}, tombstones: parsed.tombstones || {} };
+  }
+  return { markedItems: parsed || {}, tombstones: {} }; // gammelt format uten tombstones
+}
+
+function serializeSyncPayload(){
+  return JSON.stringify({ markedItems, tombstones: removedTombstones }, null, 2);
+}
+
+function mergeSyncState(remoteMarked, remoteTombstones){
+  remoteMarked = remoteMarked || {};
+  remoteTombstones = remoteTombstones || {};
+  const allIds = new Set([
+    ...Object.keys(markedItems),
+    ...Object.keys(remoteMarked),
+    ...Object.keys(removedTombstones),
+    ...Object.keys(remoteTombstones)
+  ]);
+  const mergedMarked = {};
+  const mergedTombstones = {};
+  allIds.forEach(id => {
+    const localItem = markedItems[id];
+    const remoteItem = remoteMarked[id];
+    const localAddedAt = localItem ? (localItem._t || 0) : -1;
+    const remoteAddedAt = remoteItem ? (remoteItem._t || 0) : -1;
+    const localRemovedAt = (id in removedTombstones) ? removedTombstones[id] : -1;
+    const remoteRemovedAt = (id in remoteTombstones) ? remoteTombstones[id] : -1;
+    const bestAddedAt = Math.max(localAddedAt, remoteAddedAt);
+    const bestRemovedAt = Math.max(localRemovedAt, remoteRemovedAt);
+    if(bestAddedAt >= bestRemovedAt){
+      mergedMarked[id] = remoteAddedAt > localAddedAt ? remoteItem : localItem;
+    } else {
+      mergedTombstones[id] = bestRemovedAt;
+    }
   });
-  return merged;
+  return { markedItems: mergedMarked, tombstones: mergedTombstones };
 }
 
 async function connectSync(){
@@ -757,7 +798,7 @@ async function connectSync(){
       const created = await githubGistFetch(token, 'POST', null, {
         description: 'Onda — Ekstra pugg',
         public: false,
-        files: { [GIST_FILENAME]: { content: JSON.stringify(markedItems, null, 2) } }
+        files: { [GIST_FILENAME]: { content: serializeSyncPayload() } }
       });
       saveSyncConfig(token, created.id);
       syncGistInput.value = created.id;
@@ -773,7 +814,10 @@ async function connectSync(){
 }
 
 function persistMarkedLocalOnly(){
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems)); }catch(e){}
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(markedItems));
+    localStorage.setItem(TOMBSTONES_KEY, JSON.stringify(removedTombstones));
+  }catch(e){ /* privat modus e.l. — lista lever da bare i denne økta */ }
 }
 
 async function pushSync(){
@@ -781,7 +825,7 @@ async function pushSync(){
   if(!token || !gistId) return;
   try{
     await githubGistFetch(token, 'PATCH', gistId, {
-      files: { [GIST_FILENAME]: { content: JSON.stringify(markedItems, null, 2) } }
+      files: { [GIST_FILENAME]: { content: serializeSyncPayload() } }
     });
     setSyncStatus('Sist synkronisert: ' + new Date().toLocaleTimeString('nb-NO'), 'ok');
   }catch(err){
@@ -799,14 +843,19 @@ async function pullAndMerge(){
   try{
     const gist = await githubGistFetch(token, 'GET', gistId);
     const file = gist.files && gist.files[GIST_FILENAME];
-    const remote = file ? JSON.parse(file.content) : {};
-    const before = JSON.stringify(markedItems);
-    markedItems = mergeMarkedItems(remote);
+    const remote = parseSyncPayload(file ? file.content : null);
+    const beforeMarked = JSON.stringify(markedItems);
+    const beforeTombstones = JSON.stringify(removedTombstones);
+    const merged = mergeSyncState(remote.markedItems, remote.tombstones);
+    markedItems = merged.markedItems;
+    removedTombstones = merged.tombstones;
     persistMarkedLocalOnly();
     updateEkstraLabel();
     updateExtraFilterUI();
-    if(viewingExtra || JSON.stringify(markedItems) !== before) loadList();
-    if(JSON.stringify(markedItems) !== JSON.stringify(remote)) await pushSync();
+    if(viewingExtra || JSON.stringify(markedItems) !== beforeMarked) loadList();
+    const changedFromRemote = JSON.stringify(markedItems) !== JSON.stringify(remote.markedItems || {})
+      || JSON.stringify(removedTombstones) !== JSON.stringify(remote.tombstones || {});
+    if(changedFromRemote) await pushSync();
     else setSyncStatus('Sist synkronisert: ' + new Date().toLocaleTimeString('nb-NO'), 'ok');
     return Object.keys(markedItems).length;
   }catch(err){
@@ -898,8 +947,13 @@ function buildChapterOptions(){
 
 function toggleMark(item){
   const wasMarked = !!markedItems[item.id];
-  if(wasMarked){ delete markedItems[item.id]; }
-  else { markedItems[item.id] = item; }
+  if(wasMarked){
+    delete markedItems[item.id];
+    removedTombstones[item.id] = Date.now();
+  } else {
+    markedItems[item.id] = Object.assign({}, item, { _t: Date.now() });
+    delete removedTombstones[item.id];
+  }
   persistMarked();
   updateEkstraLabel();
   updateExtraFilterUI();
@@ -1489,6 +1543,8 @@ pdfBtn.addEventListener('click', () => {
 clearExtraBtn.addEventListener('click', () => {
   if(Object.keys(markedItems).length === 0) return;
   if(confirm('Tøm hele Ekstra pugg-lista?')){
+    const now = Date.now();
+    Object.keys(markedItems).forEach(id => { removedTombstones[id] = now; });
     markedItems = {};
     persistMarked();
     updateEkstraLabel();

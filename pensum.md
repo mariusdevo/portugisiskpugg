@@ -1341,9 +1341,9 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
 | det finnes, det er; for … siden (om tid) | há | [A] |
-| forandret seg fullstendig | mudou completamente | [mo-DO kõ-ple-ta-MẼ-tsji] |
+| å forandre seg fullstendig | mudar completamente | [mu-DAR kõ-ple-ta-MẼ-tsji] |
 | vanlig, alminnelig | comum | [ko-MŨ] |
-| jeg dro ut, jeg gikk ut | saí | [sa-I] |
+| å gå ut, å dra ut | sair | [sa-IR] |
 | skinnende, blank | brilhante | [bri-LJÃ-tsji] |
 | under, nedenunder | embaixo | [ẽi-BAI-sjo] |
 | nydelig, vakker | lindo | [LĨ-do] |
@@ -1352,43 +1352,39 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | å komme fram | chegar | [sje-GAR] |
 | tilbake | de volta | [dji VÅO-ta] |
 | i stedet for | ao invés de | [ao ĩ-VÆS dji] |
-| steiner | pedras | [PÆ-dras] |
+| stein | pedra | [PÆ-dra] |
 | omgitt (av) | rodeada | [ho-dji-A-da] |
 | mon tro? tro om …? | Será (que) …? | [se-RA ki] |
-| ville klare | conseguiria | [kõ-se-gi-RI-a] |
+| å klare, å få til | conseguir | [kõ-se-GIR] |
 | var (fortid, tilstand) | estava / tava | [es-TA-va / TA-va] |
-| ville lete etter | procuraria | [pro-ko-ra-RI-a] |
-| ropte på meg | me chamou | [mi sja-MO] |
-| tok lang tid | demorou | [dji-mo-RO] |
+| å lete etter | procurar | [pro-ko-RAR] |
+| å rope, å kalle på | chamar | [sja-MAR] |
+| å ta lang tid | demorar | [dji-mo-RAR] |
 | langt fra folkemengden | longe da multidão | [LÕ-zji da mo-tsji-DÃO] |
-| jeg krøp, jeg ålte meg | rastejei | [has-te-ZJEI] |
+| å krype, å ale seg | rastejar | [has-te-ZJAR] |
 | oppå, over | em cima de | [ẽi SI-ma dji] |
 | å hvile | descansar | [des-kã-SAR] |
 | sult | fome | [FÅ-mi] |
-| jeg håper | espero | [es-PÆ-ro] |
-| at (jeg/han) klarer (konjunktiv, etter f.eks. "espero que") | consiga | [kõ-SI-ga] |
+| å håpe, å vente | esperar | [es-pe-RAR] |
 | snart | em breve | [ẽi BRÆ-vi] |
 | de må | devem | [DÆ-vẽi] |
 | like etterpå, straks etter | logo em seguida | [LÅ-go ẽi se-GI-da] |
 | ved et uhell | acidentalmente | [a-si-dẽ-tao-MẼ-tsji] |
-| mistet, lot falle | deixou cair | [dei-SJO ka-IR] |
+| å miste, å slippe | deixar cair | [dei-SJAR ka-IR] |
 | bit, stykke | pedaço | [pe-DA-so] |
 | bakken, gulvet | chão | [SJÃO] |
-| jeg tok en bit | dei uma mordida | [DEI Ũ-ma mor-DJI-da] |
+| å ta en bit | dar uma mordida | [DAR Ũ-ma mor-DJI-da] |
 | slik, sånn | assim | [a-SĨ] |
-| jeg klatret opp | subi | [so-BI] |
-| jeg sovnet | caí no sono | [ka-I no SO-no] |
-| jeg fikk, jeg hadde | tive | [TSJI-vi] |
+| å sovne | cair no sono | [ka-IR no SO-no] |
+| å ha, å få | ter | [TER] |
 | det fantes, det var (datid av "há") | havia | [a-VI-a] |
-| sittende (hunkjønn fl.) | sentadas | [sẽ-TA-das] |
-| stoler | cadeiras | [ka-DEI-ras] |
+| å sette seg | sentar | [sẽ-TAR] |
+| stol | cadeira | [ka-DEI-ra] |
 | ved siden av | ao lado (de) | [ao LA-do (dji)] |
-| smilte | sorriu | [so-HIO] |
-| holdt fast | segurou | [se-go-RO] |
 | å nå, å rekke | alcançar | [ao-kã-SAR] |
 | utsikt | vista | [VIS-ta] |
 | på toppen | no topo | [no TO-po] |
-| skyer | nuvens | [NO-vẽis] |
+| sky | nuvem | [NO-vẽi] |
 | larven | lagarta | [la-GAR-ta] |
 | skogen | floresta | [flo-RES-ta] |
 | familien | família | [fa-MI-lia] |
