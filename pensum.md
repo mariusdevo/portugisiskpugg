@@ -1213,7 +1213,15 @@ I tale står disse foran verbet, og dekker både direkte objekt, indirekte objek
 
 ### Pekeord (demonstrativer)
 
-Portugisisk skiller mellom tre "avstander" for pekeord: nær den som snakker (*este/esta/isto*), nær den man snakker til (*esse/essa/isso*), og langt fra begge (*aquele/aquela/aquilo*). I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
+Portugisisk skiller mellom tre "avstander" for pekeord:
+
+| Avstand | Hankjønn / hunkjønn | Nøytralt (upersonlig) |
+|---|---|---|
+| Nær den som snakker | este / esta | isto |
+| Nær den man snakker til | esse / essa | isso |
+| Langt fra begge | aquele / aquela | aquilo |
+
+> I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
 
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
