@@ -1223,17 +1223,14 @@ Portugisisk skiller mellom tre "avstander" for pekeord:
 
 > I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
 
+**Eksempler**
+
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| dette / denne (nær meg) | este / esta | [ES-tsji / ES-ta] |
-| dette (generelt, upersonlig) | isto | [IS-to] |
-| det / den (nær deg — mest brukt i tale) | esse / essa | [E-si / E-sa] |
-| det, dette (generelt, upersonlig — svært vanlig) | isso | [I-so] |
-| det der / den der (langt unna) | aquele / aquela | [a-KE-li / a-KE-la] |
-| det der (generelt, langt unna) | aquilo | [a-KI-lo] |
-| disse (nær meg, flertall) | estes / estas | [ES-tsjis / ES-tas] |
-| disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
-| de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
+| Denne er min. | Esta é minha. | [ES-ta Æ MI-nja] |
+| Den boken er bra. | Esse livro é bom. | [E-si LI-vro Æ BÕ] |
+| Jeg vil ha den der. | Quero aquele. | [KÆ-ro a-KE-li] |
+| Dette er bra. | Isto é bom. | [IS-to Æ BÕ] |
 
 ### Hvordan si «det» på portugisisk
 
