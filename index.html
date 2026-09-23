@@ -279,6 +279,20 @@ code{
 .reference-view td{padding:7px 10px;border-bottom:1px solid var(--line);font-size:0.9rem;}
 .reference-view td.ut{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--ocean);white-space:nowrap;}
 .reference-view tr:nth-child(even) td{background:rgba(27,36,48,0.03);}
+.reference-view em{font-style:italic;color:var(--ocean);}
+.reference-toc{
+  background:rgba(27,36,48,0.04);border-radius:12px;padding:14px 16px;margin:0 0 24px;
+}
+.reference-toc strong{
+  display:block;font-family:'Inter',sans-serif;font-size:0.72rem;text-transform:uppercase;
+  letter-spacing:0.04em;color:var(--ink-soft);margin-bottom:8px;
+}
+.reference-toc ul{
+  margin:0;padding:0;list-style:none;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:4px 16px;
+}
+.reference-toc a{color:var(--ocean-deep);text-decoration:none;font-size:0.88rem;font-weight:600;}
+.reference-toc a:hover{text-decoration:underline;}
 
 .cover{
   position:absolute;left:0;top:0;width:0;height:0;
@@ -584,8 +598,10 @@ function parseForm(cell){
   return { pt: cell, ut: '' };
 }
 
-function mdBoldToHtml(s){
-  return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+function mdInlineToHtml(s){
+  return escapeHtml(s)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
 }
 
 function parsePensum(text){
@@ -724,23 +740,37 @@ const REF_SEPARATOR_ROW = /^\|[\s:|-]+\|$/;
 function renderReferenceTable(headerCells, rows){
   const isVocab = headerCells.length === 3 &&
     /norsk/i.test(headerCells[0]) && /portugisisk/i.test(headerCells[1]) && /uttale/i.test(headerCells[2]);
-  let html = '<table><thead><tr>' + headerCells.map(c => '<th>' + mdBoldToHtml(c) + '</th>').join('') + '</tr></thead><tbody>';
+  let html = '<table><thead><tr>' + headerCells.map(c => '<th>' + mdInlineToHtml(c) + '</th>').join('') + '</tr></thead><tbody>';
   rows.forEach(r => {
     if(isVocab && r.length === 3){
       let uttale = r[2];
       if(uttale.startsWith('[') && uttale.endsWith(']')) uttale = uttale.slice(1, -1);
-      html += '<tr><td>' + mdBoldToHtml(r[0]) + '</td><td>' + mdBoldToHtml(r[1]) + '</td>'
+      html += '<tr><td>' + mdInlineToHtml(r[0]) + '</td><td>' + mdInlineToHtml(r[1]) + '</td>'
             + '<td class="ut">[' + escapeHtml(uttale) + ']</td></tr>';
     } else {
-      html += '<tr>' + r.map(c => '<td>' + mdBoldToHtml(c) + '</td>').join('') + '</tr>';
+      html += '<tr>' + r.map(c => '<td>' + mdInlineToHtml(c) + '</td>').join('') + '</tr>';
     }
   });
   html += '</tbody></table>';
   return html;
 }
 
+function referenceSlug(title){
+  return 'ref-' + title.toLowerCase()
+    .replace(/[«»"'.,:!?()]/g, '')
+    .replace(/[^a-z0-9æøåãõáéíóúâêôàçü]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 function renderReferenceMarkdown(raw){
   const lines = raw.split(/\r?\n/);
+  const headings = lines.filter(l => l.trim().startsWith('### ')).map(l => l.trim().slice(4).trim());
+  const tocHtml = headings.length > 1
+    ? '<nav class="reference-toc"><strong>Innhold</strong><ul>' +
+      headings.map(t => '<li><a href="#' + referenceSlug(t) + '">' + mdInlineToHtml(t) + '</a></li>').join('') +
+      '</ul></nav>'
+    : '';
+  let tocInserted = false;
   let html = '';
   let i = 0;
   while(i < lines.length){
@@ -749,12 +779,14 @@ function renderReferenceMarkdown(raw){
     if(trimmed === ''){ i++; continue; }
 
     if(trimmed.startsWith('### ')){
-      html += '<h3>' + mdBoldToHtml(trimmed.slice(4).trim()) + '</h3>';
+      if(!tocInserted){ html += tocHtml; tocInserted = true; }
+      const title = trimmed.slice(4).trim();
+      html += '<h3 id="' + referenceSlug(title) + '">' + mdInlineToHtml(title) + '</h3>';
       i++; continue;
     }
 
     if(trimmed.startsWith('> ')){
-      html += '<p class="note">' + mdBoldToHtml(trimmed.slice(2).trim()) + '</p>';
+      html += '<p class="note">' + mdInlineToHtml(trimmed.slice(2).trim()) + '</p>';
       i++; continue;
     }
 
@@ -776,7 +808,7 @@ function renderReferenceMarkdown(raw){
       continue;
     }
 
-    html += '<p>' + mdBoldToHtml(trimmed) + '</p>';
+    html += '<p>' + mdInlineToHtml(trimmed) + '</p>';
     i++;
   }
   return html;
@@ -1133,7 +1165,7 @@ function renderFutureNote(section){
     futureNote.style.display = 'none';
     return;
   }
-  let html = section.futureIntro ? mdBoldToHtml(section.futureIntro) : '';
+  let html = section.futureIntro ? mdInlineToHtml(section.futureIntro) : '';
   if(helperNames.length){
     html += '<div class="verblist">' + helperNames.map(n => '<span class="verbchip">' + escapeHtml(n) + '</span>').join('') + '</div>';
   }
@@ -1554,6 +1586,14 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ---------- Kontroller ---------- */
+
+referenceView.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if(!link) return;
+  e.preventDefault();
+  const target = document.getElementById(link.getAttribute('href').slice(1));
+  if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
 grid.addEventListener('click', (e) => {
   const cellNo = e.target.closest('.cell-no');
