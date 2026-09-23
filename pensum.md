@@ -1135,6 +1135,50 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Altfor godt. | Bom demais. | [bõ dji-MAIS] |
 | Bilen er rask, men gammel. | O carro é rápido, mas velho. | [o KA-ho Æ HA-pi-do, mas VÆ-ljo] |
 
+## 15. Norske partikkelverb — portugisiske enkeltord
+
+<!-- Norsk (som engelsk og tysk) bygger ofte betydning med verb + partikkel (stå OPP, gå UT, slå PÅ). Portugisisk, som er et romansk språk, bruker som regel ett eget latinsk verb i stedet. Triks: tenk på det "fine" engelske ordet i stedet for det hverdagslige — find out → discover → descobrir, give up → desist → desistir — så treffer man ofte portugisisk direkte. Motsatt vei: der norsk har étt verb "bli", bruker portugisisk gjerne ficar + adjektiv (bli sint → ficar bravo). -->
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| stå opp | levantar(-se) | [le-vã-TAR(-si)] |
+| legge seg | deitar(-se) | [dei-TAR(-si)] |
+| gå ut | sair | [sa-IR] |
+| komme inn | entrar | [ẽ-TRAR] |
+| komme tilbake | voltar | [vou-TAR] |
+| slå på | ligar | [li-GAR] |
+| slå av | desligar | [djis-li-GAR] |
+| finne ut | descobrir | [djis-ko-BRIR] |
+| få til | conseguir | [kõ-se-GIR] |
+| gi opp | desistir | [dji-zis-TSJIR] |
+| lete etter | procurar | [pro-ko-RAR] |
+| ta vare på, passe på | cuidar (de) | [kui-DAR (dji)] |
+| gi beskjed | avisar | [a-vi-ZAR] |
+| bli kjent med | conhecer | [ko-nje-SER] |
+| komme på, huske | lembrar | [lẽi-BRAR] |
+| være enig | concordar | [kõ-kor-DAR] |
+| bli ferdig | terminar / acabar | [ter-mi-NAR / a-ka-BAR] |
+| ha lyst til | querer | [ke-RER] |
+| ringe til | ligar (pra) | [li-GAR (pra)] |
+| høres ut, ser ut, virker | parecer | [pa-re-SER] |
+| bli sint | ficar bravo | [fi-KAR BRA-vo] |
+| bli glad | ficar feliz | [fi-KAR fe-LIS] |
+| bli syk | ficar doente | [fi-KAR do-Ẽ-tsji] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg fikk det ikke til. | Não consegui. | [não kõ-se-GI] |
+| Gi meg beskjed! | Me avisa! | [mi a-VI-za] |
+| Det høres bra ut. | Parece bom. | [pa-RÆ-si BÕ] |
+| Jeg ble sint. | Fiquei bravo. | [fi-KEI BRA-vo] |
+| Jeg står opp klokka sju. | Levanto às sete. | [le-VÃ-to as SÆ-tsji] |
+| Vi er enige. | Concordamos. | [kõ-kor-DA-mos] |
+| Jeg husket det ikke. | Não lembrei. | [não lẽi-BREI] |
+
 # Appendiks
 
 ## Appendiks A: Grammatisk oppslagsverk
@@ -1451,8 +1495,8 @@ Portugisisk trekker ofte sammen en preposisjon og et etterfølgende ord — arti
 | mer ... enn | mais ... que | [MAIS ... ki] |
 | mindre ... enn | menos ... que | [ME-nos ... ki] |
 | like ... som | tão ... quanto | [TÃO ... KWÃ-to] |
-| den/det beste | o melhor | [o me-LJOR] |
-| den/det verste | o pior | [o pi-OR] |
+| den/det beste | o melhor | [o me-LJÅR] |
+| den/det verste | o pior | [o pi-ÅR] |
 | veldig ... (superlativ-endelse) | -íssimo / -íssima | [-I-si-mo / -I-si-ma] |
 
 **Eksempler**
@@ -1461,7 +1505,7 @@ Portugisisk trekker ofte sammen en preposisjon og et etterfølgende ord — arti
 |---|---|---|
 | Denne er penere enn den andre. | Esta é mais linda que a outra. | [ES-ta Æ MAIS LĨ-da ki a O-tra] |
 | Jeg er like sliten som deg. | Tô tão cansado quanto você. | [TO TÃO kã-SA-do KWÃ-to vo-SE] |
-| Denne er verst. | Esta é a pior. | [ES-ta Æ a pi-OR] |
+| Denne er verst. | Esta é a pior. | [ES-ta Æ a pi-ÅR] |
 | Den er veldig vakker. | Ela é lindíssima. | [Æ-la Æ lĩ-DJI-si-ma] |
 
 ### Substantiv: kjønn og flertall
