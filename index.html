@@ -280,17 +280,21 @@ code{
 .reference-view td.ut{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--ocean);white-space:nowrap;}
 .reference-view tr:nth-child(even) td{background:rgba(27,36,48,0.03);}
 .reference-view em{font-style:italic;color:var(--ocean);}
+.reference-view{counter-reset:ref-section;}
+.reference-view h3{counter-increment:ref-section;}
+.reference-view h3::before{content:counter(ref-section) ". ";color:var(--coral-dark);}
 .reference-toc{
-  background:rgba(27,36,48,0.04);border-radius:12px;padding:14px 16px;margin:0 0 24px;
+  background:rgba(27,36,48,0.04);border-radius:12px;padding:14px 16px 14px 0;margin:0 0 24px;
 }
 .reference-toc strong{
   display:block;font-family:'Inter',sans-serif;font-size:0.72rem;text-transform:uppercase;
-  letter-spacing:0.04em;color:var(--ink-soft);margin-bottom:8px;
+  letter-spacing:0.04em;color:var(--ink-soft);margin:0 16px 8px;padding-left:16px;
 }
-.reference-toc ul{
-  margin:0;padding:0;list-style:none;display:grid;
+.reference-toc ol{
+  margin:0;padding:0 16px 0 40px;display:grid;
   grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:4px 16px;
 }
+.reference-toc li::marker{color:var(--coral-dark);font-weight:600;}
 .reference-toc a{color:var(--ocean-deep);text-decoration:none;font-size:0.88rem;font-weight:600;}
 .reference-toc a:hover{text-decoration:underline;}
 
@@ -766,9 +770,9 @@ function renderReferenceMarkdown(raw){
   const lines = raw.split(/\r?\n/);
   const headings = lines.filter(l => l.trim().startsWith('### ')).map(l => l.trim().slice(4).trim());
   const tocHtml = headings.length > 1
-    ? '<nav class="reference-toc"><strong>Innhold</strong><ul>' +
+    ? '<nav class="reference-toc"><strong>Innhold</strong><ol>' +
       headings.map(t => '<li><a href="#' + referenceSlug(t) + '">' + mdInlineToHtml(t) + '</a></li>').join('') +
-      '</ul></nav>'
+      '</ol></nav>'
     : '';
   let tocInserted = false;
   let html = '';
