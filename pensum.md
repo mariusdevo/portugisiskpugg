@@ -1179,6 +1179,43 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Vi er enige. | Concordamos. | [kõ-kor-DA-mos] |
 | Jeg husket det ikke. | Não lembrei. | [não lẽi-BREI] |
 
+## 16. Faste muntlige uttrykk
+
+<!-- Faste uttrykk du ikke kan sette sammen ord for ord — betydningen sitter i hele frasen, ikke i enkeltordene. Kapittel 11 (Fyllord og reaksjonsord) dekker de korte enkeltords-reaksjonene (né, tá, tipo, valeu ...); dette kapittelet er lengre, faste vendinger med egen, ikke-bokstavelig betydning. -->
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| jeg er lei av | tô de saco cheio (de) | [TO dji SA-ko SJEI-o (dji)] |
+| ta det med ro | relaxa | [re-LA-sha] |
+| det spiller ingen rolle | não importa | [não ĩ-PÅR-ta] |
+| det er opp til deg | você que sabe | [vo-SE ki SA-bi] |
+| jeg mener det, seriøst | falo sério | [FA-lo SÆ-rio] |
+| ikke noe problem | sem problema | [sẽi pro-BLE-ma] |
+| ingen stress, ta det piano | numa boa | [NŨ-ma BO-a] |
+| jeg skjønner | entendi / saquei | [ẽ-tẽ-DJI / sa-KEI] |
+| jeg orker ikke | não aguento | [não a-GUẼ-to] |
+| for et rot | que bagunça | [ki ba-GŨ-sa] |
+| jeg er opptatt | tô ocupado | [TO o-ku-PA-do] |
+| det er ikke min sak | não é problema meu | [não Æ pro-BLE-ma meo] |
+| kutt ut! | para com isso! | [PA-ra kõ I-so] |
+| jeg tuller | tô brincando | [TO brĩ-CÃ-do] |
+| det ordner seg | vai dar certo | [VAI DAR SÆR-to] |
+| jeg klarer meg | eu me viro | [eo mi VI-ro] |
+| kom igjen! | vai! | [VAI] |
+| er du gal? | você é louco? | [vo-SE Æ LO-ko] |
+| jeg stoler på deg | confio em você | [kõ-FI-o ẽi vo-SE] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg er så lei av å vente. | Tô de saco cheio de esperar. | [TO dji SA-ko SJEI-o dji es-pe-RAR] |
+| Ta det med ro, det går bra. | Relaxa, vai dar tudo certo. | [re-LA-sha, VAI DAR TO-do SÆR-to] |
+| Det spiller ingen rolle for meg. | Não importa pra mim. | [não ĩ-PÅR-ta pra MĨ] |
+| Jeg tuller ikke, jeg mener det. | Não tô brincando, falo sério. | [não TO brĩ-CÃ-do, FA-lo SÆ-rio] |
+
 # Appendiks
 
 ## Appendiks A: Grammatisk oppslagsverk
