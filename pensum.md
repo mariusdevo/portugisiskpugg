@@ -1135,6 +1135,87 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Altfor godt. | Bom demais. | [bõ dji-MAIS] |
 | Bilen er rask, men gammel. | O carro é rápido, mas velho. | [o KA-ho Æ HA-pi-do, mas VÆ-ljo] |
 
+## 15. Norske partikkelverb — portugisiske enkeltord
+
+<!-- Norsk (som engelsk og tysk) bygger ofte betydning med verb + partikkel (stå OPP, gå UT, slå PÅ). Portugisisk, som er et romansk språk, bruker som regel ett eget latinsk verb i stedet. Triks: tenk på det "fine" engelske ordet i stedet for det hverdagslige — find out → discover → descobrir, give up → desist → desistir — så treffer man ofte portugisisk direkte. Motsatt vei: der norsk har étt verb "bli", bruker portugisisk gjerne ficar + adjektiv (bli sint → ficar bravo). -->
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| stå opp | levantar(-se) | [le-vã-TAR(-si)] |
+| legge seg | deitar(-se) | [dei-TAR(-si)] |
+| gå ut | sair | [sa-IR] |
+| komme inn | entrar | [ẽ-TRAR] |
+| komme tilbake | voltar | [vou-TAR] |
+| slå på | ligar | [li-GAR] |
+| slå av | desligar | [djis-li-GAR] |
+| finne ut | descobrir | [djis-ko-BRIR] |
+| få til | conseguir | [kõ-se-GIR] |
+| gi opp | desistir | [dji-zis-TSJIR] |
+| lete etter | procurar | [pro-ko-RAR] |
+| ta vare på, passe på | cuidar (de) | [kui-DAR (dji)] |
+| gi beskjed | avisar | [a-vi-ZAR] |
+| bli kjent med | conhecer | [ko-nje-SER] |
+| komme på, huske | lembrar | [lẽi-BRAR] |
+| være enig | concordar | [kõ-kor-DAR] |
+| bli ferdig | terminar / acabar | [ter-mi-NAR / a-ka-BAR] |
+| ha lyst til | querer | [ke-RER] |
+| ringe til | ligar (pra) | [li-GAR (pra)] |
+| høres ut, ser ut, virker | parecer | [pa-re-SER] |
+| bli sint | ficar bravo | [fi-KAR BRA-vo] |
+| bli glad | ficar feliz | [fi-KAR fe-LIS] |
+| bli syk | ficar doente | [fi-KAR do-Ẽ-tsji] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg fikk det ikke til. | Não consegui. | [não kõ-se-GI] |
+| Gi meg beskjed! | Me avisa! | [mi a-VI-za] |
+| Det høres bra ut. | Parece bom. | [pa-RÆ-si BÕ] |
+| Jeg ble sint. | Fiquei bravo. | [fi-KEI BRA-vo] |
+| Jeg står opp klokka sju. | Levanto às sete. | [le-VÃ-to as SÆ-tsji] |
+| Vi er enige. | Concordamos. | [kõ-kor-DA-mos] |
+| Jeg husket det ikke. | Não lembrei. | [não lẽi-BREI] |
+
+## 16. Faste muntlige uttrykk
+
+<!-- Faste uttrykk du ikke kan sette sammen ord for ord — betydningen sitter i hele frasen, ikke i enkeltordene. Kapittel 11 (Fyllord og reaksjonsord) dekker de korte enkeltords-reaksjonene (né, tá, tipo, valeu ...); dette kapittelet er lengre, faste vendinger med egen, ikke-bokstavelig betydning. -->
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| jeg er lei av | tô de saco cheio (de) | [TO dji SA-ko SJEI-o (dji)] |
+| ta det med ro | relaxa | [re-LA-sha] |
+| det spiller ingen rolle | não importa | [não ĩ-PÅR-ta] |
+| det er opp til deg | você que sabe | [vo-SE ki SA-bi] |
+| jeg mener det, seriøst | falo sério | [FA-lo SÆ-rio] |
+| ikke noe problem | sem problema | [sẽi pro-BLE-ma] |
+| ingen stress, ta det piano | numa boa | [NŨ-ma BO-a] |
+| jeg skjønner | entendi / saquei | [ẽ-tẽ-DJI / sa-KEI] |
+| jeg orker ikke | não aguento | [não a-GUẼ-to] |
+| for et rot | que bagunça | [ki ba-GŨ-sa] |
+| jeg er opptatt | tô ocupado | [TO o-ku-PA-do] |
+| det er ikke min sak | não é problema meu | [não Æ pro-BLE-ma meo] |
+| kutt ut! | para com isso! | [PA-ra kõ I-so] |
+| jeg tuller | tô brincando | [TO brĩ-CÃ-do] |
+| det ordner seg | vai dar certo | [VAI DAR SÆR-to] |
+| jeg klarer meg | eu me viro | [eo mi VI-ro] |
+| kom igjen! | vai! | [VAI] |
+| er du gal? | você é louco? | [vo-SE Æ LO-ko] |
+| jeg stoler på deg | confio em você | [kõ-FI-o ẽi vo-SE] |
+
+**Setninger**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| Jeg er så lei av å vente. | Tô de saco cheio de esperar. | [TO dji SA-ko SJEI-o dji es-pe-RAR] |
+| Ta det med ro, det går bra. | Relaxa, vai dar tudo certo. | [re-LA-sha, VAI DAR TO-do SÆR-to] |
+| Det spiller ingen rolle for meg. | Não importa pra mim. | [não ĩ-PÅR-ta pra MĨ] |
+| Jeg tuller ikke, jeg mener det. | Não tô brincando, falo sério. | [não TO brĩ-CÃ-do, FA-lo SÆ-rio] |
+
 # Appendiks
 
 ## Appendiks A: Grammatisk oppslagsverk
@@ -1223,17 +1304,14 @@ Portugisisk skiller mellom tre "avstander" for pekeord:
 
 > I muntlig brasiliansk portugisisk brukes *esse/essa/isso*-familien i praksis om det meste — *este/esta/isto* ser du mest i skrift, men er verdt å kjenne igjen.
 
+**Eksempler**
+
 | Norsk | Portugisisk | Uttale |
 |---|---|---|
-| dette / denne (nær meg) | este / esta | [ES-tsji / ES-ta] |
-| dette (generelt, upersonlig) | isto | [IS-to] |
-| det / den (nær deg — mest brukt i tale) | esse / essa | [E-si / E-sa] |
-| det, dette (generelt, upersonlig — svært vanlig) | isso | [I-so] |
-| det der / den der (langt unna) | aquele / aquela | [a-KE-li / a-KE-la] |
-| det der (generelt, langt unna) | aquilo | [a-KI-lo] |
-| disse (nær meg, flertall) | estes / estas | [ES-tsjis / ES-tas] |
-| disse, de der (nær deg, flertall) | esses / essas | [E-sis / E-sas] |
-| de der (langt unna, flertall) | aqueles / aquelas | [a-KE-lis / a-KE-las] |
+| Denne er min. | Esta é minha. | [ES-ta Æ MI-nja] |
+| Den boken er bra. | Esse livro é bom. | [E-si LI-vro Æ BÕ] |
+| Jeg vil ha den der. | Quero aquele. | [KÆ-ro a-KE-li] |
+| Dette er bra. | Isto é bom. | [IS-to Æ BÕ] |
 
 ### Hvordan si «det» på portugisisk
 
@@ -1454,8 +1532,8 @@ Portugisisk trekker ofte sammen en preposisjon og et etterfølgende ord — arti
 | mer ... enn | mais ... que | [MAIS ... ki] |
 | mindre ... enn | menos ... que | [ME-nos ... ki] |
 | like ... som | tão ... quanto | [TÃO ... KWÃ-to] |
-| den/det beste | o melhor | [o me-LJOR] |
-| den/det verste | o pior | [o pi-OR] |
+| den/det beste | o melhor | [o me-LJÅR] |
+| den/det verste | o pior | [o pi-ÅR] |
 | veldig ... (superlativ-endelse) | -íssimo / -íssima | [-I-si-mo / -I-si-ma] |
 
 **Eksempler**
@@ -1464,7 +1542,7 @@ Portugisisk trekker ofte sammen en preposisjon og et etterfølgende ord — arti
 |---|---|---|
 | Denne er penere enn den andre. | Esta é mais linda que a outra. | [ES-ta Æ MAIS LĨ-da ki a O-tra] |
 | Jeg er like sliten som deg. | Tô tão cansado quanto você. | [TO TÃO kã-SA-do KWÃ-to vo-SE] |
-| Denne er verst. | Esta é a pior. | [ES-ta Æ a pi-OR] |
+| Denne er verst. | Esta é a pior. | [ES-ta Æ a pi-ÅR] |
 | Den er veldig vakker. | Ela é lindíssima. | [Æ-la Æ lĩ-DJI-si-ma] |
 
 ### Substantiv: kjønn og flertall
