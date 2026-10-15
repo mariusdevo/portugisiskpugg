@@ -1216,6 +1216,55 @@ Disse verbene plasseres foran et annet verb i infinitiv, for å uttrykke framtid
 | Det spiller ingen rolle for meg. | Não importa pra mim. | [não ĩ-PÅR-ta pra MĨ] |
 | Jeg tuller ikke, jeg mener det. | Não tô brincando, falo sério. | [não TO brĩ-CÃ-do, FA-lo SÆ-rio] |
 
+## 17. Lagrede oversettelser
+
+**Gloser**
+
+| Norsk | Portugisisk | Uttale |
+|---|---|---|
+| bidra | contribuir | [kõ-tri-bu-IR] |
+| å følge | seguir | [se-GUIR] |
+| å burde | dever | [dji-VER] |
+| hver | cada | [KA-da] |
+| slå av | desligar | [djis-li-GAR] |
+| råd | conselho | [kõ-SE-ljo] |
+| finne ut | descobrir | [djis-ko-BRIR] |
+| å ta | levar | [le-VAR] |
+| matbit | lanche | [LÃ-sji] |
+| i en hast | com pressa | [kõ PRÆ-sa] |
+| mangel | falta | [FAO-ta] |
+| innhold | conteúdo | [kõ-te-Ú-do] |
+| mengde | multidão | [mo-tsji-DÃO] |
+| å leve | viver | [vi-VER] |
+| ingen (person) | ninguém | [nĩ-GẼI] |
+| på en måte | de certa forma | [dji SÆR-ta FÅR-ma] |
+| å finne | encontrar | [ẽ-kõ-TRAR] |
+| å prøve | tentar | [tẽ-TAR] |
+| å ta vare på, å bry seg | cuidar (de) | [kui-DAR (dji)] |
+| lik, liknende | parecido | [pa-re-SI-do] |
+| størrelse | tamanho | [ta-MA-njo] |
+| å foreslå | propor | [pro-POR] |
+| like mye som | tão ... quanto | [TÃO ... KWÃ-to] |
+| like lenge som | tão longo quanto | [TÃO LÕ-go KWÃ-to] |
+| løs | folgado | [fou-GA-do] |
+| stram, tett | apertado | [a-per-TA-do] |
+| bred | largo | [LAR-go] |
+| flertallet, de fleste | maioria | [ma-io-RI-a] |
+| å erstatte, å bytte | trocar | [tro-KAR] |
+| å bli kjent med | conhecer | [ko-nje-SER] |
+| å miste, å savne | perder | [per-DER] |
+| å markere | marcar | [mar-KAR] |
+| heldig | sortudo | [sor-TU-do] |
+| boks, eske | caixa | [KAI-sha] |
+| å måtte | ter que | [TER ki] |
+| pakke | pacote | [pa-CÅ-tsji] |
+| å holde | segurar | [se-gu-RAR] |
+| hvis | se | [si] |
+| i det siste | ultimamente | [ÚO-tsji-ma-MẼ-tsji] |
+| å gjette | adivinhar | [a-dji-vi-NJAR] |
+| å ta et valg | fazer uma escolha | [fa-ZER Ũ-ma es-CÅ-lja] |
+| for det meste | na maior parte | [na ma-IÅR PAR-tsji] |
+
 # Appendiks
 
 ## Appendiks A: Grammatisk oppslagsverk
